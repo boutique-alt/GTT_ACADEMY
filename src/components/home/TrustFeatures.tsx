@@ -13,13 +13,13 @@ const features = [
     icon: "/images/certificate-detail.jpg",
     title: "Why Choose Us?",
     text: "More than 16 years in teacher training and 20,000+ certified teachers working successfully across the globe.",
-    href: `${LIVE}/about.php`,
+    href: "/about",
   },
   {
     icon: "/images/apostille.jpg",
     title: "Apostille Certification from MEA",
     text: "Receive an Apostille Certificate after course completion, eliminating the need for added embassy certification.",
-    href: `${LIVE}/about.php`,
+    href: "/about",
   },
 ];
 
