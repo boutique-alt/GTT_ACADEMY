@@ -17,8 +17,8 @@ export default function BrochureEnquiry() {
 
   return (
     <section className="bg-brand-gradient py-20">
-      <div className="mx-auto grid max-w-7xl items-stretch gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <form onSubmit={submitBrochure} className="min-w-0 overflow-hidden rounded-3xl bg-white p-6 shadow-2xl sm:p-8 lg:p-9">
+      <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-8 px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
+        <form onSubmit={submitBrochure} className="order-2 min-w-0 overflow-hidden rounded-3xl bg-white p-6 shadow-2xl sm:p-8 lg:order-1 lg:p-9">
           <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.22em] text-[#30ad22]">Get a Free Brochure</p>
           <h2 className="font-serif text-3xl font-bold text-[#05245b]">Fill out my online form</h2>
           <p className="mt-3 text-sm leading-6 text-slate-600">Share your details and our team will guide you with the right teacher training course brochure.</p>
@@ -52,7 +52,7 @@ export default function BrochureEnquiry() {
             Request Brochure <ArrowRight size={18} />
           </button>
         </form>
-        <div className="overflow-hidden rounded-3xl bg-white p-3">
+        <div className="order-1 overflow-hidden rounded-3xl bg-white p-3 lg:order-2">
           <Image src="/images/home-brochure.png" alt="GTT Academy home brochure" width={900} height={700} className="h-auto w-full rounded-2xl object-contain" />
         </div>
       </div>

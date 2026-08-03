@@ -28,6 +28,10 @@ function getOffset(index: number, active: number, total: number) {
   return offset;
 }
 
+function canHover() {
+  return typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+}
+
 export default function Gallery() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -48,10 +52,16 @@ export default function Gallery() {
 
         <div
           className="relative mx-auto flex h-[400px] w-full max-w-5xl items-center justify-center md:h-[550px] md:max-w-none lg:h-[650px]"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-          onPointerEnter={() => setPaused(true)}
-          onPointerLeave={() => setPaused(false)}
+          onMouseEnter={() => {
+            if (canHover()) setPaused(true);
+          }}
+          onMouseLeave={() => {
+            if (canHover()) setPaused(false);
+          }}
+          onClick={(event) => {
+            if ((event.target as HTMLElement).closest("button")) return;
+            if (!canHover()) setPaused((current) => !current);
+          }}
         >
           {images.map((image, index) => {
             const offset = getOffset(index, active, total);
@@ -69,7 +79,7 @@ export default function Gallery() {
           <button
             type="button"
             onClick={() => setActive((current) => (current - 1 + total) % total)}
-            className="absolute left-2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#05245b] shadow-lg backdrop-blur transition hover:bg-white hover:text-[#0045bc] md:left-8"
+            className="absolute left-2 z-20 hidden h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#05245b] shadow-lg backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:flex md:left-8"
             aria-label="Previous image"
           >
             <ChevronLeft size={20} />
@@ -77,7 +87,7 @@ export default function Gallery() {
           <button
             type="button"
             onClick={() => setActive((current) => (current + 1) % total)}
-            className="absolute right-2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#05245b] shadow-lg backdrop-blur transition hover:bg-white hover:text-[#0045bc] md:right-8"
+            className="absolute right-2 z-20 hidden h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#05245b] shadow-lg backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:flex md:right-8"
             aria-label="Next image"
           >
             <ChevronRight size={20} />

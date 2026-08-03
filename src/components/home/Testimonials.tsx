@@ -1,10 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import TestimonialCard from "@/components/home/TestimonialCard";
 import testimonials from "@/data/testimonials.json";
 
+function canHover() {
+  return typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+}
+
 export default function Testimonials() {
+  const [paused, setPaused] = useState(false);
+
   const renderCards = (copy: string) =>
     testimonials.map((testimonial, index) => (
       <TestimonialCard
@@ -27,8 +34,18 @@ export default function Testimonials() {
           light
         />
       </div>
-      <div className="relative overflow-x-hidden overflow-y-visible py-6 sm:py-8">
-        <div className="flex w-max gap-6 animate-[testimonialMarquee_1260s_linear_infinite] px-3 hover:[animation-play-state:paused]">
+      <div
+        className="relative overflow-x-hidden overflow-y-visible py-6 sm:py-8"
+        onClick={(event) => {
+          if ((event.target as HTMLElement).closest("a")) return;
+          if (!canHover()) setPaused((current) => !current);
+        }}
+      >
+        <div
+          className={`flex w-max gap-6 animate-[testimonialMarquee_1260s_linear_infinite] px-3 hover:[animation-play-state:paused] ${
+            paused ? "[animation-play-state:paused]" : ""
+          }`}
+        >
           <div className="flex items-end gap-6 pb-1">{renderCards("primary")}</div>
           <div className="flex items-end gap-6 pb-1" aria-hidden="true">
             {renderCards("duplicate")}

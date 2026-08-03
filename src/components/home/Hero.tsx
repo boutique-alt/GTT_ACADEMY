@@ -41,18 +41,18 @@ export default function Hero() {
       <button
         onClick={() => move(-1)}
         aria-label="Previous hero slide"
-        className="absolute left-2 top-1/2 z-20 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-[#05245b]/45 text-white backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:left-6 sm:size-13"
+        className="absolute left-2 top-1/2 z-20 hidden size-10 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-[#05245b]/45 text-white backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:left-6 sm:grid sm:size-13"
       >
         <ChevronLeft size={26} />
       </button>
       <button
         onClick={() => move(1)}
         aria-label="Next hero slide"
-        className="absolute right-2 top-1/2 z-20 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-[#05245b]/45 text-white backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:right-6 sm:size-13"
+        className="absolute right-2 top-1/2 z-20 hidden size-10 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-[#05245b]/45 text-white backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:right-6 sm:grid sm:size-13"
       >
         <ChevronRight size={26} />
       </button>
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center py-8 pl-11 pr-11 max-sm:min-h-[68svh] sm:h-full sm:py-20 sm:pl-16 sm:pr-20 lg:pl-10 lg:pr-24 lg:pt-10 lg:pb-14">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-4 py-8 max-sm:min-h-[68svh] sm:h-full sm:py-20 sm:pl-16 sm:pr-20 lg:pl-10 lg:pr-24 lg:pt-10 lg:pb-14">
         <div className="w-full max-w-3xl text-white lg:-ml-4 lg:-translate-y-4 xl:-ml-8">
           <div className="mb-3 inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.1em] backdrop-blur sm:mb-6 sm:px-4 sm:py-2 sm:text-xs sm:tracking-[0.14em]">
             <Award size={15} className="shrink-0 text-[#ffbc09]" /> 16+ Years of Excellence in Teacher Training
