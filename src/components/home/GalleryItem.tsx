@@ -7,6 +7,7 @@ type Props = {
   alt: string;
   offset: number;
   active: boolean;
+  onSelect?: () => void;
 };
 
 function getOffsetX(offset: number) {
@@ -17,7 +18,7 @@ function getOffsetX(offset: number) {
   return "100%";
 }
 
-export default function GalleryItem({ src, alt, offset, active }: Props) {
+export default function GalleryItem({ src, alt, offset, active, onSelect }: Props) {
   const nearby = Math.abs(offset) === 1;
 
   return (
@@ -32,9 +33,19 @@ export default function GalleryItem({ src, alt, offset, active }: Props) {
       }}
     >
       <article
+        role={onSelect ? "button" : undefined}
+        tabIndex={onSelect ? 0 : undefined}
+        onClick={onSelect}
+        onKeyDown={(event) => {
+          if (!onSelect) return;
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            onSelect();
+          }
+        }}
         className={`relative h-[280px] w-full overflow-hidden rounded-2xl border-[6px] border-white bg-[#f5f8fc] shadow-xl transition-shadow duration-500 md:h-[480px] md:border-[10px] lg:h-[550px] ${
           active ? "shadow-[#05245b]/25" : "shadow-[#05245b]/5"
-        }`}
+        } ${onSelect && !active ? "cursor-pointer" : ""}`}
       >
         <Image src={src} alt={alt} fill sizes="(max-width: 768px) 220px, (max-width: 1024px) 360px, 440px" className="object-cover object-top" />
       </article>
