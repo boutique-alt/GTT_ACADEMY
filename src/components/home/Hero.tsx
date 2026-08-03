@@ -11,7 +11,7 @@ const slides = [
     text: "Say goodbye to the old monotonous and strictly conventional approach to the 'only theoretical' textbook studies.",
   },
   {
-    image: "/images/hero-2.jpg",
+    image: "/images/hero-banner.png",
     heading: "Listen Up Teachers! Get TRAINED LOCAL to go GLOBAL!",
     text: "Join Our Teacher Training Program today! Get an Apostille Certificate which is accepted across all embassies and ministries of education and join the global teaching forum.",
   },

@@ -36,11 +36,13 @@ export default function VideoShowcase() {
             </ul>
           </div>
 
-          <div className="flex h-full flex-col justify-center bg-[#05245b] p-4 sm:p-5">
-            <div className="mb-3 flex items-center gap-2 text-sm font-bold text-white">
-              <PlayCircle className="text-[#ffbc09]" size={20} /> Student Review Video
+          <div className="relative flex h-full flex-col justify-center overflow-hidden bg-gradient-to-br from-[#eef6ff] via-[#f5f9ff] to-[#e8f4fc] p-4 sm:p-5">
+            <div className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-[#0045bc]/10 blur-2xl" />
+            <div className="pointer-events-none absolute -bottom-12 -left-8 size-44 rounded-full bg-[#30ad22]/10 blur-2xl" />
+            <div className="relative mb-3 flex items-center gap-2 text-sm font-bold text-[#05245b]">
+              <PlayCircle className="text-[#0045bc]" size={20} /> Student Review Video
             </div>
-            <div className="aspect-video w-full overflow-hidden rounded-2xl">
+            <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg shadow-[#0045bc]/15 ring-1 ring-[#0045bc]/10">
               <iframe
                 className="size-full"
                 src="https://www.youtube.com/embed/xduuUZMSM6M"
