@@ -21,8 +21,8 @@ export default function Home() {
       <Hero />
       <TrustFeatures />
       <About />
-      <AcademyDetails />
       <CertificateShowcase />
+      <AcademyDetails />
       <AcademyCoursesRange />
       <VideoShowcase />
       <Courses />

@@ -12,11 +12,11 @@ const benefits = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-brand-gradient-soft pb-24">
+    <section id="about" className="bg-brand-gradient-soft pt-8 pb-24 sm:pt-12">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div className="relative">
-          <div className="overflow-hidden rounded-[2rem] bg-slate-100">
-            <Image src="/images/hero-2.jpg" alt="Teacher training at GTT Academy" width={1920} height={1280} className="h-auto w-full object-contain" />
+          <div className="overflow-hidden rounded-[2rem] bg-white">
+            <Image src="/images/hero-2.jpg" alt="Teacher training at GTT Academy" width={1920} height={1280} className="h-auto w-full object-cover" />
           </div>
           <div className="absolute -bottom-7 -right-3 rounded-2xl border-4 border-white bg-[#ffbc09] p-6 text-[#05245b] shadow-xl sm:right-8">
             <p className="font-serif text-4xl font-bold">20,000+</p>

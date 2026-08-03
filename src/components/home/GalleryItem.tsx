@@ -27,7 +27,7 @@ export default function GalleryItem({ src, alt, offset, active }: Props) {
         transform: `translateX(${getOffsetX(offset)}) scale(${active ? 1 : 0.75})`,
         opacity: active ? 1 : nearby ? 0.85 : 0,
         zIndex: active ? 10 : nearby ? 5 : 0,
-        pointerEvents: active ? "auto" : "none",
+        pointerEvents: Math.abs(offset) <= 1 ? "auto" : "none",
         transition: "transform 0.8s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.8s cubic-bezier(0.32, 0.72, 0, 1)",
       }}
     >

@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
 import AboutEditMarquee from "@/components/about/AboutEditMarquee";
+import AboutStickyLayout from "@/components/about/AboutStickyLayout";
 import { applyNowHref } from "@/data/site";
 
 const paragraphs = [
@@ -14,14 +15,8 @@ const paragraphs = [
 export default function AboutStory() {
   return (
     <section className="no-view-reveal bg-[#f5f8fc] py-16 sm:py-20">
-      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:gap-12 lg:px-8">
-        <div className="w-full shrink-0 lg:w-[280px]">
-          <div className="lg:sticky lg:top-[120px] lg:max-h-[calc(100vh-140px)] lg:overflow-y-auto lg:overscroll-contain">
-            <AboutCoursesSidebar />
-          </div>
-        </div>
-
-        <div className="min-w-0 flex-1 space-y-8">
+      <AboutStickyLayout sidebar={<AboutCoursesSidebar />}>
+        <div className="space-y-8">
           <AboutEditMarquee />
 
           <div className="rounded-[1.5rem] border border-slate-100 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
@@ -41,7 +36,7 @@ export default function AboutStory() {
             </a>
           </div>
         </div>
-      </div>
+      </AboutStickyLayout>
     </section>
   );
 }

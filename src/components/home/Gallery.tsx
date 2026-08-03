@@ -30,24 +30,31 @@ function getOffset(index: number, active: number, total: number) {
 
 export default function Gallery() {
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
   const total = images.length;
 
   useEffect(() => {
+    if (paused) return;
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % total);
     }, 2000);
-
     return () => window.clearInterval(timer);
-  }, [total]);
+  }, [paused, total]);
 
   return (
     <section className="relative w-full overflow-hidden bg-brand-gradient-soft py-16 md:py-24">
       <div className="mx-auto w-full px-4 md:max-w-none md:px-12 lg:px-24">
         <SectionHeading eyebrow="GTT Academy" title="Our Gallery" />
 
-        <div className="relative mx-auto flex h-[400px] w-full max-w-5xl items-center justify-center md:h-[550px] md:max-w-none lg:h-[650px]">
+        <div
+          className="relative mx-auto flex h-[400px] w-full max-w-5xl items-center justify-center md:h-[550px] md:max-w-none lg:h-[650px]"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onPointerEnter={() => setPaused(true)}
+          onPointerLeave={() => setPaused(false)}
+        >
           <div
-            className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full transition-colors duration-1000 ease-in-out md:h-[850px] md:w-[850px] lg:h-[1000px] lg:w-[1000px]"
+            className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full transition-colors duration-1000 ease-in-out md:h-[850px] md:w-[850px] lg:h-[1000px] lg:w-[1000px]"
             style={{ backgroundColor: images[active].bgColor, opacity: 0.15 }}
           />
 

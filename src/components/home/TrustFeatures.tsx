@@ -1,4 +1,4 @@
-import Image from "next/image";
+import TrustFeatureCard from "@/components/home/TrustFeatureCard";
 
 const LIVE = "https://www.globalteachersacademy.com";
 
@@ -25,17 +25,17 @@ const features = [
 
 export default function TrustFeatures() {
   return (
-    <section className="relative z-10 -mt-4 px-4 pb-20 sm:-mt-12 sm:px-6">
-      <div className="mx-auto grid max-w-7xl overflow-hidden rounded-2xl bg-white shadow-2xl shadow-blue-950/10 md:grid-cols-3">
-        {features.map(({ icon, title, text, href }, index) => (
-          <article key={title} className={`group p-8 transition hover:bg-[#f0faf3] ${index < 2 ? "border-b border-slate-100 md:border-b-0 md:border-r" : ""}`}>
-            <div className="mb-5 grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-[#0045bc]/15 to-[#30ad22]/15 p-2">
-              <Image src={icon} alt="" width={60} height={60} className="size-full object-contain" />
-            </div>
-            <h2 className="mb-3 font-serif text-xl font-bold text-[#05245b]">{title}</h2>
-            <p className="text-sm leading-6 text-slate-600">{text}</p>
-            <a href={href} className="mt-5 inline-block text-sm font-bold text-[#30ad22]">Read More →</a>
-          </article>
+    <section className="relative z-10 -mt-4 px-4 pb-10 sm:-mt-12 sm:px-6 sm:pb-12">
+      <div className="mx-auto flex max-w-7xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl shadow-blue-950/10 md:flex-row">
+        {features.map((feature, index) => (
+          <div
+            key={feature.title}
+            className={`flex flex-1 transition-[flex] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] has-[:hover]:flex-[1.45] ${
+              index < 2 ? "border-b border-slate-100 md:border-b-0 md:border-r" : ""
+            }`}
+          >
+            <TrustFeatureCard {...feature} />
+          </div>
         ))}
       </div>
     </section>
