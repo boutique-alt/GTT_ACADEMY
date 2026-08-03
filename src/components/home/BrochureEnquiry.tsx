@@ -16,7 +16,7 @@ export default function BrochureEnquiry() {
   }
 
   return (
-    <section className="bg-[#05245b] py-20">
+    <section className="bg-brand-gradient py-20">
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <form onSubmit={submitBrochure} className="rounded-3xl bg-white p-7 shadow-2xl sm:p-9">
           <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.22em] text-[#30ad22]">Get a Free Brochure</p>
@@ -48,7 +48,7 @@ export default function BrochureEnquiry() {
               </select>
             </label>
           </div>
-          <button className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#30ad22] px-7 py-4 font-bold text-white transition hover:bg-[#278f1c]">
+          <button className="btn-brand-gradient mt-6 inline-flex items-center gap-2 rounded-full px-7 py-4 font-bold">
             Request Brochure <ArrowRight size={18} />
           </button>
         </form>

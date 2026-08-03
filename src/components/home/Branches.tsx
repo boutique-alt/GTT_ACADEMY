@@ -4,7 +4,7 @@ import { branches, contactHref } from "@/data/site";
 
 export default function Branches() {
   return (
-    <section className="bg-[#f3f8ff] py-20">
+    <section className="bg-brand-gradient-soft py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Pan-India Presence" title="Our Branches" />
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">

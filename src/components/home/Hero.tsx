@@ -65,7 +65,7 @@ export default function Hero() {
             {slides[active].text}
           </p>
           <div className="mt-5 flex flex-col gap-2.5 max-sm:pb-16 sm:mt-8 sm:flex-row sm:gap-3 sm:pb-0">
-            <a href={applyNowHref} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#30ad22] px-6 py-3 text-sm font-semibold tracking-[0.04em] shadow-xl shadow-green-900/30 transition hover:-translate-y-0.5 hover:bg-[#278f1c] sm:px-7 sm:py-4">
+            <a href={applyNowHref} className="btn-brand-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-[0.04em] sm:px-7 sm:py-4">
               Apply Now <ArrowRight size={18} />
             </a>
             <a href="#courses" className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold tracking-[0.04em] backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:px-7 sm:py-4">

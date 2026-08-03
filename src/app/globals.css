@@ -7,14 +7,47 @@
   --brand-green: #30ad22;
   --brand-gold: #ffbc09;
   --brand-navy: #05245b;
+  --surface-soft: #eef4ff;
+  --surface-mint: #f0faf3;
+  --surface-warm: #fff8e8;
+  --brand-gradient: linear-gradient(90deg, #0045bc 0%, #30ad22 100%);
+  --brand-gradient-hero: linear-gradient(135deg, #031b46 0%, #0045bc 55%, #30ad22 100%);
+  --brand-gradient-soft: linear-gradient(135deg, #eef4ff 0%, #f5f9ff 45%, #f0faf3 100%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-green: var(--brand-green);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-navy: var(--brand-navy);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-mint: var(--surface-mint);
+  --color-surface-warm: var(--surface-warm);
   --font-sans: var(--font-manrope);
   --font-serif: var(--font-lora);
   --font-display: var(--font-cormorant);
+}
+
+.btn-brand-gradient {
+  background-image: var(--brand-gradient);
+  color: #fff;
+  transition: filter 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 12px 28px -12px rgba(0, 69, 188, 0.45);
+}
+
+.btn-brand-gradient:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.bg-brand-gradient {
+  background-image: var(--brand-gradient);
+}
+
+.bg-brand-gradient-soft {
+  background-image: var(--brand-gradient-soft);
 }
 
 * {
@@ -25,7 +58,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-manrope), Arial, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 button,
@@ -128,8 +161,30 @@ button {
   }
 }
 
+@keyframes aboutScrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes aboutScrollDown {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.about-marquee-col:hover .about-marquee {
+  animation-play-state: paused;
+}
+
 @supports (animation-timeline: view()) {
-  main > section:not(:first-child) {
+  main > section:not(:first-child):not(.no-view-reveal) {
     animation: sectionReveal linear both;
     animation-timeline: view();
     animation-range: entry 0% entry 24%;
@@ -143,9 +198,9 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *:not(.gallery-slide):not(.about-marquee),
+  *:not(.gallery-slide):not(.about-marquee)::before,
+  *:not(.gallery-slide):not(.about-marquee)::after {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

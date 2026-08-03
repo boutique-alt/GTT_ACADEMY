@@ -3,7 +3,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function VideoShowcase() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-brand-gradient-soft py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Experience GTT Academy"

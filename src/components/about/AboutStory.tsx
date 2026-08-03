@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
+import AboutEditMarquee from "@/components/about/AboutEditMarquee";
 import { applyNowHref } from "@/data/site";
 
 const paragraphs = [
@@ -12,25 +13,33 @@ const paragraphs = [
 
 export default function AboutStory() {
   return (
-    <section className="bg-[#f5f8fc] py-16 sm:py-20">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-12 lg:px-8">
-        <AboutCoursesSidebar />
-
-        <div className="rounded-[1.5rem] border border-slate-100 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
-          <h2 className="font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">About Us</h2>
-
-          <div className="mt-7 space-y-5 text-[15px] leading-7 text-slate-600">
-            {paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 64)}>{paragraph}</p>
-            ))}
+    <section className="no-view-reveal bg-[#f5f8fc] py-16 sm:py-20">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:gap-12 lg:px-8">
+        <div className="w-full shrink-0 lg:w-[280px]">
+          <div className="lg:sticky lg:top-[120px] lg:max-h-[calc(100vh-140px)] lg:overflow-y-auto lg:overscroll-contain">
+            <AboutCoursesSidebar />
           </div>
+        </div>
 
-          <a
-            href={applyNowHref}
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-[#30ad22] px-7 py-4 text-sm font-semibold tracking-[0.04em] text-white shadow-xl shadow-green-900/20 transition hover:-translate-y-0.5 hover:bg-[#278f1c]"
-          >
-            Apply Now <ArrowRight size={18} />
-          </a>
+        <div className="min-w-0 flex-1 space-y-8">
+          <AboutEditMarquee />
+
+          <div className="rounded-[1.5rem] border border-slate-100 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
+            <h2 className="font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">About Us</h2>
+
+            <div className="mt-7 space-y-5 text-[15px] leading-7 text-slate-600">
+              {paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 64)}>{paragraph}</p>
+              ))}
+            </div>
+
+            <a
+              href={applyNowHref}
+              className="btn-brand-gradient mt-10 inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold tracking-[0.04em]"
+            >
+              Apply Now <ArrowRight size={18} />
+            </a>
+          </div>
         </div>
       </div>
     </section>

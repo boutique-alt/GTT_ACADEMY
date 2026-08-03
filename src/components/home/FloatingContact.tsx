@@ -31,7 +31,7 @@ export default function FloatingContact() {
         <a
           href="tel:9674923512"
           aria-label="Call GTT Academy"
-          className="grid size-12 place-items-center rounded-full bg-[#0045bc] text-white shadow-2xl shadow-blue-950/25 transition hover:-translate-y-1 hover:bg-[#05245b] sm:inline-flex sm:size-auto sm:items-center sm:gap-2 sm:rounded-full sm:px-5 sm:py-3 sm:text-sm sm:font-bold"
+          className="btn-brand-gradient grid size-12 place-items-center rounded-full shadow-2xl shadow-blue-950/25 transition hover:-translate-y-1 sm:inline-flex sm:size-auto sm:items-center sm:gap-2 sm:rounded-full sm:px-5 sm:py-3 sm:text-sm sm:font-bold"
         >
           <span className="grid size-7 place-items-center rounded-full bg-white/15 sm:bg-white/15"><Phone size={14} /></span>
           <span className="hidden sm:inline">Call Now</span>

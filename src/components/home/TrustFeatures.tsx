@@ -28,8 +28,8 @@ export default function TrustFeatures() {
     <section className="relative z-10 -mt-4 px-4 pb-20 sm:-mt-12 sm:px-6">
       <div className="mx-auto grid max-w-7xl overflow-hidden rounded-2xl bg-white shadow-2xl shadow-blue-950/10 md:grid-cols-3">
         {features.map(({ icon, title, text, href }, index) => (
-          <article key={title} className={`group p-8 transition hover:bg-[#f7fbff] ${index < 2 ? "border-b border-slate-100 md:border-b-0 md:border-r" : ""}`}>
-            <div className="mb-5 grid size-16 place-items-center rounded-xl bg-[#0045bc]/10 p-2">
+          <article key={title} className={`group p-8 transition hover:bg-[#f0faf3] ${index < 2 ? "border-b border-slate-100 md:border-b-0 md:border-r" : ""}`}>
+            <div className="mb-5 grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-[#0045bc]/15 to-[#30ad22]/15 p-2">
               <Image src={icon} alt="" width={60} height={60} className="size-full object-contain" />
             </div>
             <h2 className="mb-3 font-serif text-xl font-bold text-[#05245b]">{title}</h2>

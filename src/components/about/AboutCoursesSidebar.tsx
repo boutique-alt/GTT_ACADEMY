@@ -24,7 +24,7 @@ export default function AboutCoursesSidebar() {
               <li key={course.href}>
                 <a
                   href={course.href}
-                  className="flex items-start gap-2 px-4 py-3 text-sm leading-5 text-slate-700 transition hover:bg-[#f7fbff] hover:text-[#0045bc]"
+                  className="flex items-start gap-2 px-4 py-3 text-sm leading-5 text-slate-700 transition hover:bg-[#f0faf3] hover:text-[#0045bc]"
                 >
                   <ChevronRight size={16} className="mt-0.5 shrink-0 text-[#30ad22]" />
                   <span>{course.title}</span>

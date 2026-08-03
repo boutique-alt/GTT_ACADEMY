@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="bg-[#0045bc] text-white">
+      <div className="bg-brand-gradient text-white">
         <div className="mx-auto flex min-h-10 max-w-7xl items-center justify-between gap-4 px-4 py-2 text-xs sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <a className="flex items-center gap-1.5 hover:text-[#ffbc09]" href="tel:18001203481">
@@ -64,7 +64,7 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a href={applyNowHref} className="ml-3 rounded-full bg-[#30ad22] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-green-600/20 transition hover:bg-[#278f1c]">
+            <a href={applyNowHref} className="btn-brand-gradient ml-3 rounded-full px-5 py-3 text-sm font-bold">
               Apply Now
             </a>
           </div>
@@ -97,7 +97,7 @@ export default function Header() {
             {navLinks.slice(2).map((item) => (
               <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)} className="block border-b border-slate-100 py-3 font-semibold text-slate-700">{item.label}</a>
             ))}
-            <a href={applyNowHref} onClick={() => setMenuOpen(false)} className="mt-4 block rounded-full bg-[#30ad22] px-5 py-3 text-center font-bold text-white">Apply Now</a>
+            <a href={applyNowHref} onClick={() => setMenuOpen(false)} className="btn-brand-gradient mt-4 block rounded-full px-5 py-3 text-center font-bold">Apply Now</a>
           </div>
         )}
       </nav>

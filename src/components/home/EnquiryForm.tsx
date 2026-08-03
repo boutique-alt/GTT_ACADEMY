@@ -16,7 +16,7 @@ export default function EnquiryForm() {
   }
 
   return (
-    <section id="enquiry" className="bg-[#eef6ff] py-24">
+    <section id="enquiry" className="bg-brand-gradient-soft py-24">
       <div className="mx-auto grid max-w-7xl overflow-hidden rounded-3xl bg-white shadow-2xl shadow-blue-950/10 lg:grid-cols-[.9fr_1.1fr]">
         <div className="relative overflow-hidden bg-[#05245b] text-white">
           <div className="absolute -bottom-20 -right-20 size-72 rounded-full bg-[#30ad22]/25 blur-2xl" />
@@ -70,7 +70,7 @@ export default function EnquiryForm() {
             Message
             <textarea name="message" rows={4} placeholder="How can we help you?" className="resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 font-normal outline-none transition focus:border-[#0045bc] focus:ring-3 focus:ring-[#0045bc]/10" />
           </label>
-          <button className="inline-flex items-center justify-center gap-2 rounded-full bg-[#30ad22] px-7 py-4 font-bold text-white transition hover:bg-[#278f1c] sm:col-span-2 sm:justify-self-start">
+          <button className="btn-brand-gradient inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 font-bold sm:col-span-2 sm:justify-self-start">
             Send Enquiry <ArrowRight size={18} />
           </button>
         </form>

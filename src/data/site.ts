@@ -105,7 +105,7 @@ export const courses = [
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Career Opportunities", href: `${LIVE}/career.php` },
+  { label: "Career Opportunities", href: "/career" },
   { label: "Accreditations", href: `${LIVE}/accreditations.php` },
   { label: "FAQ", href: `${LIVE}/faq.php` },
   { label: "Alumni", href: `${LIVE}/alumni.php` },
@@ -117,7 +117,7 @@ export const usefulLinks = [
   { label: "Job Opportunities & Placement support", href: `${LIVE}/Job-opportunities-placement-support.php` },
   { label: "Franchise Opportunity", href: `${LIVE}/franchise-opportunity.php` },
   { label: "About Us", href: "/about" },
-  { label: "Career Opportunities", href: `${LIVE}/career.php` },
+  { label: "Career Opportunities", href: "/career" },
   { label: "Accreditations", href: `${LIVE}/accreditations.php` },
   { label: "Courses", href: `${LIVE}/courses.php` },
 ];

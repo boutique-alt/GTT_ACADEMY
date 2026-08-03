@@ -1,4 +1,5 @@
 import About from "@/components/home/About";
+import AcademyCoursesRange from "@/components/home/AcademyCoursesRange";
 import AcademyDetails from "@/components/home/AcademyDetails";
 import Branches from "@/components/home/Branches";
 import BrochureEnquiry from "@/components/home/BrochureEnquiry";
@@ -22,6 +23,7 @@ export default function Home() {
       <About />
       <AcademyDetails />
       <CertificateShowcase />
+      <AcademyCoursesRange />
       <VideoShowcase />
       <Courses />
       <Stats />
