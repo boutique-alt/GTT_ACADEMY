@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { Gift, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
-import ApplyNowLink from "@/components/ui/ApplyNowLink";
 
 export default function FloatingContact() {
   return (
@@ -21,12 +21,14 @@ export default function FloatingContact() {
       </a>
 
       <div className="fixed bottom-4 right-3 z-40 flex flex-col items-end gap-2 sm:bottom-5 sm:right-4">
-        <ApplyNowLink
+        <Link
+          href="/special-offer"
           aria-label="View special offer"
+          prefetch
           className="hidden animate-[contactFloat_3.2s_ease-in-out_infinite] items-center gap-2 rounded-full border border-[#ffbc09]/40 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-[#05245b] shadow-xl transition hover:bg-[#ffbc09] sm:inline-flex"
         >
           <Gift size={15} className="text-[#30ad22]" /> Special Offer
-        </ApplyNowLink>
+        </Link>
         <a
           href="tel:9674923512"
           aria-label="Call GTT Academy"

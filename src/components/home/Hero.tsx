@@ -15,6 +15,16 @@ const slides = [
     heading: "Listen Up Teachers! Get TRAINED LOCAL to go GLOBAL!",
     text: "Join Our Teacher Training Program today! Get an Apostille Certificate which is accepted across all embassies and ministries of education and join the global teaching forum.",
   },
+  {
+    image: "/images/hero-banner-teachers-learning.jpg",
+    heading: "Teachers Learning From GTT Academy",
+    text: "Join our live online Meet classes and learn modern teaching methods directly from GTT Academy — anytime, from anywhere.",
+  },
+  {
+    image: "/images/hero-banner-teachers-children.jpg",
+    heading: "Trained Teachers. Inspired Children.",
+    text: "Our certified teachers carry GTT learning into real classrooms — guiding children with confidence, care, and world-class teaching skills.",
+  },
 ];
 
 export default function Hero() {
@@ -36,8 +46,14 @@ export default function Hero() {
           style={{ backgroundImage: `url(${slide.image})` }}
         />
       ))}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#031b46]/85 via-[#05245b]/72 to-[#031b46]/60 sm:bg-gradient-to-r sm:from-[#031b46]/95 sm:via-[#05245b]/75 sm:to-[#0045bc]/25" />
-      <div className="absolute -right-24 top-20 size-80 rounded-full bg-[#30ad22]/20 blur-3xl max-sm:hidden" />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(0, 69, 188, 0.5) 0%, rgba(0, 69, 188, 0) 50%)",
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#031b46]/50 via-transparent to-[#031b46]/45 sm:hidden" />
       <button
         onClick={() => move(-1)}
         aria-label="Previous hero slide"

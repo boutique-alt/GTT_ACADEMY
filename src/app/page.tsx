@@ -21,11 +21,11 @@ export default function Home() {
       <Hero />
       <TrustFeatures />
       <About />
+      <Courses />
       <CertificateShowcase />
       <AcademyDetails />
       <AcademyCoursesRange />
       <VideoShowcase />
-      <Courses />
       <Stats />
       <EnquiryForm />
       <Testimonials />

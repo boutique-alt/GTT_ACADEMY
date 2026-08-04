@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
+import ApplyNowLink from "@/components/ui/ApplyNowLink";
 
 const benefits = [
   "Apostille Certificate granted by the Ministry of External Affairs",
@@ -43,6 +44,9 @@ export default function About() {
           <p className="mt-7 border-l-4 border-[#ffbc09] pl-5 font-serif text-lg font-semibold italic text-[#0045bc]">
             You are a good teacher already. Now let us help you become the best version of yourself!
           </p>
+          <ApplyNowLink className="btn-brand-gradient mt-6 inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-[0.04em] text-white">
+            Apply Now <ArrowRight size={18} />
+          </ApplyNowLink>
         </div>
       </div>
     </section>

@@ -14,13 +14,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-brand-gradient text-white">
-        <div className="mx-auto flex min-h-10 max-w-7xl items-center justify-between gap-4 px-4 py-2 text-xs sm:px-6 lg:px-8">
+        <div className="mx-auto flex min-h-11 max-w-7xl items-center justify-between gap-4 px-4 py-2.5 text-sm sm:px-6 sm:text-[15px] lg:px-8">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <a className="flex items-center gap-1.5 hover:text-[#ffbc09]" href="tel:18001203481">
-              <Phone size={13} /> India toll free: 18001203481
+              <Phone size={15} /> India toll free: 18001203481
             </a>
             <a className="hidden items-center gap-1.5 hover:text-[#ffbc09] sm:flex" href="mailto:enquiry@globalteachersacademy.com">
-              <Mail size={13} /> enquiry@globalteachersacademy.com
+              <Mail size={15} /> enquiry@globalteachersacademy.com
             </a>
           </div>
           <a className="font-bold text-[#ffbc09]" href="tel:9674923512">
