@@ -106,10 +106,10 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Career Opportunities", href: "/career" },
-  { label: "Accreditations", href: `${LIVE}/accreditations.php` },
-  { label: "FAQ", href: `${LIVE}/faq.php` },
-  { label: "Alumni", href: `${LIVE}/alumni.php` },
-  { label: "Contact us", href: `${LIVE}/contact.php` },
+  { label: "Accreditations", href: "/accreditations" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Alumni", href: "/alumni" },
+  { label: "Contact us", href: "/contact" },
 ];
 
 export const usefulLinks = [
@@ -118,7 +118,7 @@ export const usefulLinks = [
   { label: "Franchise Opportunity", href: `${LIVE}/franchise-opportunity.php` },
   { label: "About Us", href: "/about" },
   { label: "Career Opportunities", href: "/career" },
-  { label: "Accreditations", href: `${LIVE}/accreditations.php` },
+  { label: "Accreditations", href: "/accreditations" },
   { label: "Courses", href: `${LIVE}/courses.php` },
 ];
 
@@ -129,14 +129,15 @@ export const quickLinks = [
   { label: "Payment", href: `${LIVE}/payment.php` },
   { label: "Payment Terms and Conditions", href: `${LIVE}/payment-terms-and-conditions.php` },
   { label: "Refund", href: `${LIVE}/refund.php` },
-  { label: "FAQ", href: `${LIVE}/faq.php` },
-  { label: "Alumni", href: `${LIVE}/alumni.php` },
+  { label: "FAQ", href: "/faq" },
+  { label: "Alumni", href: "/alumni" },
   { label: "Blogs", href: `${LIVE}/blog.php` },
 ];
 
-export const applyNowHref = `${LIVE}/apply-now.php`;
-export const contactHref = `${LIVE}/contact.php`;
-export const alumniHref = `${LIVE}/alumni.php`;
+export const applyNowHref = "/apply-now" as const;
+export const contactHref = "/contact";
+export const alumniHref = "/alumni";
+export const thankYouHref = "/thank-you";
 export const acknowledgementsHref = `${LIVE}/acknowledgements.php`;
 
 export const branches = [

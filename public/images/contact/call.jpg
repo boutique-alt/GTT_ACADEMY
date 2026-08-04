@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W78T75FF');</script>
+<!-- End Google Tag Manager -->
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="Anil z" name="author">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 Not Found</title>
+<!-- Favicon Icon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+<!-- Animation CSS -->
+
+<link rel="stylesheet" href="assets/css/animate.css" />
+
+<!-- Latest Bootstrap min CSS -->
+
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- Google Font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+
+<!-- Icon Font CSS -->
+
+<link rel="stylesheet" href="assets/css/ionicons.min.css" />
+
+<link rel="stylesheet" href="assets/css/themify-icons.css" />
+
+<!-- FontAwesome CSS -->
+
+<link rel="stylesheet" href="assets/css/all.min.css" />
+
+<!--- owl carousel CSS-->
+
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css" />
+
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css" />
+
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css" />
+
+<!-- Magnific Popup CSS -->
+
+<link rel="stylesheet" href="assets/css/magnific-popup.css" />
+
+<!-- Style CSS -->
+
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<link rel="stylesheet" href="assets/css/responsive.css" />
+
+<link rel="stylesheet" id="layoutstyle" href="assets/color/theme.css" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- Start Pagination From -->
+
+<form name="frmPaging" action="/404.php" method="post" style="margin:0px;">
+
+ <input 	type="hidden" 	name="pageNo"		value="">
+
+ <input 	type="hidden" 	name="link_id"		value="">
+
+ <input 	type="hidden" 	name="category"		value="">    
+
+</form>    
+
+<!-- End Pagination From -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-216004052-1"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'UA-216004052-1');
+
+</script>
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-758438062"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-758438062'); </script>
+<script> gtag('config', 'AW-758438062/rxdFCO_S_rccEK6x0-kC', { 'phone_conversion_number': '9674923512' }); </script>
+<!-- Event snippet for Click to call conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-758438062/6jzrCKqslbgcEK6x0-kC', 'value': 1.0, 'currency': 'INR', 'event_callback': callback }); return false; } </script>
+<!-- Global site tag (gtag.js) - Google Ads: 10836042837 -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10836042837"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'AW-10836042837');
+
+</script>
+
+<!--Start of Zendesk Chat Script-->
+
+<script type="text/javascript">
+
+window.$zopim||(function(d,s){var z=$zopim=function(c){
+
+z._.push(c)},$=z.s=
+
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+
+$.src='https://v2.zopim.com/?4nZtYwDWPDVccnpVLTnBLCVIviiEh8tx';z.t=+new Date;$.
+
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+
+</script>
+
+<!--End of Zendesk Chat Script-->
+
+<script type="text/javascript" src="js/ajax1.js"></script>
+
+<script type="application/ld+json">
+
+    {
+
+      "@context": "http://schema.org",
+
+      "@type": "Service",
+
+      "serviceType": "Teachers Training Course",
+
+      "category": "Teachers Training Institute",
+
+      "provider": {
+
+        "name": "GTT Academy"
+
+      },
+
+      "areaServed": {
+
+        "@type": "Country",
+
+        "name": "India"
+
+      }
+
+    }
+
+    </script>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W78T75FF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--<div class="modal fade lr_popup" id="Login" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+    	<div class="modal-content border-0">
+
+    		<div class="modal-body">
+
+            	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                  <span aria-hidden="true">×</span>
+
+                </button>
+
+                <div class="row no-gutters">
+
+                	<div class="col-lg-12">
+
+                    	<div class="padding_eight_all">
+
+                            <div class="tab-content">
+
+                                <div class="tab-pane fade show active" id="login" role="tabpanel">
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                	</div>
+
+                </div>
+
+        	</div>
+
+        </div>
+
+    </div>
+
+</div>-->
+
+
+
+<!-- START HEADER -->
+
+<header class="header_wrap dark_skin">
+
+	<div class="top-header light_skin bg-dark">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+
+                    <ul class="contact_detail list_none text-center text-md-left">
+
+                        
+
+                        
+
+                        
+
+						<li><b></b></li>
+
+                					  
+                	    <li><a href="tel:18001203481">India toll free: 18001203481</a></li>			
+
+                					  
+                        <li><a href="tel:9674923512"">Mobile/Watsapp No: 9674923512</a></li>
+
+                					  
+                        <li><a href="/cdn-cgi/l/email-protection#66030817130f141f26010a0904070a120307050e03141507050702030b1f4805090b6b6c">Email ID: <span class="__cf_email__" data-cfemail="f7929986829e858eb7909b9895969b839296949f92858496949693929a8ed994989a">[email&#160;protected]</span>
+</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4 text-right">
+
+                	<div class="d-flex flex-wrap align-items-center justify-content-md-end justify-content-center mt-2 mt-md-0">
+
+                    	<ul class="list_none social_icons social_white text-center text-md-right">
+
+												<li><a href="https://www.facebook.com/GTTAcademyIndia/" target="_blank"><i class="ion-social-facebook"></i></a></li>
+
+												<li><a href="https://twitter.com/GTTAcademyIndia" target="_blank"><i class="ion-social-twitter"></i></a></li>
+
+												<li><a href="https://www.youtube.com/channel/UCyZIENvB_cAU_Uvn_LXz1yg" target="_blank"><i class="ion-social-youtube-outline"></i></a></li>
+
+												<li><a href="https://www.linkedin.com/company/gtt-academy-india/" target="_blank"><i class="ion-social-linkedin-outline"></i></a></li>
+
+												<li><a href="https://www.instagram.com/gttacademyindia/" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
+
+                        </ul>
+
+							<ul>
+
+                            <div class="apply-btn-area">
+
+                              <li><a href="apply-now.php" class="btn btn-default">Apply Now</a></li>
+
+                            </div>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg">
+
+          <div class="col-md-2">
+
+            <a class="navbar-brand" href="./">
+
+                <img class="logo_light" src="assets/images/logo.png" title="Global Teacher Training Academy (GTT Academy)" alt="Global Teacher Training Academy (GTT Academy)" />
+
+                <img class="logo_dark" src="assets/images/logo.png" title="Global Teacher Training Academy (GTT Academy)" alt="Global Teacher Training Academy (GTT Academy)" />
+
+                <img class="logo_default" src="assets/images/logo.png" title="Global Teacher Training Academy (GTT Academy)" alt="Global Teacher Training Academy (GTT Academy)" />
+
+            </a>
+
+          </div>
+
+          <div class="col-md-10">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="ion-android-menu"></span> Menu</button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+				<ul class="navbar-nav">
+
+                    <li><a class="nav-link " href="./">Home</a></li>
+
+                    <li class="dropdown">
+
+                        <a class="nav-link " href="about.php">About Us</a>
+
+                        <!-- <div class="dropdown-menu">
+
+                            <ul>
+
+                                <li><a class="dropdown-item nav-link nav_item" href="about.php">About Us 1</a></li>
+
+                                <li><a class="dropdown-item nav-link nav_item" href="about.php">About Us 2</a></li>
+
+                            </ul>
+
+                        </div> -->
+
+                    </li>
+
+										<li class="dropdown">
+
+											<a class="dropdown-toggle nav-link " href="#" data-toggle="dropdown">Courses</a>
+
+											<div class="dropdown-menu">
+
+													<ul>
+
+														
+  														<li class="dropdown">
+
+																	<a class="dropdown-item menu-link dropdown-toggler " href='javascript:void(0)'>Teacher Training Courses </a>
+
+																	<div class="dropdown-menu">
+
+																			<ul class="over">
+
+																				
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/teacher-training-courses/pre-and-primary-teacher-training-with-practical-session.php">Pre and Primary Teacher Training with Practical Session</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/teacher-training-courses/montessori-teacher-training-with-practical-session.php">Montessori Teacher Training with Practical Session</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/teacher-training-courses/diploma-in-teaching-and-training.php">Diploma in Teaching and Training</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/teacher-training-courses/early-childhood-care-and-education.php">Early Childhood Care and Education </a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/teacher-training-courses/nursery-teacher-training-with-practical-session.php">Nursery Teacher Training With Practical Session</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/teacher-training-courses/educational-administration-and-management.php">Educational Administration and Management</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/teacher-training-courses/diploma-in-child-and-adolescent-counseling.php">Diploma in Child and Adolescent Counseling</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/teacher-training-courses/diploma-in-child-psychology.php">Diploma in Child Psychology</a></li>
+
+																					
+																			</ul>
+
+																	</div>
+
+															</li>
+
+															
+  														<li class="dropdown">
+
+																	<a class="dropdown-item menu-link dropdown-toggler " href='javascript:void(0)'>Specialized Courses</a>
+
+																	<div class="dropdown-menu">
+
+																			<ul class="over">
+
+																				
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/specialized-courses/diploma-in-child-and-adolescent-counseling.php">Diploma in Child and Adolescent Counseling</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/specialized-courses/classroom-management-skill.php">Classroom Management Skill</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/specialized-courses/diploma-in-child-psychology.php">Diploma in Child Psychology</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/specialized-courses/teaching-grammar.php">Teaching Grammar</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/specialized-courses/teaching-phonetics.php">Teaching Phonetics</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/specialized-courses/nlp-for-students.php">NLP for Students</a></li>
+
+																					
+																			</ul>
+
+																	</div>
+
+															</li>
+
+															
+  														<li class="dropdown">
+
+																	<a class="dropdown-item menu-link dropdown-toggler " href='javascript:void(0)'>TEFL/TESOL Online Courses</a>
+
+																	<div class="dropdown-menu">
+
+																			<ul class="over">
+
+																				
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/tefl-tesol-online-courses/140-hour-tefl-course-diploma-with-practical-teaching-session.php">140 Hour TEFL Course Diploma with Practical Teaching Session</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/tefl-tesol-online-courses/200-hour-tesol-course-pg-diploma-with-dual-specialisation-and-practical-teaching-session.php">200 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session</a></li>
+
+																					
+																					<li><a class="dropdown-item nav-link nav_item" href="courses/tefl-tesol-online-courses/400-hour-tesol-course-masters-with-practical-teaching-session.php">400 Hour TESOL Course Masters with Practical Teaching Session</a></li>
+
+																					
+																			</ul>
+
+																	</div>
+
+															</li>
+
+															
+													</ul>
+
+											</div>
+
+									</li>
+
+                    <!-- <li class="dropdown">
+
+                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Courses</a>
+
+                        <div class="dropdown-menu">
+
+                            <ul>
+
+															
+                                <li>
+
+																	<a class="dropdown-item nav-link nav_item" href="details-course/pre-and-primary-teacher-training.php">Pre and Primary Teacher Training </a>
+
+																</li>
+
+																
+                                <li>
+
+																	<a class="dropdown-item nav-link nav_item" href="details-course/montessori-teacher-training.php">Montessori Teacher Training </a>
+
+																</li>
+
+																
+                                <li>
+
+																	<a class="dropdown-item nav-link nav_item" href="details-course/nursery-teacher-training.php">Nursery Teacher Training </a>
+
+																</li>
+
+																
+                                <li>
+
+																	<a class="dropdown-item nav-link nav_item" href="details-course/diploma-in-early-childhood-care-and-education.php">Diploma in Early Childhood Care and Education </a>
+
+																</li>
+
+																
+                                <li>
+
+																	<a class="dropdown-item nav-link nav_item" href="details-course/diploma-in-educational-administration-and-management.php">Diploma in Educational Administration and Management</a>
+
+																</li>
+
+																
+                            </ul>
+
+                        </div>
+
+                    </li> -->
+
+                    <li><a class="nav-link " href="career.php">career opportunities</a></li>
+
+                    <li><a class="nav-link " href="accreditations.php">Accreditations </a></li>
+
+                    <li><a class="nav-link " href="faq.php">FAQ</a></li>
+
+                    <li><a class="nav-link " href="alumni.php">Alumni</a></li>
+
+                    <li><a class="nav-link " href="contact.php">Contact us</a></li>
+
+                </ul>
+
+            </div>
+
+          </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- END HEADER -->
+
+<!-- START SECTION BREADCRUMB -->
+<!-- END SECTION BANNER -->
+<section class="small_pt small_pb overflow-hidden fof">
+	<div class="container-fluid p-0">
+    	<div class="row no-gutters align-items-center">
+        	<div class="col-md-12">
+            	<div class="overlap_section padding_eight_all text-center">
+                	<div class="animation animated fadeInLeft" data-animation="fadeInLeft" data-animation-delay="0.02s" style="animation-delay: 0.02s; opacity: 1;">
+                        <h1>404 Error</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION ABOUT -->
+<!-- START FOOTER -->
+<footer class="bg-dark footer_dark">
+	<div class="top_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-8 mb-4 mb-lg-0">
+                	<h6 class="widget_title">Contact us</h6>
+                    <ul class="contact_info contact_info_light list_none">
+                        <li>
+                            <i class="fa fa-map-marker-alt "></i>
+                            <address>Level 1, Unit 2, Sy.No. 83/1, Plot no 2, Inorbit Mall Road,<br />
+Raidurg Village, Hi-Tech City, Hyderabad - 500081, TS, India.</address>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+														 <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3f5a514e4a564d467f5853505d5e534b5a5e5c575a4d4c5e5c5e5b5a5246115c5052">[email&#160;protected]</a></p>
+                        </li>
+                        <li>
+                            <i class="fa fa-mobile-alt"></i>
+														<p>9674923512</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-4 mb-4 mb-lg-0">
+                	<h6 class="widget_title">Useful Links</h6>
+                    <ul class="list_none widget_links links_style1">
+                        <li><a href="tutor-support-assessment.php">Tutor Support & Assessment</a></li>
+                        <li><a href="Job-opportunities-placement-support.php">Job Opportunities & Placement support</a></li>
+                        <li><a href="payment.php">Payment</a></li>
+                    	<li><a href="about.php">About Us</a></li>
+                        <li><a href="career.php">Career Opportunities</a></li>
+                        <li><a href="accreditations.php">Accreditations </a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="alumni.php">Alumni</a></li>
+					    <li><a href="blog.php">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+									<h6 class="widget_title">Quick Links</h6>
+										<ul class="list_none widget_links links_style1">
+												<li><a href="privacy-policy.php">Privacy Policy </a></li>
+												<li><a href="terms-conditions.php">Terms and Conditions</a></li>
+												<li><a href="payment.php">Payment</a></li>
+												<li><a href="refund.php">Refund</a></li>
+										</ul>
+                </div>
+								<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+									<h6 class="widget_title">Brochure</h6>
+																			<a target="_blank" href="download/71769094426.pdf"><img src="images/broucher.png">
+										<h3>Fill the Form to Download Our Brochure</h3></a>
+																				<h6 class="widget_title">Follow Us</h6>
+										<ul class="list_none social_icons radius_social social_white social_style1">
+												<li><a href="https://www.facebook.com/GTTAcademyIndia/" target="_blank"><i class="ion-social-facebook"></i></a></li>
+												<li><a href="https://twitter.com/GTTAcademyIndia" target="_blank"><i class="ion-social-twitter"></i></a></li>
+												<li><a href="https://www.youtube.com/channel/UCyZIENvB_cAU_Uvn_LXz1yg" target="_blank"><i class="ion-social-youtube-outline"></i></a></li>
+												<li><a href="https://www.instagram.com/gttacademyindia/" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
+										</ul>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h6 class="widget_title">Subscribe Newsletter</h6>
+                    <div class="newsletter_form mb-4">
+											
+												<script>
+												function checkfashion()
+												{
+												if(document.subscribe_frm.n_title.value.search(/\S/) == -1){
+												alert("Please Enter E-Mail Address.");
+												document.subscribe_frm.n_title.focus();
+												return false;
+												}
+
+												return true;
+												}
+
+
+												function ValidateEmail2subscribe(inputText)
+												{
+												var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+												if(inputText.value.match(mailformat))
+												{
+												return true;
+												}
+												else
+												{
+												alert("Please correctly fill your email address and then submit");
+												document.subscribe_frm.n_title.value='';
+												return false;
+												}
+												}
+												</script>
+																								<form name="subscribe_frm" action="/404.php#emailaccept"  class="form-main" method="post">
+															<div class="form-group">
+															<input type="hidden" name="showmode" value="emailsubscribe" />
+															<input class="form-control" id="mce-EMAIL" type="text"  placeholder="Enter email id"  name="n_title" onBlur="javascript: ValidateEmail2subscribe(this);" value="" required>
+															<button data-height="45px" name="Subscribe" type="submit" class="btn btn-default btn-sm" value="Submit" onClick="validateSubscription();">Subscribe</button>
+														</div>
+													</form>
+													                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="bottom_footer bg_black">
+    	<div class="container">
+        	<div class="row align-items-center">
+            	<div class="col-md-6">
+                	<p class="copyright m-md-0 text-center text-md-left">© 2020-2026 GTT Academy Pvt Ltd All Rights Reserved.   </p>
+                </div>
+                <div class="col-md-6 text-right">
+                	<p> Designed by : <a target="_blank" href="https://www.infoskysolutions.com/" rel="nofollow"> Infosky Solutions</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="appointment"><div class="rotate"><a href="#" data-toggle="modal" data-target="#Login"><img src="assets/images/call-now.gif" width="50%"></a></div></div>
+<!-- END FOOTER -->
+
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
+
+<!-- Latest jQuery -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-1.12.4.min.js"></script>
+<!-- jquery-ui -->
+<script src="assets/js/jquery-ui.js"></script>
+<!-- popper min js -->
+<script src="assets/js/popper.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- magnific-popup min js  -->
+<script src="assets/js/magnific-popup.min.js"></script>
+<!-- waypoints min js  -->
+<script src="assets/js/waypoints.min.js"></script>
+<!-- parallax js  -->
+<script src="assets/js/parallax.js"></script>
+<!-- countdown js  -->
+<script src="assets/js/jquery.countdown.min.js"></script>
+<!-- jquery.counterup.min js -->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!-- imagesloaded js -->
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<!-- isotope min js -->
+<script src="assets/js/isotope.min.js"></script>
+<!-- jquery.parallax-scroll js -->
+<script src="assets/js/jquery.parallax-scroll.js"></script>
+<!-- scripts js -->
+<script src="assets/js/scripts.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"2321c83d5ca74fb48005cdc77c16cc5b","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
+

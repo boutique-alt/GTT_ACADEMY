@@ -76,13 +76,13 @@ export default function AboutStickyLayout({ sidebar, children }: Props) {
   }, []);
 
   return (
-    <div ref={wrapRef} className="relative mx-auto flex max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:gap-12 lg:px-8">
-      <div ref={railRef} className="w-full shrink-0 lg:w-[280px]">
-        <div ref={sideRef} className="w-full will-change-[position,top]">
+    <div ref={wrapRef} className="relative mx-auto flex w-full max-w-7xl min-w-0 flex-col gap-10 overflow-x-clip px-4 sm:px-6 lg:flex-row lg:items-start lg:gap-12 lg:px-8">
+      <div ref={railRef} className="w-full min-w-0 max-w-full shrink-0 lg:w-[280px]">
+        <div ref={sideRef} className="w-full min-w-0 max-w-full will-change-[position,top]">
           {sidebar}
         </div>
       </div>
-      <div className="min-w-0 flex-1">{children}</div>
+      <div className="min-w-0 max-w-full flex-1">{children}</div>
     </div>
   );
 }

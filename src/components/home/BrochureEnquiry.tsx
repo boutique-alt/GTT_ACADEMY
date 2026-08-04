@@ -2,9 +2,13 @@
 
 import Image from "next/image";
 import { FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
+import { thankYouHref } from "@/data/site";
 
 export default function BrochureEnquiry() {
+  const router = useRouter();
+
   function submitBrochure(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -12,7 +16,8 @@ export default function BrochureEnquiry() {
     const body = encodeURIComponent(
       `Name: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nCourse: ${data.get("course")}\nRequest: Please send the course brochure.`,
     );
-    window.location.href = `mailto:enquiry@globalteachersacademy.com?subject=${subject}&body=${body}`;
+    window.open(`mailto:enquiry@globalteachersacademy.com?subject=${subject}&body=${body}`, "_blank");
+    router.push(thankYouHref);
   }
 
   return (

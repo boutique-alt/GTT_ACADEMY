@@ -57,7 +57,20 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-blue-200">© 2020-2026 GTT Academy Pvt Ltd. All Rights Reserved.</div>
+      <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-blue-200">
+        <p>© 2026 GTT Academy Pvt Ltd. All Rights Reserved.</p>
+        <p className="mt-1.5">
+          Design and developed by{" "}
+          <a
+            href="https://pixelsolution.in/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-white transition hover:text-[#ffbc09]"
+          >
+            Pixel Solution
+          </a>
+        </p>
+      </div>
     </footer>
   );
 }

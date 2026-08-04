@@ -1,6 +1,6 @@
 import { Gift, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
-import { applyNowHref } from "@/data/site";
+import ApplyNowLink from "@/components/ui/ApplyNowLink";
 
 export default function FloatingContact() {
   return (
@@ -21,19 +21,20 @@ export default function FloatingContact() {
       </a>
 
       <div className="fixed bottom-4 right-3 z-40 flex flex-col items-end gap-2 sm:bottom-5 sm:right-4">
-        <a
-          href={applyNowHref}
+        <ApplyNowLink
           aria-label="View special offer"
           className="hidden animate-[contactFloat_3.2s_ease-in-out_infinite] items-center gap-2 rounded-full border border-[#ffbc09]/40 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-[#05245b] shadow-xl transition hover:bg-[#ffbc09] sm:inline-flex"
         >
           <Gift size={15} className="text-[#30ad22]" /> Special Offer
-        </a>
+        </ApplyNowLink>
         <a
           href="tel:9674923512"
           aria-label="Call GTT Academy"
           className="btn-brand-gradient grid size-12 place-items-center rounded-full shadow-2xl shadow-blue-950/25 transition hover:-translate-y-1 sm:inline-flex sm:size-auto sm:items-center sm:gap-2 sm:rounded-full sm:px-5 sm:py-3 sm:text-sm sm:font-bold"
         >
-          <span className="grid size-7 place-items-center rounded-full bg-white/15 sm:bg-white/15"><Phone size={14} /></span>
+          <span className="grid size-7 place-items-center rounded-full bg-white/15 sm:bg-white/15">
+            <Phone size={14} />
+          </span>
           <span className="hidden sm:inline">Call Now</span>
         </a>
       </div>

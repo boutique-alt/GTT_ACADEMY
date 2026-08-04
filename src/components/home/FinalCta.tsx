@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { applyNowHref } from "@/data/site";
+import ApplyNowLink from "@/components/ui/ApplyNowLink";
 
 export default function FinalCta() {
   return (
@@ -11,9 +11,9 @@ export default function FinalCta() {
           <p className="mb-2 text-sm font-bold uppercase tracking-[0.18em] text-white/85">Take the next step</p>
           <h2 className="font-serif text-3xl font-bold sm:text-4xl">The Future of Teaching and Learning Starts Here!</h2>
         </div>
-        <a href={applyNowHref} className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-4 font-bold text-[#05245b] shadow-xl transition hover:-translate-y-0.5 hover:bg-[#ffbc09]">
+        <ApplyNowLink className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-4 font-bold text-[#05245b] shadow-xl transition hover:-translate-y-0.5 hover:bg-[#ffbc09]">
           Apply Now <ArrowRight size={18} />
-        </a>
+        </ApplyNowLink>
       </div>
     </section>
   );

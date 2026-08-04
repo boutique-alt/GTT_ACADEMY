@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { applyNowHref } from "@/data/site";
-
+import ApplyNowLink from "@/components/ui/ApplyNowLink";
 const columns = [
   [
     "/images/gallery/gallery-1.jpg",
@@ -75,12 +74,9 @@ export default function AboutEditMarquee() {
           <p className="mt-4 max-w-md text-sm leading-7 text-slate-600 sm:text-base">
             Timeless craft for classrooms that matter — practical skills, global credentials, and confident educators.
           </p>
-          <a
-            href={applyNowHref}
-            className="btn-brand-gradient mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.18em]"
-          >
+          <ApplyNowLink className="btn-brand-gradient mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.18em]">
             Explore <ArrowRight size={16} />
-          </a>
+          </ApplyNowLink>
         </div>
       </div>
     </div>

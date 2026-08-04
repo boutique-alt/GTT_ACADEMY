@@ -2,8 +2,7 @@ import { ArrowRight } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
 import AboutEditMarquee from "@/components/about/AboutEditMarquee";
 import AboutStickyLayout from "@/components/about/AboutStickyLayout";
-import { applyNowHref } from "@/data/site";
-
+import ApplyNowLink from "@/components/ui/ApplyNowLink";
 const paragraphs = [
   "Global Teacher Training Academy (GTT ACADEMY) is not just another name in the gamut of teacher training institutes available in the Teaching and Training Industry but it's a movement to inspire, educate and motivate the class of individuals whom we know as teachers. The global certificate is accepted across all countries as our certificate does not only boast of national and international accreditation but is also legalized through Central Government attestation and apostille which makes the certificate accepted across all schools in India and abroad. The certificate is verified, validated and attested by the central Government and it can be used to get permanent work visa across 130 countries. The Certificate Apostille vouches the credibility and authenticity of the degree that is provided by us. This formal validation saves the time for any additional certification from any embassy to get a work visa in any country.",
   "At our core we believe that if we want a sweep of refinement in any education system we must make competent teachers and to create that we need high quality teacher training programs which focuses on developing people. It is not a hidden fact in the educational system today we significantly lack qualified teachers who not just have a degree but also the skills to nurture minds of children in a holistic manner. We are a team of dedicated professionals with a mission to optimize individual teaching potential for those who desire to become qualified teachers.",
@@ -28,12 +27,9 @@ export default function AboutStory() {
               ))}
             </div>
 
-            <a
-              href={applyNowHref}
-              className="btn-brand-gradient mt-10 inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold tracking-[0.04em]"
-            >
+            <ApplyNowLink className="btn-brand-gradient mt-10 inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold tracking-[0.04em]">
               Apply Now <ArrowRight size={18} />
-            </a>
+            </ApplyNowLink>
           </div>
         </div>
       </AboutStickyLayout>

@@ -1,7 +1,7 @@
 import { ArrowRight, Check } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
-import { applyNowHref } from "@/data/site";
-
+import AboutStickyLayout from "@/components/about/AboutStickyLayout";
+import ApplyNowLink from "@/components/ui/ApplyNowLink";
 const intro = [
   "Global Teacher Training Academy (GTT Academy) provides several opportunities for candidates seeking teaching jobs after completion of their courses. By providing an apostille Certificate, GTT Academy not only authenticates your certificate but also at the same time saves you loads of time while looking for a job.",
   "GTT Academy puts emphasis on the placement services as much as it does on its teacher training programs.",
@@ -33,14 +33,12 @@ const closing = [
 
 export default function CareerContent() {
   return (
-    <section className="bg-[#f5f8fc] py-16 sm:py-20">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-12 lg:px-8">
-        <AboutCoursesSidebar />
+    <section className="no-view-reveal w-full min-w-0 overflow-x-clip bg-[#f5f8fc] py-16 sm:py-20">
+      <AboutStickyLayout sidebar={<AboutCoursesSidebar />}>
+        <div className="min-w-0 max-w-full rounded-[1.5rem] border border-slate-100 bg-white p-5 shadow-sm sm:p-8 lg:p-10">
+          <h2 className="font-serif text-2xl font-bold text-[#05245b] sm:text-3xl lg:text-4xl">Career Opportunities</h2>
 
-        <div className="rounded-[1.5rem] border border-slate-100 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
-          <h2 className="font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">Career Opportunities</h2>
-
-          <div className="mt-7 space-y-5 text-[15px] leading-7 text-slate-600">
+          <div className="mt-7 space-y-5 text-[15px] leading-7 break-words text-slate-600">
             {intro.map((paragraph) => (
               <p key={paragraph.slice(0, 64)}>{paragraph}</p>
             ))}
@@ -49,11 +47,11 @@ export default function CareerContent() {
 
             <ul className="grid gap-3 sm:grid-cols-2">
               {jobs.map((job) => (
-                <li key={job} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
+                <li key={job} className="flex min-w-0 items-start gap-3 text-sm leading-6 text-slate-700">
                   <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-[#30ad22] text-white">
                     <Check size={13} />
                   </span>
-                  {job}
+                  <span className="min-w-0 flex-1 break-words">{job}</span>
                 </li>
               ))}
             </ul>
@@ -63,14 +61,11 @@ export default function CareerContent() {
             ))}
           </div>
 
-          <a
-            href={applyNowHref}
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-[#30ad22] px-7 py-4 text-sm font-semibold tracking-[0.04em] text-white shadow-xl shadow-green-900/20 transition hover:-translate-y-0.5 hover:bg-[#278f1c]"
-          >
+          <ApplyNowLink className="btn-brand-gradient mt-10 inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold tracking-[0.04em]">
             Apply Now <ArrowRight size={18} />
-          </a>
+            </ApplyNowLink>
         </div>
-      </div>
+      </AboutStickyLayout>
     </section>
   );
 }

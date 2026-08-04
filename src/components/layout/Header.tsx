@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
-import { applyNowHref, courseGroups, navLinks } from "@/data/site";
+import ApplyNowLink from "@/components/ui/ApplyNowLink";
+import { courseGroups, navLinks } from "@/data/site";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +23,9 @@ export default function Header() {
               <Mail size={13} /> enquiry@globalteachersacademy.com
             </a>
           </div>
-          <a className="font-bold text-[#ffbc09]" href="tel:9674923512">WhatsApp: 9674923512</a>
+          <a className="font-bold text-[#ffbc09]" href="tel:9674923512">
+            WhatsApp: 9674923512
+          </a>
         </div>
       </div>
 
@@ -50,7 +53,9 @@ export default function Header() {
                       <ul className="space-y-2.5">
                         {group.courses.map((course) => (
                           <li key={`${group.title}-${course.title}`}>
-                            <a href={course.href} target="_blank" rel="noreferrer" className="text-sm leading-5 text-slate-600 transition hover:text-[#30ad22]">{course.title}</a>
+                            <a href={course.href} target="_blank" rel="noreferrer" className="text-sm leading-5 text-slate-600 transition hover:text-[#30ad22]">
+                              {course.title}
+                            </a>
                           </li>
                         ))}
                       </ul>
@@ -64,9 +69,7 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a href={applyNowHref} className="btn-brand-gradient ml-3 rounded-full px-5 py-3 text-sm font-bold">
-              Apply Now
-            </a>
+            <ApplyNowLink className="btn-brand-gradient ml-3 rounded-full px-5 py-3 text-sm font-bold">Apply Now</ApplyNowLink>
           </div>
 
           <button className="rounded-lg p-2 text-[#0045bc] lg:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
@@ -77,7 +80,9 @@ export default function Header() {
         {menuOpen && (
           <div className="max-h-[calc(100vh-118px)] overflow-y-auto border-t bg-white px-4 py-4 lg:hidden">
             {navLinks.slice(0, 2).map((item) => (
-              <a onClick={() => setMenuOpen(false)} key={item.label} href={item.href} className="block border-b border-slate-100 py-3 font-semibold text-slate-700">{item.label}</a>
+              <a onClick={() => setMenuOpen(false)} key={item.label} href={item.href} className="block border-b border-slate-100 py-3 font-semibold text-slate-700">
+                {item.label}
+              </a>
             ))}
             <button onClick={() => setCoursesOpen(!coursesOpen)} className="flex w-full items-center justify-between border-b border-slate-100 py-3 font-semibold text-slate-700">
               Courses <ChevronDown className={coursesOpen ? "rotate-180" : ""} size={16} />
@@ -88,16 +93,22 @@ export default function Header() {
                   <div key={group.title}>
                     <p className="mb-2 text-sm font-bold text-[#0045bc]">{group.title}</p>
                     {group.courses.map((course) => (
-                      <a key={`${group.title}-${course.title}`} href={course.href} target="_blank" rel="noreferrer" className="block py-1.5 text-xs text-slate-600">{course.title}</a>
+                      <a key={`${group.title}-${course.title}`} href={course.href} target="_blank" rel="noreferrer" className="block py-1.5 text-xs text-slate-600">
+                        {course.title}
+                      </a>
                     ))}
                   </div>
                 ))}
               </div>
             )}
             {navLinks.slice(2).map((item) => (
-              <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)} className="block border-b border-slate-100 py-3 font-semibold text-slate-700">{item.label}</a>
+              <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)} className="block border-b border-slate-100 py-3 font-semibold text-slate-700">
+                {item.label}
+              </a>
             ))}
-            <a href={applyNowHref} onClick={() => setMenuOpen(false)} className="btn-brand-gradient mt-4 block rounded-full px-5 py-3 text-center font-bold">Apply Now</a>
+            <ApplyNowLink onClick={() => setMenuOpen(false)} className="btn-brand-gradient mt-4 block rounded-full px-5 py-3 text-center font-bold">
+              Apply Now
+            </ApplyNowLink>
           </div>
         )}
       </nav>
