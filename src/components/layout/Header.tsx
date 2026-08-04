@@ -51,13 +51,20 @@ export default function Header() {
                     <div key={group.title}>
                       <h3 className="mb-3 border-b border-slate-100 pb-3 font-bold text-[#0045bc]">{group.title}</h3>
                       <ul className="space-y-2.5">
-                        {group.courses.map((course) => (
-                          <li key={`${group.title}-${course.title}`}>
-                            <a href={course.href} target="_blank" rel="noreferrer" className="text-sm leading-5 text-slate-600 transition hover:text-[#30ad22]">
-                              {course.title}
-                            </a>
-                          </li>
-                        ))}
+                        {group.courses.map((course) => {
+                          const external = course.href.startsWith("http");
+                          return (
+                            <li key={`${group.title}-${course.title}`}>
+                              <a
+                                href={course.href}
+                                {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+                                className="text-sm leading-5 text-slate-600 transition hover:text-[#30ad22]"
+                              >
+                                {course.title}
+                              </a>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   ))}
@@ -92,11 +99,20 @@ export default function Header() {
                 {courseGroups.map((group) => (
                   <div key={group.title}>
                     <p className="mb-2 text-sm font-bold text-[#0045bc]">{group.title}</p>
-                    {group.courses.map((course) => (
-                      <a key={`${group.title}-${course.title}`} href={course.href} target="_blank" rel="noreferrer" className="block py-1.5 text-xs text-slate-600">
-                        {course.title}
-                      </a>
-                    ))}
+                    {group.courses.map((course) => {
+                      const external = course.href.startsWith("http");
+                      return (
+                        <a
+                          key={`${group.title}-${course.title}`}
+                          href={course.href}
+                          onClick={() => setMenuOpen(false)}
+                          {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+                          className="block py-1.5 text-xs text-slate-600"
+                        >
+                          {course.title}
+                        </a>
+                      );
+                    })}
                   </div>
                 ))}
               </div>

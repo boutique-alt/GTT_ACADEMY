@@ -22,25 +22,34 @@ export default function AboutHero() {
           }}
         />
         <div className="relative z-10 flex h-full w-full">
-          <div className="flex h-full w-[min(48%,28rem)] items-center px-4 py-5 sm:w-[min(44%,32rem)] sm:px-8 sm:py-8 lg:px-12 lg:py-10 xl:px-16 xl:py-12">
-            <blockquote className="border-l-[3px] border-[#ffbc09] pl-3 sm:pl-5">
-              <p className="font-serif text-[clamp(0.85rem,2.3vw,1.75rem)] font-semibold uppercase leading-[1.45] tracking-[0.04em] text-white sm:leading-[1.5]">
-                {quoteLines.map((line) => (
-                  <span key={line} className="block">
+          <div className="flex h-full w-[min(48%,28rem)] items-center px-4 py-5 sm:w-[min(44%,32rem)] sm:px-8 sm:py-8 lg:w-[min(58%,52rem)] lg:items-start lg:px-12 lg:pt-16 lg:pb-10 xl:w-[min(60%,56rem)] xl:px-16 xl:pt-20 xl:pb-12">
+            <blockquote className="border-l-[3px] border-[#ffbc09] pl-3 sm:pl-5 lg:border-l-4 lg:pl-6">
+              <p className="font-serif text-[clamp(0.85rem,2.3vw,1.75rem)] font-semibold uppercase leading-[1.45] tracking-[0.04em] drop-shadow-[0_2px_10px_rgba(3,27,70,0.45)] sm:leading-[1.5] lg:text-5xl lg:leading-[1.1] lg:tracking-[-0.01em] xl:text-[4.5rem] xl:leading-[1.05]">
+                {quoteLines.map((line, i) => (
+                  <span
+                    key={line}
+                    className={`block ${
+                      i === quoteLines.length - 1
+                        ? "text-[#ffbc09]"
+                        : i === 0
+                          ? "text-white"
+                          : "text-[#dce9ff]"
+                    }`}
+                  >
                     {line}
                   </span>
                 ))}
               </p>
-              <footer className="mt-3 text-[10px] font-bold tracking-[0.08em] text-[#ffbc09] sm:mt-4 sm:text-xs sm:tracking-[0.12em] md:text-sm">
+              <footer className="mt-3 text-[10px] font-bold tracking-[0.08em] text-[#ffbc09] sm:mt-4 sm:text-xs sm:tracking-[0.12em] md:text-sm lg:mt-6 lg:text-base lg:tracking-[0.14em]">
                 — Chinese Proverb
               </footer>
             </blockquote>
           </div>
         </div>
       </section>
-      <div className="bg-brand-gradient py-4 sm:py-5">
+      <div className="bg-brand-gradient py-4 sm:py-5 lg:py-7">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-center font-display text-3xl font-semibold tracking-[-0.02em] text-white sm:text-4xl">
+          <h1 className="text-center font-display text-3xl font-semibold tracking-[-0.02em] text-white sm:text-4xl lg:text-[4.5rem] lg:leading-[1.05]">
             About Us
           </h1>
         </div>

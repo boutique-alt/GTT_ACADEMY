@@ -15,7 +15,11 @@ export default function TrustFeatureCard({ icon, title, text, href }: Props) {
       </div>
       <h2 className="mb-3 font-serif text-xl font-bold text-[#05245b] transition duration-300 group-hover:text-[#0045bc]">{title}</h2>
       <p className="flex-1 text-sm leading-6 text-slate-600 transition-all duration-500 group-hover:leading-7">{text}</p>
-      <a href={href} className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-[#30ad22] transition duration-300 group-hover:gap-2 group-hover:text-[#0045bc]">
+      <a
+        href={href}
+        {...(href.startsWith("http") ? { target: "_blank" as const, rel: "noreferrer" } : {})}
+        className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-[#30ad22] transition duration-300 group-hover:gap-2 group-hover:text-[#0045bc]"
+      >
         Read More <span className="transition duration-300 group-hover:translate-x-0.5">→</span>
       </a>
     </article>

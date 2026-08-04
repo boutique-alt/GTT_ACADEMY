@@ -1,14 +1,13 @@
 import TrustFeatureCard from "@/components/home/TrustFeatureCard";
 import TrustFeaturesMobile from "@/components/home/TrustFeaturesMobile";
-
-const LIVE = "https://www.globalteachersacademy.com";
+import { coursePath } from "@/data/site";
 
 const features = [
   {
     icon: "/images/certificate.png",
     title: "Importance of Teacher Training",
     text: "Learn and create new teaching strategies that increase students' interest and make classroom education more effective.",
-    href: `${LIVE}/courses/teacher-training-courses/pre-and-primary-teacher-training-with-practical-session.php`,
+    href: coursePath("teacher-training-courses", "pre-and-primary-teacher-training-with-practical-session"),
   },
   {
     icon: "/images/certificate-detail.jpg",
@@ -20,7 +19,7 @@ const features = [
     icon: "/images/apostille.jpg",
     title: "Apostille Certification from MEA",
     text: "Receive an Apostille Certificate after course completion, eliminating the need for added embassy certification.",
-    href: "/about",
+    href: "/accreditations",
   },
 ];
 

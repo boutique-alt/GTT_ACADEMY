@@ -1,36 +1,98 @@
 const LIVE = "https://www.globalteachersacademy.com";
 
+/** Local course routes (mirror live site paths without .php). */
+export const coursePath = (...segments: string[]) =>
+  `/courses/${segments.map((s) => s.replace(/\.php$/, "")).join("/")}`;
+
+/** Live course page until the local app has that route built. */
+const liveCourse = (...segments: string[]) =>
+  `${LIVE}/courses/${segments.map((s) => s.replace(/\.php$/, "")).join("/")}.php`;
+
 export const courseGroups = [
   {
     title: "Teacher Training Courses",
     courses: [
-      { title: "Pre and Primary Teacher Training with Practical Session", href: `${LIVE}/courses/teacher-training-courses/pre-and-primary-teacher-training-with-practical-session.php` },
-      { title: "Montessori Teacher Training with Practical Session", href: `${LIVE}/courses/teacher-training-courses/montessori-teacher-training-with-practical-session.php` },
-      { title: "Diploma in Teaching and Training", href: `${LIVE}/courses/teacher-training-courses/diploma-in-teaching-and-training.php` },
-      { title: "Early Childhood Care and Education", href: `${LIVE}/courses/teacher-training-courses/early-childhood-care-and-education.php` },
-      { title: "Nursery Teacher Training With Practical Session", href: `${LIVE}/courses/teacher-training-courses/nursery-teacher-training-with-practical-session.php` },
-      { title: "Educational Administration and Management", href: `${LIVE}/courses/teacher-training-courses/educational-administration-and-management.php` },
-      { title: "Diploma in Child and Adolescent Counseling", href: `${LIVE}/courses/teacher-training-courses/diploma-in-child-and-adolescent-counseling.php` },
-      { title: "Diploma in Child Psychology", href: `${LIVE}/courses/teacher-training-courses/diploma-in-child-psychology.php` },
+      {
+        title: "Pre and Primary Teacher Training with Practical Session",
+        href: coursePath("teacher-training-courses", "pre-and-primary-teacher-training-with-practical-session"),
+      },
+      {
+        title: "Montessori Teacher Training with Practical Session",
+        href: liveCourse("teacher-training-courses", "montessori-teacher-training-with-practical-session"),
+      },
+      {
+        title: "Diploma in Teaching and Training",
+        href: liveCourse("teacher-training-courses", "diploma-in-teaching-and-training"),
+      },
+      {
+        title: "Early Childhood Care and Education",
+        href: liveCourse("teacher-training-courses", "early-childhood-care-and-education"),
+      },
+      {
+        title: "Nursery Teacher Training With Practical Session",
+        href: liveCourse("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
+      },
+      {
+        title: "Educational Administration and Management",
+        href: liveCourse("teacher-training-courses", "educational-administration-and-management"),
+      },
+      {
+        title: "Diploma in Child and Adolescent Counseling",
+        href: liveCourse("teacher-training-courses", "diploma-in-child-and-adolescent-counseling"),
+      },
+      {
+        title: "Diploma in Child Psychology",
+        href: liveCourse("teacher-training-courses", "diploma-in-child-psychology"),
+      },
     ],
   },
   {
     title: "Specialized Courses",
     courses: [
-      { title: "Diploma in Child and Adolescent Counseling", href: `${LIVE}/courses/specialized-courses/diploma-in-child-and-adolescent-counseling.php` },
-      { title: "Classroom Management Skill", href: `${LIVE}/courses/specialized-courses/classroom-management-skill.php` },
-      { title: "Diploma in Child Psychology", href: `${LIVE}/courses/specialized-courses/diploma-in-child-psychology.php` },
-      { title: "Teaching Grammar", href: `${LIVE}/courses/specialized-courses/teaching-grammar.php` },
-      { title: "Teaching Phonetics", href: `${LIVE}/courses/specialized-courses/teaching-phonetics.php` },
-      { title: "NLP for Students", href: `${LIVE}/courses/specialized-courses/nlp-for-students.php` },
+      {
+        title: "Diploma in Child and Adolescent Counseling",
+        href: liveCourse("specialized-courses", "diploma-in-child-and-adolescent-counseling"),
+      },
+      {
+        title: "Classroom Management Skill",
+        href: liveCourse("specialized-courses", "classroom-management-skill"),
+      },
+      {
+        title: "Diploma in Child Psychology",
+        href: liveCourse("specialized-courses", "diploma-in-child-psychology"),
+      },
+      {
+        title: "Teaching Grammar",
+        href: liveCourse("specialized-courses", "teaching-grammar"),
+      },
+      {
+        title: "Teaching Phonetics",
+        href: liveCourse("specialized-courses", "teaching-phonetics"),
+      },
+      {
+        title: "NLP for Students",
+        href: liveCourse("specialized-courses", "nlp-for-students"),
+      },
     ],
   },
   {
     title: "TEFL/TESOL Online Courses",
     courses: [
-      { title: "140 Hour TEFL Course Diploma with Practical Teaching Session", href: `${LIVE}/courses/tefl-tesol-online-courses/140-hour-tefl-course-diploma-with-practical-teaching-session.php` },
-      { title: "200 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session", href: `${LIVE}/courses/tefl-tesol-online-courses/200-hour-tesol-course-pg-diploma-with-dual-specialisation-and-practical-teaching-session.php` },
-      { title: "400 Hour TESOL Course Masters with Practical Teaching Session", href: `${LIVE}/courses/tefl-tesol-online-courses/400-hour-tesol-course-masters-with-practical-teaching-session.php` },
+      {
+        title: "140 Hour TEFL Course Diploma with Practical Teaching Session",
+        href: liveCourse("tefl-tesol-online-courses", "140-hour-tefl-course-diploma-with-practical-teaching-session"),
+      },
+      {
+        title: "200 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session",
+        href: liveCourse(
+          "tefl-tesol-online-courses",
+          "200-hour-tesol-course-pg-diploma-with-dual-specialisation-and-practical-teaching-session",
+        ),
+      },
+      {
+        title: "400 Hour TESOL Course Masters with Practical Teaching Session",
+        href: liveCourse("tefl-tesol-online-courses", "400-hour-tesol-course-masters-with-practical-teaching-session"),
+      },
     ],
   },
 ];
@@ -40,7 +102,7 @@ export const courses = [
     title: "Pre and Primary Teacher Training",
     image: "/images/courses/pre-primary.jpg",
     badge: "/images/premium-course.gif",
-    href: `${LIVE}/courses/teacher-training-courses/pre-and-primary-teacher-training-with-practical-session.php`,
+    href: coursePath("teacher-training-courses", "pre-and-primary-teacher-training-with-practical-session"),
     description:
       "GTT Academy significantly contributes to teacher education, producing quality pre-primary teachers interested in global exposure and challenging teaching conditions worldwide.",
   },
@@ -48,7 +110,7 @@ export const courses = [
     title: "Montessori Teacher Training",
     image: "/images/courses/montessori.jpg",
     badge: "/images/premium-course.gif",
-    href: `${LIVE}/courses/teacher-training-courses/montessori-teacher-training-with-practical-session.php`,
+    href: liveCourse("teacher-training-courses", "montessori-teacher-training-with-practical-session"),
     description:
       "Montessori Teacher Training Course at Global Teacher Training Academy empowers teachers to expand horizons and become trusted aides in learning.",
   },
@@ -56,7 +118,7 @@ export const courses = [
     title: "Early Childhood Care and Education",
     image: "/images/courses/early-childhood.jpg",
     badge: "/images/popular-course.gif",
-    href: `${LIVE}/courses/teacher-training-courses/early-childhood-care-and-education.php`,
+    href: liveCourse("teacher-training-courses", "early-childhood-care-and-education"),
     description:
       "In recent years, early childhood education has become more prevalent and has emerged as a global priority in the field of early childhood education.",
   },
@@ -64,7 +126,7 @@ export const courses = [
     title: "Child Psychology",
     image: "/images/courses/child-psychology.jpg",
     badge: "/images/popular-course.gif",
-    href: `${LIVE}/courses/teacher-training-courses/diploma-in-child-psychology.php`,
+    href: liveCourse("teacher-training-courses", "diploma-in-child-psychology"),
     description:
       "Diploma in Child Psychology from GTT Academy equips learners with a holistic approach to foster the development of young children from birth to 6 years.",
   },
@@ -72,7 +134,7 @@ export const courses = [
     title: "Child and Adolescent Counseling",
     image: "/images/courses/counselling.jpg",
     badge: "/images/popular-course.gif",
-    href: `${LIVE}/courses/teacher-training-courses/diploma-in-child-and-adolescent-counseling.php`,
+    href: liveCourse("teacher-training-courses", "diploma-in-child-and-adolescent-counseling"),
     description:
       "Our Diploma in Child and Adolescent Counseling equips learners to foster development and improve physical, emotional, social, and spiritual wellbeing of children and adolescents.",
   },
@@ -80,7 +142,7 @@ export const courses = [
     title: "Education Administration and Management",
     image: "/images/courses/administration.jpg",
     badge: "/images/premium-course.gif",
-    href: `${LIVE}/courses/teacher-training-courses/educational-administration-and-management.php`,
+    href: liveCourse("teacher-training-courses", "educational-administration-and-management"),
     description:
       "Education Administration and Management course by GTT Academy helps understand administrative functions and manage all departments in any educational institution.",
   },
@@ -88,7 +150,7 @@ export const courses = [
     title: "Diploma in Teaching and Training",
     image: "/images/courses/teaching-training.jpg",
     badge: "/images/premium-course.gif",
-    href: `${LIVE}/courses/teacher-training-courses/diploma-in-teaching-and-training.php`,
+    href: liveCourse("teacher-training-courses", "diploma-in-teaching-and-training"),
     description:
       "The Diploma in Teaching and Training equips educators to become exceptional teacher trainers, curriculum developers,or examiners, shaping the future of education.",
   },
@@ -96,7 +158,7 @@ export const courses = [
     title: "TESOL",
     image: "/images/courses/tesol.jpg",
     badge: "/images/premium-course.gif",
-    href: `${LIVE}/courses/tefl-tesol-online-courses/140-hour-tefl-course-diploma-with-practical-teaching-session.php`,
+    href: liveCourse("tefl-tesol-online-courses", "140-hour-tefl-course-diploma-with-practical-teaching-session"),
     description:
       "Our TESOL courses are competently designed programs that enable you to learn beyond the norm and get access to the international teaching industry.",
   },
@@ -119,9 +181,8 @@ export const usefulLinks = [
   { label: "About Us", href: "/about" },
   { label: "Career Opportunities", href: "/career" },
   { label: "Accreditations", href: "/accreditations" },
-  { label: "Courses", href: `${LIVE}/courses.php` },
+  { label: "Courses", href: "/#courses" },
 ];
-
 
 export const quickLinks = [
   { label: "Privacy Policy", href: `${LIVE}/privacy-policy.php` },

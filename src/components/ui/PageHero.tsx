@@ -13,9 +13,9 @@ export default function PageHero({ title, image }: Props) {
         />
         <div className="absolute inset-0 bg-black/40" />
       </section>
-      <div className="bg-brand-gradient py-4 sm:py-5">
+      <div className="bg-brand-gradient py-4 sm:py-5 lg:py-7">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-center font-display text-3xl font-semibold tracking-[-0.02em] text-white sm:text-4xl">
+          <h1 className="text-center font-display text-3xl font-semibold tracking-[-0.02em] text-white sm:text-4xl lg:text-[4.5rem] lg:leading-[1.05]">
             {title}
           </h1>
         </div>

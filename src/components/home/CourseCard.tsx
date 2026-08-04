@@ -41,8 +41,7 @@ export default function CourseCard({ title, description, image, href, badge }: P
         <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{description}</p>
         <a
           href={href}
-          target="_blank"
-          rel="noreferrer"
+          {...(href.startsWith("http") ? { target: "_blank" as const, rel: "noreferrer" } : {})}
           className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-[#0045bc] transition duration-300 group-hover:gap-2.5 group-hover:text-[#30ad22]"
         >
           Read More <ArrowUpRight size={16} className="transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

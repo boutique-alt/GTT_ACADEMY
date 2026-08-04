@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         destination: "/apply-now",
         permanent: false,
       },
+      {
+        source: "/courses/teacher-training-courses/pre-and-primary-teacher-training-with-practical-session.php",
+        destination: "/courses/teacher-training-courses/pre-and-primary-teacher-training-with-practical-session",
+        permanent: false,
+      },
     ];
   },
 };

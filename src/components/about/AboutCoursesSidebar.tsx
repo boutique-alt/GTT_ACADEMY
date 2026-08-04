@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { courseGroups } from "@/data/site";
 
@@ -20,17 +21,30 @@ export default function AboutCoursesSidebar() {
             <p className="text-sm font-bold break-words text-white">{group.title}</p>
           </div>
           <ul className="divide-y divide-slate-100">
-            {group.courses.map((course) => (
-              <li key={course.href} className="min-w-0">
-                <a
-                  href={course.href}
-                  className="flex min-w-0 items-start gap-2 px-3 py-3 text-sm leading-5 text-slate-700 transition hover:bg-[#f0faf3] hover:text-[#0045bc] sm:px-4"
-                >
+            {group.courses.map((course) => {
+              const external = course.href.startsWith("http");
+              const className =
+                "flex min-w-0 items-start gap-2 px-3 py-3 text-sm leading-5 text-slate-700 transition hover:bg-[#f0faf3] hover:text-[#0045bc] sm:px-4";
+              const children = (
+                <>
                   <ChevronRight size={16} className="mt-0.5 shrink-0 text-[#30ad22]" />
                   <span className="min-w-0 flex-1 break-words whitespace-normal">{course.title}</span>
-                </a>
-              </li>
-            ))}
+                </>
+              );
+              return (
+                <li key={`${group.title}-${course.href}`} className="min-w-0">
+                  {external ? (
+                    <a href={course.href} target="_blank" rel="noreferrer" className={className}>
+                      {children}
+                    </a>
+                  ) : (
+                    <Link href={course.href} className={className}>
+                      {children}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       ))}
