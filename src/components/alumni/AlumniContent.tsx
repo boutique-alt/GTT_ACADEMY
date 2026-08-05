@@ -7,7 +7,7 @@ import ApplyNowLink from "@/components/ui/ApplyNowLink";
 export default function AlumniContent() {
   return (
     <section className="no-view-reveal bg-[#f5f8fc] py-16 sm:py-20">
-      <AboutStickyLayout sidebar={<AboutCoursesSidebar />}>
+      <AboutStickyLayout sidebar={<AboutCoursesSidebar />} mobileContentFirst>
         <div className="rounded-[1.5rem] border border-slate-100 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
           <h2 className="font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">Alumni</h2>
 
