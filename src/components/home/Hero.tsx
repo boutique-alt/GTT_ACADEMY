@@ -42,7 +42,7 @@ export default function Hero() {
       {slides.map((slide, index) => (
         <div
           key={slide.image}
-          className={`absolute inset-0 bg-cover bg-[72%_center] bg-no-repeat transition-all duration-1000 max-sm:bg-[72%_30%] sm:bg-[center_22%] ${active === index ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 bg-cover bg-[72%_center] bg-no-repeat transition-all duration-1000 max-sm:bg-[85%_30%] sm:bg-[center_22%] ${active === index ? "opacity-100" : "opacity-0"}`}
           style={{ backgroundImage: `url(${slide.image})` }}
         />
       ))}
