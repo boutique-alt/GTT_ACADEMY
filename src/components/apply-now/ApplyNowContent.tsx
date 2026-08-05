@@ -6,7 +6,7 @@ import ContactForm from "@/components/contact/ContactForm";
 export default function ApplyNowContent() {
   return (
     <section className="no-view-reveal w-full min-w-0 overflow-x-clip bg-[#f5f8fc] py-16 sm:py-20">
-      <AboutStickyLayout sidebar={<AboutCoursesSidebar />}>
+      <AboutStickyLayout sidebar={<AboutCoursesSidebar />} mobileContentFirst>
         <div className="min-w-0 max-w-full overflow-hidden rounded-[1.5rem] border border-slate-100 bg-white shadow-sm">
           <div className="bg-gradient-to-br from-[#eef4ff] via-white to-[#f0faf3] px-6 pb-2 pt-8 sm:px-10 sm:pt-10">
             <p className="text-center text-xs font-extrabold uppercase tracking-[0.22em] text-[#30ad22]">
