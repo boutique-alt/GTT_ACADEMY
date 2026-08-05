@@ -25,9 +25,11 @@ export default function FloatingContact() {
           href="/special-offer"
           aria-label="View special offer"
           prefetch
-          className="hidden animate-[contactFloat_3.2s_ease-in-out_infinite] items-center gap-2 rounded-full border border-[#ffbc09]/40 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-[#05245b] shadow-xl transition hover:bg-[#ffbc09] sm:inline-flex"
+          className="inline-flex animate-[contactFloat_3.2s_ease-in-out_infinite] items-center gap-1.5 rounded-full border border-[#ffbc09]/40 bg-white px-3 py-2 text-[10px] font-extrabold uppercase tracking-wide text-[#05245b] shadow-xl transition hover:bg-[#ffbc09] sm:gap-2 sm:px-4 sm:text-xs"
         >
-          <Gift size={15} className="text-[#30ad22]" /> Special Offer
+          <Gift size={14} className="text-[#30ad22] sm:hidden" />
+          <Gift size={15} className="hidden text-[#30ad22] sm:block" />
+          Special Offer
         </Link>
         <a
           href="tel:9674923512"

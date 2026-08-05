@@ -31,9 +31,9 @@ const columnMotion = [
 export default function AboutEditMarquee() {
   return (
     <div className="overflow-hidden rounded-[1.5rem] border border-slate-100 bg-white shadow-sm">
-      <div className="grid items-center gap-6 p-4 sm:p-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 lg:p-6">
+      <div className="flex flex-col gap-6 p-4 sm:p-5 lg:grid lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 lg:p-6">
         <div
-          className="relative grid h-[420px] grid-cols-3 gap-2 overflow-hidden rounded-xl sm:h-[480px] sm:gap-3 md:h-[520px]"
+          className="relative order-2 grid h-[420px] grid-cols-3 gap-2 overflow-hidden rounded-xl sm:h-[480px] sm:gap-3 md:h-[520px] lg:order-1"
           style={{
             maskImage: "linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)",
             WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)",
@@ -66,7 +66,7 @@ export default function AboutEditMarquee() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center px-2 py-4 text-center lg:items-start lg:py-6 lg:text-left">
+        <div className="order-1 flex flex-col items-center px-2 py-4 text-center lg:order-2 lg:items-start lg:py-6 lg:text-left">
           <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.22em] text-[#30ad22]">GTT Academy</p>
           <h2 className="font-serif text-3xl font-bold leading-tight text-[#05245b] sm:text-4xl">
             Teacher Training Edit
