@@ -1,49 +1,62 @@
-import { ArrowRight, Gift } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
 import AboutStickyLayout from "@/components/about/AboutStickyLayout";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 
+function PromoImage({ className = "" }: { className?: string }) {
+  return (
+    <div className={`overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 ${className}`}>
+      <Image
+        src="/images/special-offer-promo.jpg"
+        alt="GTT Academy Special Offer — Level up your teaching"
+        width={1200}
+        height={1600}
+        className="h-auto w-full object-contain"
+        priority
+      />
+    </div>
+  );
+}
+
 export default function SpecialOfferContent() {
   return (
-    <section className="no-view-reveal w-full min-w-0 overflow-x-clip bg-[#f5f8fc] py-16 sm:py-20">
-      <AboutStickyLayout sidebar={<AboutCoursesSidebar />}>
-        <div className="min-w-0 max-w-full overflow-hidden rounded-[1.5rem] border border-slate-100 bg-white shadow-sm">
-          <div className="bg-gradient-to-br from-[#eef4ff] via-white to-[#f0faf3] px-6 py-8 sm:px-10 sm:py-10">
-            <div className="mx-auto flex size-14 items-center justify-center rounded-full bg-[#ffbc09]/15 text-[#ffbc09]">
-              <Gift size={28} />
-            </div>
-            <p className="mt-5 text-center text-xs font-extrabold uppercase tracking-[0.22em] text-[#30ad22]">
-              Limited time opportunity
+    <section className="no-view-reveal w-full min-w-0 overflow-x-clip bg-[#f5f8fc] py-10 sm:py-16 lg:py-20">
+      {/* Mobile: Special Offer title → promo image, before sidebar/details */}
+      <div className="mx-auto mb-8 max-w-7xl px-4 sm:px-6 lg:hidden">
+        <div className="rounded-[1.5rem] border border-slate-100 bg-white p-4 shadow-sm sm:p-5">
+          <h2 className="mb-4 text-center font-serif text-2xl font-bold text-[#05245b]">Special Offer</h2>
+          <PromoImage />
+        </div>
+      </div>
+
+      <AboutStickyLayout sidebar={<AboutCoursesSidebar />} mobileContentFirst>
+        <div className="min-w-0 max-w-full rounded-[1.5rem] border border-slate-100 bg-white p-5 shadow-sm sm:p-8 lg:p-10">
+          <h2 className="hidden font-serif text-2xl font-bold text-[#05245b] lg:block lg:text-4xl">Special Offer</h2>
+
+          <div className="space-y-5 text-[15px] leading-7 break-words text-slate-600 lg:mt-7">
+            <p>
+              <strong className="text-[#05245b]">GTT Teacher Training Courses</strong>
+              <br />
+              Your classroom is changing - fast. AI tools, digital platforms, and new learner expectations. If your
+              teaching hasn&apos;t caught up yet, this summer is the perfect time to start. GTT Academy&apos;s Teacher
+              Training courses are built for exactly this moment.
             </p>
-            <h2 className="mt-2 text-center font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">
-              GTT Teacher Training Courses
-            </h2>
-            <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-brand-gradient" />
-            <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-8 text-slate-600 sm:text-lg sm:leading-9">
-              Your classroom is changing — fast. AI tools, digital platforms, and new learner expectations. If your
-              teaching hasn&apos;t caught up yet, this is the perfect time to start. GTT Academy&apos;s Teacher Training
-              courses are built for exactly this moment.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <ApplyNowLink className="btn-brand-gradient inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-semibold tracking-[0.04em] text-white">
-                Apply Now <ArrowRight size={18} />
+
+            <p>
+              <ApplyNowLink className="inline-flex font-bold text-[#0045bc] underline-offset-2 transition hover:text-[#30ad22] hover:underline">
+                Apply Now
               </ApplyNowLink>
-            </div>
+            </p>
+
+            {/* Desktop: image after details (original order) */}
+            <PromoImage className="hidden lg:block" />
           </div>
 
-          <div className="border-t border-slate-100 px-6 py-8 sm:px-10 sm:py-10">
-            <h3 className="text-center font-serif text-2xl font-bold text-[#05245b] sm:text-3xl">
-              The Future of Teaching and Learning Starts Here!
-            </h3>
-            <p className="mx-auto mt-4 max-w-2xl text-center leading-7 text-slate-600">
-              Join thousands of teachers who upskilled with GTT Academy. Get globally recognised credentials, practical
-              classroom methods, and career-ready support — online, distance, or in-class.
-            </p>
-            <div className="mt-7 flex justify-center">
-              <ApplyNowLink className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#0045bc] px-8 py-3.5 text-sm font-semibold tracking-[0.04em] text-[#0045bc] transition hover:bg-[#0045bc] hover:text-white">
-                Apply Now <ArrowRight size={18} />
-              </ApplyNowLink>
-            </div>
+          <div className="mt-8 flex justify-center">
+            <ApplyNowLink className="btn-brand-gradient inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold tracking-[0.04em]">
+              Apply Now <ArrowRight size={18} />
+            </ApplyNowLink>
           </div>
         </div>
       </AboutStickyLayout>

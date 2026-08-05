@@ -17,32 +17,44 @@ export const courseGroups = [
         href: coursePath("teacher-training-courses", "pre-and-primary-teacher-training-with-practical-session"),
       },
       {
+        title: "Regular/In-class Pre and Primary Teacher Training Course",
+        href: liveCourse("teacher-training-courses", "regular-in-class-pre-and-primary-teacher-training-course"),
+      },
+      {
         title: "Montessori Teacher Training with Practical Session",
         href: liveCourse("teacher-training-courses", "montessori-teacher-training-with-practical-session"),
-      },
-      {
-        title: "Diploma in Teaching and Training",
-        href: liveCourse("teacher-training-courses", "diploma-in-teaching-and-training"),
-      },
-      {
-        title: "Early Childhood Care and Education",
-        href: liveCourse("teacher-training-courses", "early-childhood-care-and-education"),
       },
       {
         title: "Nursery Teacher Training With Practical Session",
         href: liveCourse("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
       },
       {
+        title: "Early Childhood Care and Education",
+        href: liveCourse("teacher-training-courses", "early-childhood-care-and-education"),
+      },
+      {
         title: "Educational Administration and Management",
         href: liveCourse("teacher-training-courses", "educational-administration-and-management"),
       },
+    ],
+  },
+  {
+    title: "TEFL/TESOL Online Courses",
+    courses: [
       {
-        title: "Diploma in Child and Adolescent Counseling",
-        href: liveCourse("teacher-training-courses", "diploma-in-child-and-adolescent-counseling"),
+        title: "120 Hour TEFL Course Diploma with Practical Teaching Session",
+        href: liveCourse("tefl-tesol-online-courses", "120-hour-tefl-course-diploma-with-practical-teaching-session"),
       },
       {
-        title: "Diploma in Child Psychology",
-        href: liveCourse("teacher-training-courses", "diploma-in-child-psychology"),
+        title: "180 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session",
+        href: liveCourse(
+          "tefl-tesol-online-courses",
+          "180-hour-tesol-course-pg-diploma-with-dual-specialisation-and-practical-teaching-session",
+        ),
+      },
+      {
+        title: "350 Hour TESOL Course Masters with Practical Teaching Session",
+        href: liveCourse("tefl-tesol-online-courses", "350-hour-tesol-course-masters-with-practical-teaching-session"),
       },
     ],
   },
@@ -66,6 +78,10 @@ export const courseGroups = [
         href: liveCourse("specialized-courses", "teaching-grammar"),
       },
       {
+        title: "Certificate of Language Teaching Online",
+        href: liveCourse("specialized-courses", "certificate-of-language-teaching-online"),
+      },
+      {
         title: "Teaching Phonetics",
         href: liveCourse("specialized-courses", "teaching-phonetics"),
       },
@@ -76,22 +92,27 @@ export const courseGroups = [
     ],
   },
   {
-    title: "TEFL/TESOL Online Courses",
+    title: "English Proficiency Courses",
     courses: [
       {
-        title: "140 Hour TEFL Course Diploma with Practical Teaching Session",
-        href: liveCourse("tefl-tesol-online-courses", "140-hour-tefl-course-diploma-with-practical-teaching-session"),
+        title: "Certificate in English Grammar",
+        href: liveCourse("english-proficiency-courses", "certificate-in-english-grammar"),
       },
       {
-        title: "200 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session",
-        href: liveCourse(
-          "tefl-tesol-online-courses",
-          "200-hour-tesol-course-pg-diploma-with-dual-specialisation-and-practical-teaching-session",
-        ),
+        title: "English for Academic Purpose",
+        href: liveCourse("english-proficiency-courses", "english-for-academic-purpose"),
       },
       {
-        title: "400 Hour TESOL Course Masters with Practical Teaching Session",
-        href: liveCourse("tefl-tesol-online-courses", "400-hour-tesol-course-masters-with-practical-teaching-session"),
+        title: "English for Business Communication",
+        href: liveCourse("english-proficiency-courses", "english-for-business-communication"),
+      },
+      {
+        title: "English for Customer Service",
+        href: liveCourse("english-proficiency-courses", "english-for-customer-service"),
+      },
+      {
+        title: "English for Sales and Marketing",
+        href: liveCourse("english-proficiency-courses", "english-for-sales-and-marketing"),
       },
     ],
   },
@@ -158,7 +179,7 @@ export const courses = [
     title: "TESOL",
     image: "/images/courses/tesol.jpg",
     badge: "/images/premium-course.gif",
-    href: liveCourse("tefl-tesol-online-courses", "140-hour-tefl-course-diploma-with-practical-teaching-session"),
+    href: liveCourse("tefl-tesol-online-courses", "120-hour-tefl-course-diploma-with-practical-teaching-session"),
     description:
       "Our TESOL courses are competently designed programs that enable you to learn beyond the norm and get access to the international teaching industry.",
   },

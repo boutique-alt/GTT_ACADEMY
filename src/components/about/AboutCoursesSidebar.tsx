@@ -6,6 +6,7 @@ const sidebarOrder = [
   "Teacher Training Courses",
   "TEFL/TESOL Online Courses",
   "Specialized Courses",
+  "English Proficiency Courses",
 ] as const;
 
 export default function AboutCoursesSidebar() {

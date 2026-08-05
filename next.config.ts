@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         destination: "/courses/teacher-training-courses/pre-and-primary-teacher-training-with-practical-session",
         permanent: false,
       },
+      {
+        source: "/special-offer.php",
+        destination: "/special-offer",
+        permanent: false,
+      },
     ];
   },
 };

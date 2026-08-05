@@ -19,30 +19,32 @@ export default function CourseCard({ title, description, image, href, badge }: P
           src={image}
           alt={title}
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          sizes="(max-width: 1024px) 50vw, 25vw"
           className="object-contain transition duration-700 ease-out group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#05245b]/45 to-transparent transition duration-500 group-hover:from-[#05245b]/60" />
         <div className="pointer-events-none absolute inset-0 bg-[#0045bc]/0 transition duration-500 group-hover:bg-[#0045bc]/10" />
         <span
-          className={`absolute left-3 top-3 inline-flex items-center gap-1.5 overflow-hidden rounded-full px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.08em] shadow-lg transition duration-500 group-hover:scale-105 ${
+          className={`absolute left-1.5 top-1.5 inline-flex items-center gap-1 overflow-hidden rounded-full px-2 py-1 text-[8px] font-extrabold uppercase tracking-[0.06em] shadow-lg transition duration-500 group-hover:scale-105 sm:left-3 sm:top-3 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-[10px] sm:tracking-[0.08em] ${
             isPremium ? "bg-[#ffbc09] text-[#05245b]" : "bg-[#30ad22] text-white"
           }`}
         >
           <span className="absolute inset-y-0 -left-8 w-6 rotate-12 bg-white/45 blur-sm animate-[badgeShine_3.5s_ease-in-out_infinite]" />
-          {isPremium ? <Crown size={13} strokeWidth={2.4} /> : <Flame size={13} strokeWidth={2.4} />}
-          {isPremium ? "Premium Course" : "Popular Course"}
+          {isPremium ? <Crown size={11} strokeWidth={2.4} className="sm:hidden" /> : <Flame size={11} strokeWidth={2.4} className="sm:hidden" />}
+          {isPremium ? <Crown size={13} strokeWidth={2.4} className="hidden sm:block" /> : <Flame size={13} strokeWidth={2.4} className="hidden sm:block" />}
+          <span className="sm:hidden">{isPremium ? "Premium" : "Popular"}</span>
+          <span className="hidden sm:inline">{isPremium ? "Premium Course" : "Popular Course"}</span>
         </span>
       </div>
-      <div className="p-6">
-        <h3 className="min-h-14 font-serif text-xl font-bold leading-7 text-[#05245b] transition duration-300 group-hover:text-[#0045bc]">
+      <div className="p-3 sm:p-6">
+        <h3 className="min-h-10 font-serif text-sm font-bold leading-5 text-[#05245b] transition duration-300 group-hover:text-[#0045bc] sm:min-h-14 sm:text-xl sm:leading-7">
           {title}
         </h3>
-        <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{description}</p>
+        <p className="mt-2 line-clamp-3 text-[11px] leading-4 text-slate-600 sm:mt-3 sm:text-sm sm:leading-6">{description}</p>
         <a
           href={href}
           {...(href.startsWith("http") ? { target: "_blank" as const, rel: "noreferrer" } : {})}
-          className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-[#0045bc] transition duration-300 group-hover:gap-2.5 group-hover:text-[#30ad22]"
+          className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[#0045bc] transition duration-300 group-hover:gap-2.5 group-hover:text-[#30ad22] sm:mt-5 sm:gap-1.5 sm:text-sm"
         >
           Read More <ArrowUpRight size={16} className="transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </a>

@@ -14,7 +14,7 @@ const paragraphs = [
 export default function AboutStory() {
   return (
     <section className="no-view-reveal bg-[#f5f8fc] py-16 sm:py-20">
-      <AboutStickyLayout sidebar={<AboutCoursesSidebar />}>
+      <AboutStickyLayout sidebar={<AboutCoursesSidebar />} mobileContentFirst>
         <div className="space-y-8">
           <AboutEditMarquee />
 

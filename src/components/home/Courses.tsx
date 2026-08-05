@@ -11,7 +11,7 @@ export default function Courses() {
           title="Our Featured Courses"
           description="Choose from our extensive range of flexible teaching courses, created for aspiring and in-service teachers."
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {courses.map((course) => (
             <CourseCard key={course.title} {...course} />
           ))}

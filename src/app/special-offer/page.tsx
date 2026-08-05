@@ -8,7 +8,7 @@ import SpecialOfferHero from "@/components/special-offer/SpecialOfferHero";
 export const metadata: Metadata = {
   title: "Special Offer | GTT Academy",
   description:
-    "Special offer on GTT Academy Teacher Training courses. Upgrade your teaching skills for AI tools, digital platforms, and new learner expectations.",
+    "Know about Special Offer at Global Teacher Training Academy (GTT Academy) for online Pre and Primary, Montessori teacher training and nursery teacher training certificate courses.",
 };
 
 export default function SpecialOfferPage() {
