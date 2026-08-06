@@ -1,21 +1,20 @@
 import type { Metadata } from "next";
-import CoursePageHero from "@/components/courses/CoursePageHero";
 import PrePrimaryCourseContent from "@/components/courses/PrePrimaryCourseContent";
+import PrePrimaryHero from "@/components/courses/PrePrimaryHero";
 import FinalCta from "@/components/home/FinalCta";
 import FloatingContact from "@/components/home/FloatingContact";
 import Gallery from "@/components/home/Gallery";
-import { prePrimaryCourse } from "@/data/courses/pre-and-primary";
 
 export const metadata: Metadata = {
   title: "Pre and Primary Teacher Training Online Certificate Course | GTT Academy",
   description:
-    "Pre and Primary Teacher Training with Practical Session at Global Teacher Training Academy (GTT Academy). Online and Distance PG Diploma, Diploma and Certificate courses with Apostille certification.",
+    "Pre and Primary Teacher Training with Practical Session at Global Teacher Training Academy (GTT Academy) for online Pre and Primary, Montessori teacher training and nursery teacher training certificate courses.",
 };
 
 export default function PrePrimaryTeacherTrainingPage() {
   return (
     <main>
-      <CoursePageHero title={prePrimaryCourse.title} />
+      <PrePrimaryHero />
       <PrePrimaryCourseContent />
       <FinalCta />
       <Gallery />

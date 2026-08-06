@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
-import { courseGroups, navLinks } from "@/data/site";
+import { courseDetailSidebarGroups, navLinks } from "@/data/site";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,8 +46,8 @@ export default function Header() {
                 Courses <ChevronDown size={15} />
               </button>
               <div className="invisible absolute left-1/2 top-full w-[min(1200px,96vw)] -translate-x-1/2 translate-y-2 rounded-b-2xl border-t-2 border-[#ffbc09] bg-white p-7 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                <div className="grid grid-cols-2 gap-8 xl:grid-cols-4">
-                  {courseGroups.map((group) => (
+                <div className="grid grid-cols-3 gap-8">
+                  {courseDetailSidebarGroups.map((group) => (
                     <div key={group.title}>
                       <h3 className="mb-3 border-b border-slate-100 pb-3 font-bold text-[#0045bc]">{group.title}</h3>
                       <ul className="space-y-2.5">
@@ -96,7 +96,7 @@ export default function Header() {
             </button>
             {coursesOpen && (
               <div className="space-y-5 bg-slate-50 p-4">
-                {courseGroups.map((group) => (
+                {courseDetailSidebarGroups.map((group) => (
                   <div key={group.title}>
                     <p className="mb-2 text-sm font-bold text-[#0045bc]">{group.title}</p>
                     {group.courses.map((course) => {

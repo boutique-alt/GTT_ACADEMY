@@ -52,11 +52,10 @@ export default function AlumniList({ items }: Props) {
                 type="button"
                 onClick={() => go(n)}
                 aria-current={active ? "page" : undefined}
-                className={`grid size-10 place-items-center rounded-full text-sm font-bold transition ${
-                  active
+                className={`grid size-10 place-items-center rounded-full text-sm font-bold transition ${active
                     ? "bg-[#0045bc] text-white"
                     : "border border-slate-200 text-[#05245b] hover:bg-[#eef4ff]"
-                }`}
+                  }`}
               >
                 {n}
               </button>

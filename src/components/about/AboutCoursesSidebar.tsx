@@ -1,22 +1,20 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { courseGroups } from "@/data/site";
+import { courseDetailSidebarGroups, courseGroups } from "@/data/site";
 
-const sidebarOrder = [
-  "Teacher Training Courses",
-  "TEFL/TESOL Online Courses",
-  "Specialized Courses",
-  "English Proficiency Courses",
-] as const;
+type CourseGroup = (typeof courseGroups)[number];
 
-export default function AboutCoursesSidebar() {
-  const groups = sidebarOrder
-    .map((title) => courseGroups.find((group) => group.title === title))
-    .filter((group): group is (typeof courseGroups)[number] => Boolean(group));
+type Props = {
+  groups?: CourseGroup[];
+};
+
+export default function AboutCoursesSidebar({ groups }: Props) {
+  // Default matches live course detail pages (no English Proficiency).
+  const resolvedGroups = groups ?? courseDetailSidebarGroups;
 
   return (
     <aside className="w-full min-w-0 max-w-full space-y-5">
-      {groups.map((group) => (
+      {resolvedGroups.map((group) => (
         <div key={group.title} className="w-full min-w-0 max-w-full overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
           <div className="bg-[#0045bc] px-3 py-3 sm:px-4">
             <p className="text-sm font-bold break-words text-white">{group.title}</p>

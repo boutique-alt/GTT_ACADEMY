@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
 import AboutStickyLayout from "@/components/about/AboutStickyLayout";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
+import { courseGroups } from "@/data/site";
 
 function PromoImage({ className = "" }: { className?: string }) {
   return (
@@ -22,7 +23,6 @@ function PromoImage({ className = "" }: { className?: string }) {
 export default function SpecialOfferContent() {
   return (
     <section className="no-view-reveal w-full min-w-0 overflow-x-clip bg-[#f5f8fc] py-10 sm:py-16 lg:py-20">
-      {/* Mobile: Special Offer title → promo image, before sidebar/details */}
       <div className="mx-auto mb-8 max-w-7xl px-4 sm:px-6 lg:hidden">
         <div className="rounded-[1.5rem] border border-slate-100 bg-white p-4 shadow-sm sm:p-5">
           <h2 className="mb-4 text-center font-serif text-2xl font-bold text-[#05245b]">Special Offer</h2>
@@ -30,7 +30,7 @@ export default function SpecialOfferContent() {
         </div>
       </div>
 
-      <AboutStickyLayout sidebar={<AboutCoursesSidebar />} mobileContentFirst>
+      <AboutStickyLayout sidebar={<AboutCoursesSidebar groups={courseGroups} />} mobileContentFirst>
         <div className="min-w-0 max-w-full rounded-[1.5rem] border border-slate-100 bg-white p-5 shadow-sm sm:p-8 lg:p-10">
           <h2 className="hidden font-serif text-2xl font-bold text-[#05245b] lg:block lg:text-4xl">Special Offer</h2>
 
@@ -49,7 +49,6 @@ export default function SpecialOfferContent() {
               </ApplyNowLink>
             </p>
 
-            {/* Desktop: image after details (original order) */}
             <PromoImage className="hidden lg:block" />
           </div>
 
