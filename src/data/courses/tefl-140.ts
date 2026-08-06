@@ -245,7 +245,7 @@ export const tefl140Course = {
         "Striking a Balance: Best Practices for Educators",
       ],
     },
-  ] satisfies CourseUnit[],
+  ] as CourseUnit[],
   modeTitle: "Online with Practical Sessions",
   modeText:
     "GTT Academy offers practical sessions to help you enjoy TEFL/TESOL even more by giving you confidence and expertise to deliver effective, engaging lessons. The practical sessions besides being fun packed will benefit your communication needs and interests. Our online classes comprise scenarios and choreographies that can be employed in classrooms to facilitate effective English language learning. EFL teaching methodologies and approaches, grammar and phonology, language skills, classroom management, lesson planning, teaching adults and young learners, error correction and Business English constitute an integral part of the practical sessions.",
