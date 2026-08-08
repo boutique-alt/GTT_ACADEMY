@@ -1260,6 +1260,7 @@ export const courseApplicationOptions = [
   "Diploma in Teaching and Training",
   "Early Childhood Care and Education",
   "Nursery Teacher Training With Practical Session",
+  "Special Education Needs Teacher Training",
   "Educational Administration and Management",
   "Diploma in Child and Adolescent Counseling",
   "Diploma in Child Psychology",
@@ -1267,7 +1268,9 @@ export const courseApplicationOptions = [
   "Teaching Grammar",
   "Teaching Phonetics",
   "NLP for Students",
+  "Training the Trainer Program",
   "140 Hour TEFL Course Diploma with Practical Teaching Session",
   "200 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session",
   "400 Hour TESOL Course Masters with Practical Teaching Session",
+  "IELTS for Teachers",
 ] as const;

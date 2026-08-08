@@ -1,14 +1,7 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import SocialMediaLinks from "@/components/ui/SocialMediaLinks";
 import { acknowledgementsHref, alumniHref, quickLinks, usefulLinks } from "@/data/site";
-
-const socialLinks = [
-  { label: "Facebook", href: "https://www.facebook.com/GTTAcademyIndia/", icon: FaFacebookF },
-  { label: "Instagram", href: "https://www.instagram.com/gttacademyindia/", icon: FaInstagram },
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/gtt-academy-india/", icon: FaLinkedinIn },
-  { label: "YouTube", href: "https://www.youtube.com/channel/UCyZIENvB_cAU_Uvn_LXz1yg", icon: FaYoutube },
-];
 
 export default function Footer() {
   return (
@@ -19,18 +12,22 @@ export default function Footer() {
             <Image src="/images/logo.png" alt="GTT Academy" width={174} height={58} />
           </div>
           <p className="text-sm leading-7 text-blue-100">A one-stop solution catering to a wide range of globally recognised teacher training courses.</p>
-          <div className="mt-5 flex gap-2">
-            {socialLinks.map(({ label, href, icon: Icon }) => (
-              <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} className="grid size-9 place-items-center rounded-full bg-white/10 transition hover:bg-[#30ad22]"><Icon size={16} /></a>
-            ))}
-          </div>
+          <p className="mt-4 text-xs font-extrabold uppercase tracking-[0.18em] text-[#ffbc09]">Follow us</p>
+          <SocialMediaLinks className="mt-3 flex flex-wrap gap-2" size={16} />
         </div>
         <div>
           <h3 className="mb-5 text-lg font-bold">Contact us</h3>
           <ul className="space-y-4 text-sm leading-6 text-blue-100">
             <li className="flex gap-3"><MapPin className="mt-1 shrink-0 text-[#ffbc09]" size={17} />Level 1, Unit 2, Sy.No. 83/1, Plot no 2, Inorbit Mall Road, Raidurg Village, Hi-Tech City, Hyderabad - 500081, TS, India.</li>
             <li className="flex gap-3"><Mail className="shrink-0 text-[#ffbc09]" size={17} /><a href="mailto:enquiry@globalteachersacademy.com" className="transition hover:text-[#ffbc09]">enquiry@globalteachersacademy.com</a></li>
-            <li className="flex gap-3"><Phone className="shrink-0 text-[#ffbc09]" size={17} /><a href="tel:9674923512" className="transition hover:text-[#ffbc09]">9674923512</a> / <a href="tel:18001203481" className="transition hover:text-[#ffbc09]">18001203481</a></li>
+            <li className="flex gap-3">
+              <Phone className="shrink-0 text-[#ffbc09]" size={17} />
+              <span>
+                <a href="tel:9674923512" className="transition hover:text-[#ffbc09]">9674923512</a>
+                {" / "}
+                <a href="tel:18001203481" className="transition hover:text-[#ffbc09]">18001203481</a>
+              </span>
+            </li>
           </ul>
         </div>
         <div>

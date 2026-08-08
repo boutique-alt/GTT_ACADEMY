@@ -29,6 +29,10 @@ export const courseGroups = [
         href: coursePath("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
       },
       {
+        title: "Special Education Needs Teacher Training",
+        href: "/apply-now",
+      },
+      {
         title: "Early Childhood Care and Education",
         href: coursePath("teacher-training-courses", "early-childhood-care-and-education"),
       },
@@ -56,22 +60,18 @@ export const courseGroups = [
         title: "350 Hour TESOL Course Masters with Practical Teaching Session",
         href: liveCourse("tefl-tesol-online-courses", "350-hour-tesol-course-masters-with-practical-teaching-session"),
       },
+      {
+        title: "IELTS for Teachers",
+        href: "/apply-now",
+      },
     ],
   },
   {
     title: "Specialized Courses",
     courses: [
       {
-        title: "Diploma in Child and Adolescent Counseling",
-        href: coursePath("teacher-training-courses", "diploma-in-child-and-adolescent-counseling"),
-      },
-      {
         title: "Classroom Management Skill",
         href: coursePath("specialized-courses", "classroom-management-skill"),
-      },
-      {
-        title: "Diploma in Child Psychology",
-        href: coursePath("teacher-training-courses", "diploma-in-child-psychology"),
       },
       {
         title: "Teaching Grammar",
@@ -88,6 +88,10 @@ export const courseGroups = [
       {
         title: "NLP for Students",
         href: coursePath("specialized-courses", "nlp-for-students"),
+      },
+      {
+        title: "Training the Trainer Program",
+        href: "/apply-now",
       },
     ],
   },
@@ -144,6 +148,10 @@ export const courseDetailSidebarGroups = [
         href: coursePath("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
       },
       {
+        title: "Special Education Needs Teacher Training",
+        href: "/apply-now",
+      },
+      {
         title: "Educational Administration and Management",
         href: coursePath("teacher-training-courses", "educational-administration-and-management"),
       },
@@ -154,35 +162,6 @@ export const courseDetailSidebarGroups = [
       {
         title: "Diploma in Child Psychology",
         href: coursePath("teacher-training-courses", "diploma-in-child-psychology"),
-      },
-    ],
-  },
-  {
-    title: "Specialized Courses",
-    courses: [
-      {
-        title: "Diploma in Child and Adolescent Counseling",
-        href: coursePath("teacher-training-courses", "diploma-in-child-and-adolescent-counseling"),
-      },
-      {
-        title: "Classroom Management Skill",
-        href: coursePath("specialized-courses", "classroom-management-skill"),
-      },
-      {
-        title: "Diploma in Child Psychology",
-        href: coursePath("teacher-training-courses", "diploma-in-child-psychology"),
-      },
-      {
-        title: "Teaching Grammar",
-        href: coursePath("specialized-courses", "teaching-grammar"),
-      },
-      {
-        title: "Teaching Phonetics",
-        href: coursePath("specialized-courses", "teaching-phonetics"),
-      },
-      {
-        title: "NLP for Students",
-        href: coursePath("specialized-courses", "nlp-for-students"),
       },
     ],
   },
@@ -204,10 +183,38 @@ export const courseDetailSidebarGroups = [
         title: "400 Hour TESOL Course Masters with Practical Teaching Session",
         href: coursePath("tefl-tesol-online-courses", "400-hour-tesol-course-masters-with-practical-teaching-session"),
       },
+      {
+        title: "IELTS for Teachers",
+        href: "/apply-now",
+      },
+    ],
+  },
+  {
+    title: "Specialized Courses",
+    courses: [
+      {
+        title: "Classroom Management Skill",
+        href: coursePath("specialized-courses", "classroom-management-skill"),
+      },
+      {
+        title: "Teaching Grammar",
+        href: coursePath("specialized-courses", "teaching-grammar"),
+      },
+      {
+        title: "Teaching Phonetics",
+        href: coursePath("specialized-courses", "teaching-phonetics"),
+      },
+      {
+        title: "NLP for Students",
+        href: coursePath("specialized-courses", "nlp-for-students"),
+      },
+      {
+        title: "Training the Trainer Program",
+        href: "/apply-now",
+      },
     ],
   },
 ];
-
 export const courses = [
   {
     title: "Pre and Primary Teacher Training",
@@ -273,6 +280,22 @@ export const courses = [
     description:
       "Our TESOL courses are competently designed programs that enable you to learn beyond the norm and get access to the international teaching industry.",
   },
+  {
+    title: "Nursery Teacher Training",
+    image: "/images/courses/nursery-detail.jpg",
+    badge: "/images/popular-course.gif",
+    href: coursePath("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
+    description:
+      "Nursery Teacher Training at GTT Academy prepares caregivers and educators with child development, teaching methodology, and nursery-level classroom skills.",
+  },
+  {
+    title: "Special Education Needs Teacher Training",
+    image: "/images/courses/counselling.jpg",
+    badge: "/images/premium-course.gif",
+    href: "/apply-now",
+    description:
+      "Special Education Needs Teacher Training equips teachers to identify diverse learning needs and support inclusive classrooms with practical strategies and care.",
+  },
 ];
 
 export const navLinks = [
@@ -313,12 +336,15 @@ export const thankYouHref = "/thank-you";
 export const acknowledgementsHref = `${LIVE}/acknowledgements.php`;
 
 export const branches = [
-  "Guwahati",
-  "Pune",
-  "Kolkata",
-  "Mysore",
-  "Kerala",
-  "Delhi",
-  "Bangalore",
   "Hyderabad",
+  "Bangalore",
+  "Kerala",
+  "Mysore",
+  "Pune",
+  "Delhi",
+  "Kolkata",
+  "Guwahati",
+  "UAE",
+  "Saudi Arabia",
+  "Sint Maarten",
 ];

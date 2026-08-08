@@ -55,7 +55,7 @@ export default function Testimonials() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#0045bc]/92 via-[#0045bc]/88 to-[#30ad22]/75" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow={`${testimonials.length} Real Student Experiences`}
+          eyebrow="Real Student Experiences"
           title="Student's Testimonials"
           description="Read the original experiences shared by GTT Academy students from India and around the world."
           light

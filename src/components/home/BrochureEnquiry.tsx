@@ -3,8 +3,11 @@
 import Image from "next/image";
 import { FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { thankYouHref } from "@/data/site";
+
+const BROCHURE_HREF = "/images/home-brochure.png";
+const BROCHURE_FILENAME = "GTT-Academy-Brochure.png";
 
 export default function BrochureEnquiry() {
   const router = useRouter();
@@ -47,6 +50,8 @@ export default function BrochureEnquiry() {
                 <option>Pre and Primary Teacher Training</option>
                 <option>Montessori Teacher Training</option>
                 <option>Early Childhood Care and Education</option>
+                <option>Nursery Teacher Training</option>
+                <option>Special Education Needs Teacher Training</option>
                 <option>Child Psychology</option>
                 <option>TESOL / TEFL</option>
                 <option>Other Course</option>
@@ -57,8 +62,28 @@ export default function BrochureEnquiry() {
             Request Brochure <ArrowRight size={18} />
           </button>
         </form>
-        <div className="order-1 overflow-hidden rounded-3xl bg-white p-3 lg:order-2">
-          <Image src="/images/home-brochure.png" alt="GTT Academy home brochure" width={900} height={700} className="h-auto w-full rounded-2xl object-contain" />
+
+        <div className="order-1 flex flex-col overflow-hidden rounded-3xl bg-white p-3 shadow-2xl lg:order-2">
+          <div className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
+            <Image
+              src={BROCHURE_HREF}
+              alt="GTT Academy original brochure"
+              width={900}
+              height={700}
+              className="h-auto w-full object-contain"
+              priority={false}
+            />
+          </div>
+          <div className="flex flex-col items-center gap-2 px-3 py-4 sm:flex-row sm:justify-between sm:px-4">
+            <p className="text-center text-sm font-semibold text-[#05245b] sm:text-left">Original GTT Academy Brochure</p>
+            <a
+              href={BROCHURE_HREF}
+              download={BROCHURE_FILENAME}
+              className="btn-brand-gradient inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold"
+            >
+              <Download size={16} /> Download Brochure
+            </a>
+          </div>
         </div>
       </div>
     </section>

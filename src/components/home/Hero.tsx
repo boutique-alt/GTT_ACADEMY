@@ -77,7 +77,7 @@ export default function Hero() {
           <h1 key={`heading-${active}`} className="animate-[heroIn_.7s_ease-out] font-display text-[1.65rem] font-semibold leading-[1.15] tracking-[-0.02em] max-sm:min-h-[5.4rem] sm:min-h-0 sm:text-5xl sm:leading-[1.05] lg:text-[4.5rem]">
             {slides[active].heading}
           </h1>
-          <p key={`text-${active}`} className="mt-3 max-w-xl animate-[heroIn_.7s_.1s_ease-out_both] text-[13px] font-light leading-6 tracking-[0.01em] text-blue-50/95 max-sm:line-clamp-3 max-sm:min-h-[4.5rem] sm:mt-6 sm:min-h-0 sm:text-lg sm:leading-9 sm:line-clamp-none">
+          <p key={`text-${active}`} className="mt-3 max-w-xl animate-[heroIn_.7s_.1s_ease-out_both] text-[13px] font-medium leading-6 tracking-[0.01em] text-[#ffbc09] max-sm:line-clamp-3 max-sm:min-h-[4.5rem] sm:mt-6 sm:min-h-0 sm:text-lg sm:leading-9 sm:line-clamp-none [text-shadow:0_1px_2px_rgba(3,27,70,0.55),0_0_12px_rgba(3,27,70,0.25)]">
             {slides[active].text}
           </p>
           <div className="mt-5 flex flex-col gap-2.5 max-sm:pb-16 sm:mt-8 sm:flex-row sm:gap-3 sm:pb-0">

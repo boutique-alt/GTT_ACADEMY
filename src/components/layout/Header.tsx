@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
+import SocialMediaLinks from "@/components/ui/SocialMediaLinks";
 import { courseDetailSidebarGroups, navLinks } from "@/data/site";
 
 export default function Header() {
@@ -14,7 +15,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-brand-gradient text-white">
-        <div className="mx-auto flex min-h-11 max-w-7xl items-center justify-between gap-4 px-4 py-2.5 text-sm sm:px-6 sm:text-[15px] lg:px-8">
+        <div className="mx-auto flex min-h-11 max-w-7xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-2.5 text-sm sm:px-6 sm:text-[15px] lg:px-8">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <a className="flex items-center gap-1.5 hover:text-[#ffbc09]" href="tel:18001203481">
               <Phone size={15} /> India toll free: 18001203481
@@ -22,10 +23,15 @@ export default function Header() {
             <a className="hidden items-center gap-1.5 hover:text-[#ffbc09] sm:flex" href="mailto:enquiry@globalteachersacademy.com">
               <Mail size={15} /> enquiry@globalteachersacademy.com
             </a>
+            <a className="flex items-center gap-1.5 hover:text-[#ffbc09]" href="tel:9674923512" aria-label="Call 9674923512">
+              <Phone size={15} /> 9674923512
+            </a>
           </div>
-          <a className="font-bold text-[#ffbc09]" href="tel:9674923512">
-            WhatsApp: 9674923512
-          </a>
+          <SocialMediaLinks
+            className="flex items-center gap-1.5"
+            iconClassName="grid size-7 place-items-center rounded-full bg-white/15 text-white transition hover:bg-[#ffbc09] hover:text-[#05245b]"
+            size={13}
+          />
         </div>
       </div>
 
@@ -122,6 +128,14 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <a href="tel:9674923512" className="mt-4 flex items-center gap-2 border-t border-slate-100 pt-4 text-sm font-semibold text-slate-700">
+              <Phone size={15} className="text-[#0045bc]" /> 9674923512
+            </a>
+            <SocialMediaLinks
+              className="mt-4 flex items-center gap-2"
+              iconClassName="grid size-9 place-items-center rounded-full bg-[#05245b] text-white transition hover:bg-[#30ad22]"
+              size={15}
+            />
             <ApplyNowLink onClick={() => setMenuOpen(false)} className="btn-brand-gradient mt-4 block rounded-full px-5 py-3 text-center font-bold">
               Apply Now
             </ApplyNowLink>

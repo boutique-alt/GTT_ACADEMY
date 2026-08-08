@@ -124,6 +124,22 @@ button {
   }
 }
 
+@keyframes offerBlink {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 10px 28px -8px rgba(255, 188, 9, 0.55), 0 0 0 0 rgba(255, 188, 9, 0.45);
+    background-color: #ffbc09;
+    color: #05245b;
+  }
+  50% {
+    opacity: 0.72;
+    box-shadow: 0 10px 28px -8px rgba(48, 173, 34, 0.4), 0 0 0 6px rgba(255, 188, 9, 0.15);
+    background-color: #30ad22;
+    color: #fff;
+  }
+}
+
 @keyframes sectionReveal {
   from {
     opacity: 0;
