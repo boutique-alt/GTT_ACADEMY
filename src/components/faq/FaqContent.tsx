@@ -53,12 +53,10 @@ const faqs: FaqItem[] = [
         </p>
         <p>
           <a
-            href="https://www.globalteachersacademy.com/courses.php"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/courses"
             className="font-bold text-[#0045bc] hover:underline"
           >
-            https://www.globalteachersacademy.com/courses.php
+            View all courses and fees
           </a>
         </p>
       </>

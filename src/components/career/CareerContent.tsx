@@ -23,6 +23,15 @@ const jobs = [
   "Communication Trainers",
   "Private Tutor",
   "Online Tutor",
+  "Opening a Pre school / Playschool / Daycare set up",
+  "IELTS Trainer / Examiner",
+  "Early Childhood Teacher / Early Childhood Educator",
+  "From Teacher to Teacherpreneur",
+  "Principal / Head Administrator / Academic Coordinator",
+  "Special Educator",
+  "Child Development Specialist",
+  "Behavioral Therapist",
+  "School Counselor / Child Counselor",
 ];
 
 const closing = [
@@ -55,6 +64,18 @@ export default function CareerContent() {
                 </li>
               ))}
             </ul>
+
+            <p>
+              Roles such as Child Development Specialist, Behavioral Therapist, School Counselor / Child Counselor, and Special Educator are especially supported by our{" "}
+              <a href="/courses/teacher-training-courses/diploma-in-child-psychology" className="font-semibold text-[#0045bc] underline-offset-2 hover:underline">
+                Diploma in Child Psychology
+              </a>{" "}
+              and{" "}
+              <a href="/courses/teacher-training-courses/diploma-in-child-and-adolescent-counseling" className="font-semibold text-[#0045bc] underline-offset-2 hover:underline">
+                Diploma in Child and Adolescent Counseling
+              </a>{" "}
+              programmes.
+            </p>
 
             {closing.map((paragraph) => (
               <p key={paragraph.slice(0, 64)}>{paragraph}</p>

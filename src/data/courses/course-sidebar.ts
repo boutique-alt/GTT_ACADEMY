@@ -1234,6 +1234,12 @@ export const teacherCourseDetails = {
     fees: "10000 INR + GST / 160 USD",
     level: "Diploma",
   },
+  trainTheTrainer: {
+    eligibility: "Graduation in any stream",
+    duration: "8 Months",
+    fees: "14000 INR + GST / 230 USD",
+    level: "Diploma",
+  },
   tefl140: {
     eligibility: "10+2 or Graduation in any stream",
     duration: "140 Hour (5 Months)",
@@ -1252,6 +1258,12 @@ export const teacherCourseDetails = {
     fees: "28000 INR+GST/USD 390",
     level: "Masters",
   },
+  ieltsForTeachers: {
+    eligibility: "Graduation in any stream",
+    duration: "6 Months",
+    fees: "12000 INR + GST / 200 USD",
+    level: "Certificate",
+  },
 } as const satisfies Record<string, CoursePageDetails>;
 
 export const courseApplicationOptions = [
@@ -1264,11 +1276,11 @@ export const courseApplicationOptions = [
   "Educational Administration and Management",
   "Diploma in Child and Adolescent Counseling",
   "Diploma in Child Psychology",
+  "Training the Trainer Program",
   "Classroom Management Skill",
   "Teaching Grammar",
   "Teaching Phonetics",
   "NLP for Students",
-  "Training the Trainer Program",
   "140 Hour TEFL Course Diploma with Practical Teaching Session",
   "200 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session",
   "400 Hour TESOL Course Masters with Practical Teaching Session",

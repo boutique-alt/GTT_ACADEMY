@@ -62,13 +62,17 @@ export const courseGroups = [
       },
       {
         title: "IELTS for Teachers",
-        href: "/apply-now",
+        href: coursePath("tefl-tesol-online-courses", "ielts-for-teachers"),
       },
     ],
   },
   {
     title: "Specialized Courses",
     courses: [
+      {
+        title: "Training the Trainer Program",
+        href: coursePath("specialized-courses", "training-the-trainer-program"),
+      },
       {
         title: "Classroom Management Skill",
         href: coursePath("specialized-courses", "classroom-management-skill"),
@@ -88,10 +92,6 @@ export const courseGroups = [
       {
         title: "NLP for Students",
         href: coursePath("specialized-courses", "nlp-for-students"),
-      },
-      {
-        title: "Training the Trainer Program",
-        href: "/apply-now",
       },
     ],
   },
@@ -185,13 +185,17 @@ export const courseDetailSidebarGroups = [
       },
       {
         title: "IELTS for Teachers",
-        href: "/apply-now",
+        href: coursePath("tefl-tesol-online-courses", "ielts-for-teachers"),
       },
     ],
   },
   {
     title: "Specialized Courses",
     courses: [
+      {
+        title: "Training the Trainer Program",
+        href: coursePath("specialized-courses", "training-the-trainer-program"),
+      },
       {
         title: "Classroom Management Skill",
         href: coursePath("specialized-courses", "classroom-management-skill"),
@@ -207,10 +211,6 @@ export const courseDetailSidebarGroups = [
       {
         title: "NLP for Students",
         href: coursePath("specialized-courses", "nlp-for-students"),
-      },
-      {
-        title: "Training the Trainer Program",
-        href: "/apply-now",
       },
     ],
   },
@@ -309,31 +309,26 @@ export const navLinks = [
 ];
 
 export const usefulLinks = [
-  { label: "Tutor Support & Assessment", href: `${LIVE}/tutor-support-assessment.php` },
-  { label: "Job Opportunities & Placement support", href: `${LIVE}/Job-opportunities-placement-support.php` },
-  { label: "Franchise Opportunity", href: `${LIVE}/franchise-opportunity.php` },
+  { label: "Tutor Support & Assessment", href: "/contact" },
+  { label: "Job Opportunities & Placement support", href: "/career" },
+  { label: "Franchise Opportunity", href: "/contact" },
   { label: "About Us", href: "/about" },
   { label: "Career Opportunities", href: "/career" },
   { label: "Accreditations", href: "/accreditations" },
-  { label: "Courses", href: "/#courses" },
+  { label: "Courses", href: "/courses" },
 ];
 
 export const quickLinks = [
-  { label: "Privacy Policy", href: `${LIVE}/privacy-policy.php` },
-  { label: "Terms and Conditions", href: `${LIVE}/terms-conditions.php` },
-  { label: "Payment", href: `${LIVE}/payment.php` },
-  { label: "Payment Terms and Conditions", href: `${LIVE}/payment-terms-and-conditions.php` },
-  { label: "Refund", href: `${LIVE}/refund.php` },
   { label: "FAQ", href: "/faq" },
   { label: "Alumni", href: "/alumni" },
-  { label: "Blogs", href: `${LIVE}/blog.php` },
+  { label: "Contact us", href: "/contact" },
+  { label: "Apply Now", href: "/apply-now" },
 ];
 
 export const applyNowHref = "/apply-now" as const;
 export const contactHref = "/contact";
 export const alumniHref = "/alumni";
 export const thankYouHref = "/thank-you";
-export const acknowledgementsHref = `${LIVE}/acknowledgements.php`;
 
 export const branches = [
   "Hyderabad",

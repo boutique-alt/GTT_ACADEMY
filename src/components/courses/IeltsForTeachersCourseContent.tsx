@@ -9,11 +9,11 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
-import { teachingGrammarCourse } from "@/data/courses/teaching-grammar";
-import { specializedFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
+import { ieltsForTeachersCourse } from "@/data/courses/train-the-trainer-and-ielts";
+import { tesolFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
-export default function TeachingGrammarCourseContent() {
-  const course = teachingGrammarCourse;
+export default function IeltsForTeachersCourseContent() {
+  const course = ieltsForTeachersCourse;
 
   const accordionItems = [
     {
@@ -25,7 +25,7 @@ export default function TeachingGrammarCourseContent() {
       content: <p>{course.eligibility}</p>,
     },
     {
-      title: "Who Can Join The Course?",
+      title: "Who Can Do The Course?",
       content: <CourseBulletList items={course.whoCanJoin} />,
     },
     {
@@ -122,11 +122,11 @@ export default function TeachingGrammarCourseContent() {
   return (
     <section className="no-view-reveal w-full min-w-0 overflow-x-clip bg-[#f5f8fc] py-16 sm:py-20">
       <CoursePageLayout
-        left={<AboutCoursesSidebar groups={specializedFirstSidebarGroups} />}
+        left={<AboutCoursesSidebar groups={tesolFirstSidebarGroups} />}
         right={
           <CourseRightSidebar
-            details={teacherCourseDetails.teachingGrammar}
-            defaultCourse="Teaching Grammar"
+            details={teacherCourseDetails.ieltsForTeachers}
+            defaultCourse="IELTS for Teachers"
           />
         }
       >
@@ -151,7 +151,7 @@ export default function TeachingGrammarCourseContent() {
           </div>
 
           <div className="mt-8 inline-flex rounded-full bg-[#0045bc] px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-blue-900/20">
-            Diploma
+            {course.levelLabel}
           </div>
 
           <CourseAccordion items={accordionItems} />

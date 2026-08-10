@@ -10,7 +10,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { tesol200Course } from "@/data/courses/tesol-200";
-import { courseDetailSidebarGroups } from "@/data/site";
+import { tesolFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
 export default function Tesol200CourseContent() {
   const course = tesol200Course;
@@ -135,7 +135,7 @@ export default function Tesol200CourseContent() {
   return (
     <section className="no-view-reveal w-full min-w-0 overflow-x-clip bg-[#f5f8fc] py-16 sm:py-20">
       <CoursePageLayout
-        left={<AboutCoursesSidebar groups={courseDetailSidebarGroups} />}
+        left={<AboutCoursesSidebar groups={tesolFirstSidebarGroups} />}
         right={
           <CourseRightSidebar
             details={teacherCourseDetails.tesol200}

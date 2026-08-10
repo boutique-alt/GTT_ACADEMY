@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import SocialMediaLinks from "@/components/ui/SocialMediaLinks";
-import { acknowledgementsHref, alumniHref, quickLinks, usefulLinks } from "@/data/site";
+import { quickLinks, usefulLinks } from "@/data/site";
 
 export default function Footer() {
   return (
@@ -41,17 +41,21 @@ export default function Footer() {
           <ul className="grid grid-cols-2 gap-2.5 text-sm text-blue-100">
             {quickLinks.map((item) => <li key={item.label}><a href={item.href} className="transition hover:text-[#ffbc09]">{item.label}</a></li>)}
           </ul>
-          <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
+          <a
+            href="https://goo.gl/maps/xJdUSuAhNABuXGAT7"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 block rounded-xl border border-white/10 bg-white/5 p-4 transition hover:border-[#ffbc09]/40 hover:bg-white/10"
+          >
             <p className="text-[#ffbc09]">★★★★★</p>
             <p className="mt-1 text-xs leading-5 text-blue-100">
               5 star rating based on 1014 reviews from our students on{" "}
-              <a href="https://goo.gl/maps/xJdUSuAhNABuXGAT7" target="_blank" rel="noreferrer" className="underline hover:text-[#ffbc09]">Google</a>,{" "}
-              <a href="https://www.facebook.com/GTTAcademyIndia/reviews/" target="_blank" rel="noreferrer" className="underline hover:text-[#ffbc09]">Facebook</a>
+              <span className="underline">Google</span>,{" "}
+              <span className="underline">Facebook</span>
               {" "}&{" "}
-              <a href={alumniHref} className="underline hover:text-[#ffbc09]">Alumni</a>.
+              <span className="underline">Alumni</span>.
             </p>
-            <a href={acknowledgementsHref} className="mt-3 inline-block text-xs font-semibold text-[#ffbc09] transition hover:text-white">Acknowledgements</a>
-          </div>
+          </a>
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-blue-200">

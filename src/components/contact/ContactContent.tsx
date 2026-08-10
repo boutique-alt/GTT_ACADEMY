@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
 import AboutStickyLayout from "@/components/about/AboutStickyLayout";
+import ContactBranchCards from "@/components/contact/ContactBranchCards";
 import ContactGetInTouch from "@/components/contact/ContactGetInTouch";
-import ContactInfoCards from "@/components/contact/ContactInfoCards";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 
 export default function ContactContent() {
@@ -10,12 +10,14 @@ export default function ContactContent() {
     <section className="no-view-reveal bg-[#f5f8fc] py-16 sm:py-20">
       <AboutStickyLayout sidebar={<AboutCoursesSidebar />} mobileContentFirst>
         <div className="flex flex-col space-y-0">
-          {/* Mobile: form first (above courses sidebar). Desktop: contact info first. */}
           <div className="order-2 mb-10 lg:order-1">
             <div className="rounded-[1.5rem] border border-slate-100 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
-              <h2 className="font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">Contact Information</h2>
+              <h2 className="font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">Our Branch Offices</h2>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Find GTT Academy centers across India and internationally. Full addresses will be updated as confirmed.
+              </p>
               <div className="mt-8">
-                <ContactInfoCards />
+                <ContactBranchCards />
               </div>
             </div>
           </div>

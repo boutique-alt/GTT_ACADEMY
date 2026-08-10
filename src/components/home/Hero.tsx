@@ -84,7 +84,7 @@ export default function Hero() {
             <ApplyNowLink className="btn-brand-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-[0.04em] sm:px-7 sm:py-4">
               Apply Now <ArrowRight size={18} />
             </ApplyNowLink>
-            <a href="#courses" className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold tracking-[0.04em] backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:px-7 sm:py-4">
+            <a href="/courses" className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold tracking-[0.04em] backdrop-blur transition hover:bg-white hover:text-[#0045bc] sm:px-7 sm:py-4">
               Explore Courses
             </a>
           </div>
