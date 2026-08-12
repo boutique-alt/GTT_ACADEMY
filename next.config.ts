@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
         destination: "/special-offer",
         permanent: false,
       },
+      {
+        source: "/thank-you.php",
+        destination: "/thank-you",
+        permanent: false,
+      },
+      {
+        source: "/download-brochure.php",
+        destination: "/thank-you",
+        permanent: false,
+      },
     ];
   },
 };

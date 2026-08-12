@@ -349,6 +349,7 @@ export const tesol200Course = {
     "TESOL/TEFL certificates are valid for life. It never expires so no renewal tests are necessary. However, it is always a good idea to continue to expand one's knowledge and skills as one advances in their teaching career.",
     "Needless to say, with a TESOL/TEFL certificate, you will be more equipped to take on a classroom session for students. One will be exposed to plenty of teaching tools and skills to deliver lessons successfully. Simultaneously it makes you qualified to have professional-level teaching skills.",
     "A TESOL/TEFL certification gives one access to unlimited traveling opportunities. This is one of the best things about a career as a TESOL/TEFL teacher. One is not limited to one location. As the certification is globally recognized, one could possibly teach in a number of different countries across the world.",
+    "Our certificates do not specify the online or distance learning mode of study. This allows you to present your qualification with the same recognition as a traditional degree.",
   ],
   apostilleImportance: [
     "It is quite hard for an individual to do the apostille process on their own as it's not a direct process and there are different steps involved for each document type. At GTT Academy, we provide the apostilled Certificate for legalization, which can save your valuable time and energy.",

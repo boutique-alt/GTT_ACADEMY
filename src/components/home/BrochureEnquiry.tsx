@@ -1,67 +1,31 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent } from "react";
-import { useRouter } from "next/navigation";
-import { ArrowRight, Download } from "lucide-react";
-import { thankYouHref } from "@/data/site";
+import { Download } from "lucide-react";
+import WufooEmbed from "@/components/forms/WufooEmbed";
+import { wufooForms } from "@/data/wufoo";
 
 const BROCHURE_HREF = "/images/home-brochure.png";
 const BROCHURE_FILENAME = "GTT-Academy-Brochure.png";
 
 export default function BrochureEnquiry() {
-  const router = useRouter();
-
-  function submitBrochure(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const subject = encodeURIComponent(`Brochure request from ${data.get("name")}`);
-    const body = encodeURIComponent(
-      `Name: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nCourse: ${data.get("course")}\nRequest: Please send the course brochure.`,
-    );
-    window.open(`mailto:enquiry@globalteachersacademy.com?subject=${subject}&body=${body}`, "_blank");
-    router.push(thankYouHref);
-  }
-
   return (
     <section className="bg-brand-gradient py-20">
       <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-8 px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
-        <form onSubmit={submitBrochure} className="order-2 min-w-0 overflow-hidden rounded-3xl bg-white p-6 shadow-2xl sm:p-8 lg:order-1 lg:p-9">
+        <div className="order-2 min-w-0 overflow-hidden rounded-3xl bg-white p-6 shadow-2xl sm:p-8 lg:order-1 lg:p-9">
           <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.22em] text-[#30ad22]">Get a Free Brochure</p>
           <h2 className="font-serif text-3xl font-bold text-[#05245b]">Fill out my online form</h2>
-          <p className="mt-3 text-sm leading-6 text-slate-600">Share your details and our team will guide you with the right teacher training course brochure.</p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <label className="grid min-w-0 gap-2 text-sm font-semibold text-slate-700">
-              Full Name *
-              <input required name="name" className="w-full min-w-0 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-normal outline-none focus:border-[#0045bc]" />
-            </label>
-            <label className="grid min-w-0 gap-2 text-sm font-semibold text-slate-700">
-              Phone *
-              <input required name="phone" type="tel" className="w-full min-w-0 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-normal outline-none focus:border-[#0045bc]" />
-            </label>
-            <label className="grid min-w-0 gap-2 text-sm font-semibold text-slate-700">
-              Email *
-              <input required name="email" type="email" className="w-full min-w-0 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-normal outline-none focus:border-[#0045bc]" />
-            </label>
-            <label className="grid min-w-0 gap-2 text-sm font-semibold text-slate-700">
-              Course *
-              <select required name="course" defaultValue="" className="w-full min-w-0 max-w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 font-normal outline-none focus:border-[#0045bc]">
-                <option value="" disabled>Select a course</option>
-                <option>Pre and Primary Teacher Training</option>
-                <option>Montessori Teacher Training</option>
-                <option>Early Childhood Care and Education</option>
-                <option>Nursery Teacher Training</option>
-                <option>Special Education Needs Teacher Training</option>
-                <option>Child Psychology</option>
-                <option>TESOL / TEFL</option>
-                <option>Other Course</option>
-              </select>
-            </label>
+          <p className="mt-3 text-sm leading-6 text-slate-600">
+            Share your details and our team will guide you with the right teacher training course brochure.
+          </p>
+          <div className="mt-6">
+            <WufooEmbed
+              formHash={wufooForms.brochure.formHash}
+              height={wufooForms.brochure.height}
+              className="min-h-[260px] w-full"
+            />
           </div>
-          <button className="btn-brand-gradient mt-6 inline-flex items-center gap-2 rounded-full px-7 py-4 font-bold">
-            Request Brochure <ArrowRight size={18} />
-          </button>
-        </form>
+        </div>
 
         <div className="order-1 flex flex-col overflow-hidden rounded-3xl bg-white p-3 shadow-2xl lg:order-2">
           <div className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">

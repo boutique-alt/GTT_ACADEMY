@@ -1259,9 +1259,9 @@ export const teacherCourseDetails = {
     level: "Masters",
   },
   ieltsForTeachers: {
-    eligibility: "Graduation in any stream",
+    eligibility: "Graduation in any discipline",
     duration: "6 Months",
-    fees: "12000 INR + GST / 200 USD",
+    fees: "15000 INR + GST / 220 USD",
     level: "Certificate",
   },
 } as const satisfies Record<string, CoursePageDetails>;

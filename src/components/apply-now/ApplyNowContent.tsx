@@ -1,7 +1,8 @@
 import { Award, Headphones, Phone } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
 import AboutStickyLayout from "@/components/about/AboutStickyLayout";
-import ContactForm from "@/components/contact/ContactForm";
+import WufooEmbed from "@/components/forms/WufooEmbed";
+import { wufooForms } from "@/data/wufoo";
 
 export default function ApplyNowContent() {
   return (
@@ -38,11 +39,10 @@ export default function ApplyNowContent() {
           </div>
 
           <div className="px-4 pb-8 pt-2 sm:px-8 sm:pb-10 lg:px-10">
-            <ContactForm
-              eyebrow="Fill out my online form"
-              description="Complete the form below to apply for your preferred teacher training course."
-              submitLabel="Apply Now"
-              mailSubjectPrefix="Apply Now request from"
+            <WufooEmbed
+              formHash={wufooForms.application.formHash}
+              height={wufooForms.application.height}
+              className="min-h-[400px] w-full"
             />
           </div>
         </div>
