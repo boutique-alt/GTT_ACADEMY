@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   title: "Teacher Training Certificate Course Online India | GTT Academy",
   description:
     "Global Teacher Training Academy offers globally recognised teacher training, Montessori, child psychology and TESOL courses with practical sessions.",
+  icons: {
+    icon: [{ url: "/images/favicon.png", type: "image/png" }],
+    shortcut: "/images/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
