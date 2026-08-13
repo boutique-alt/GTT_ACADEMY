@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Teaching is a very noble",
   "profession that shapes the",
@@ -44,11 +46,11 @@ export default function CareerHero() {
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         {/* Image plane — full photo on mobile, not covered by quote */}
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_20%] bg-no-repeat"
-            style={{ backgroundImage: "url(/images/career-hero-banner.jpg)" }}
-            role="img"
-            aria-label="Career opportunities at GTT Academy"
+          <CoverImage
+            src="/images/career-hero-banner.jpg"
+            alt="Career opportunities at GTT Academy"
+            priority
+            className="object-cover object-[center_20%]"
           />
           <div
             className="pointer-events-none absolute inset-0 hidden sm:block"

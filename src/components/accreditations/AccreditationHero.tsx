@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "GTT ACADEMY ENSURES",
   "INTEGRITY",
@@ -9,12 +11,7 @@ export default function AccreditationHero() {
   return (
     <>
       <section className="relative isolate aspect-video w-full overflow-hidden bg-[#05245b]">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/images/accreditations-hero.jpg)" }}
-          role="img"
-          aria-label="Accreditations at GTT Academy"
-        />
+        <CoverImage src="/images/accreditations-hero.jpg" alt="Accreditations at GTT Academy" priority />
         <div
           className="pointer-events-none absolute inset-0"
           style={{

@@ -6,9 +6,9 @@ import SpecialOfferContent from "@/components/special-offer/SpecialOfferContent"
 import SpecialOfferHero from "@/components/special-offer/SpecialOfferHero";
 
 export const metadata: Metadata = {
-  title: "Special Offer | GTT Academy",
+  title: "Independence Day Special Offer | GTT Academy",
   description:
-    "Know about Special Offer at Global Teacher Training Academy (GTT Academy) for online Pre and Primary, Montessori teacher training and nursery teacher training certificate courses.",
+    "This Independence Day, let education be our freedom. Avail special discounts across GTT Academy teacher training courses and take the next step towards becoming a confident, future-ready teacher.",
 };
 
 export default function SpecialOfferPage() {

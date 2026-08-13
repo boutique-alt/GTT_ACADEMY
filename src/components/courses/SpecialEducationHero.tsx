@@ -26,14 +26,14 @@ function QuoteBlock({ className = "" }: { className?: string }) {
   );
 }
 
-export default function TeachingGrammarHero() {
+export default function SpecialEducationHero() {
   return (
     <>
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
           <CoverImage
-            src="/images/teaching-grammar-hero.jpg"
-            alt="Teaching Grammar at GTT Academy"
+            src="/images/special-education-hero.jpg"
+            alt="Special Education at GTT Academy"
             priority
             className="object-cover object-[center_30%]"
           />
@@ -55,7 +55,7 @@ export default function TeachingGrammarHero() {
       <div className="bg-brand-gradient py-4 sm:py-5 lg:py-7">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-center font-display text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl lg:text-[3.25rem] lg:leading-[1.1] xl:text-[4rem]">
-            Teaching Grammar
+            Special Education
           </h1>
         </div>
       </div>

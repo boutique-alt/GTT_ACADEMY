@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Educate and raise",
   "the masses, and thus",
@@ -29,11 +31,11 @@ export default function MontessoriHero() {
     <>
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_25%] bg-no-repeat"
-            style={{ backgroundImage: "url(/images/montessori-hero.jpg)" }}
-            role="img"
-            aria-label="Montessori Teacher Training at GTT Academy"
+          <CoverImage
+            src="/images/montessori-hero.jpg"
+            alt="Montessori Teacher Training at GTT Academy"
+            priority
+            className="object-cover object-[center_25%]"
           />
           <div
             className="pointer-events-none absolute inset-0"

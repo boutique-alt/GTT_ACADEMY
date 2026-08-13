@@ -1,5 +1,6 @@
 import { CheckCircle2, PlayCircle } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import YoutubeLiteEmbed from "@/components/ui/YoutubeLiteEmbed";
 
 const highlights = [
   "Real student review from Sarita Jethani after her GTT Academy training.",
@@ -25,13 +26,7 @@ export default function VideoShowcase() {
               <PlayCircle className="text-[#0045bc]" size={20} /> Student Review Video
             </div>
             <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg shadow-[#0045bc]/15 ring-1 ring-[#0045bc]/10">
-              <iframe
-                className="size-full"
-                src="https://www.youtube.com/embed/xduuUZMSM6M"
-                title="GTT Academy student review - Sarita Jethani"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
+              <YoutubeLiteEmbed videoId="xduuUZMSM6M" title="GTT Academy student review - Sarita Jethani" />
             </div>
           </div>
 

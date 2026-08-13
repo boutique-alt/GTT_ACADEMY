@@ -3,20 +3,16 @@ import { ArrowRight } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
 import AboutStickyLayout from "@/components/about/AboutStickyLayout";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
+import CoverImage from "@/components/ui/CoverImage";
 import { coursesCatalogGroups } from "@/data/courses/courses-catalog";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function CoursesIndexContent() {
   return (
     <section className="no-view-reveal relative w-full min-w-0 overflow-x-clip bg-[#f5f8fc] py-16 sm:py-20">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.12]"
-        style={{
-          backgroundImage: "url(/images/accreditations-hero.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.12]">
+        <CoverImage src="/images/accreditations-hero.jpg" alt="" />
+      </div>
       <div className="relative">
         <AboutStickyLayout sidebar={<AboutCoursesSidebar groups={courseDetailSidebarGroups} />} mobileContentFirst>
           <div className="min-w-0 max-w-full space-y-8">

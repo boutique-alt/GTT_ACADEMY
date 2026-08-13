@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Check out",
   "what our",
@@ -10,12 +12,7 @@ export default function AlumniHero() {
   return (
     <>
       <section className="relative isolate aspect-video w-full overflow-hidden bg-[#05245b]">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/images/alumni-hero.jpg)" }}
-          role="img"
-          aria-label="Alumni of GTT Academy"
-        />
+        <CoverImage src="/images/alumni-hero.jpg" alt="Alumni of GTT Academy" priority />
         <div
           className="pointer-events-none absolute inset-0"
           style={{

@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Our Specialized courses",
   "are aimed at helping",
@@ -29,11 +31,11 @@ export default function NlpForStudentsHero() {
     <>
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_30%] bg-no-repeat"
-            style={{ backgroundImage: "url(/images/nlp-for-students-hero.jpg)" }}
-            role="img"
-            aria-label="NLP for Students at GTT Academy"
+          <CoverImage
+            src="/images/nlp-for-students-hero.jpg"
+            alt="NLP for Students at GTT Academy"
+            priority
+            className="object-cover object-[center_30%]"
           />
           <div
             className="pointer-events-none absolute inset-0"

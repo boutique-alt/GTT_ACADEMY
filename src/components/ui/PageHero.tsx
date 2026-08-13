@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 type Props = {
   title: string;
   image: string;
@@ -7,10 +9,7 @@ export default function PageHero({ title, image }: Props) {
   return (
     <>
       <section className="relative isolate h-[min(55svh,600px)] min-h-[320px] w-full overflow-hidden bg-[#05245b] sm:min-h-[420px] lg:h-[600px] lg:min-h-[600px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${image})` }}
-        />
+        <CoverImage src={image} alt="" priority />
         <div className="absolute inset-0 bg-black/40" />
       </section>
       <div className="bg-brand-gradient py-4 sm:py-5 lg:py-7">

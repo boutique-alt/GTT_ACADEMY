@@ -29,8 +29,8 @@ export const courseGroups = [
         href: coursePath("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
       },
       {
-        title: "Special Education Needs Teacher Training",
-        href: "/apply-now",
+        title: "Special Education",
+        href: coursePath("teacher-training-courses", "pg-diploma-in-special-education"),
       },
       {
         title: "Early Childhood Care and Education",
@@ -148,8 +148,8 @@ export const courseDetailSidebarGroups = [
         href: coursePath("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
       },
       {
-        title: "Special Education Needs Teacher Training",
-        href: "/apply-now",
+        title: "Special Education",
+        href: coursePath("teacher-training-courses", "pg-diploma-in-special-education"),
       },
       {
         title: "Educational Administration and Management",
@@ -289,12 +289,12 @@ export const courses = [
       "Nursery Teacher Training at GTT Academy prepares caregivers and educators with child development, teaching methodology, and nursery-level classroom skills.",
   },
   {
-    title: "Special Education Needs Teacher Training",
-    image: "/images/courses/counselling.jpg",
+    title: "Special Education",
+    image: "/images/courses/special-education.jpg",
     badge: "/images/premium-course.gif",
-    href: "/apply-now",
+    href: coursePath("teacher-training-courses", "pg-diploma-in-special-education"),
     description:
-      "Special Education Needs Teacher Training equips teachers to identify diverse learning needs and support inclusive classrooms with practical strategies and care.",
+      "Diploma and PG Diploma in Special Education equip parents, school teachers and shadow teachers to support children with special needs through inclusive strategies and care.",
   },
 ];
 

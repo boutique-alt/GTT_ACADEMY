@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Excel in IELTS",
   "and unlock global",
@@ -28,11 +30,11 @@ export default function IeltsForTeachersHero() {
     <>
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_35%] bg-no-repeat"
-            style={{ backgroundImage: "url(/images/ielts-for-teachers-hero.jpg)" }}
-            role="img"
-            aria-label="IELTS for Teachers at GTT Academy"
+          <CoverImage
+            src="/images/ielts-for-teachers-hero.jpg"
+            alt="IELTS for Teachers at GTT Academy"
+            priority
+            className="object-cover object-[center_35%]"
           />
           <div
             className="pointer-events-none absolute inset-0"

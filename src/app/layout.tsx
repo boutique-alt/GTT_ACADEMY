@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Lora, Manrope } from "next/font/google";
+import Script from "next/script";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import ScrollProgress from "@/components/layout/ScrollProgress";
@@ -13,6 +14,7 @@ const manrope = Manrope({
 const lora = Lora({
   variable: "--font-lora",
   subsets: ["latin"],
+  preload: false,
 });
 
 const display = Cormorant_Garamond({
@@ -33,12 +35,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${lora.variable} ${display.variable} scroll-smooth antialiased`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${manrope.variable} ${lora.variable} ${display.variable} scroll-smooth antialiased`}
+    >
       <body>
         <ScrollProgress />
         <Header />
         {children}
         <Footer />
+        <Script
+          id="ze-snippet"
+          src="https://static.zdassets.com/ekr/snippet.js?key=870f04e9-bd2f-40a6-bcbf-8657f4f1b06c"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

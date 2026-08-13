@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "A TEACHER",
   "NEVER",
@@ -10,12 +12,7 @@ export default function FaqHero() {
   return (
     <>
       <section className="relative isolate aspect-video w-full overflow-hidden bg-[#05245b]">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/images/faq-hero.jpg)" }}
-          role="img"
-          aria-label="Frequently asked questions at GTT Academy"
-        />
+        <CoverImage src="/images/faq-hero.jpg" alt="Frequently asked questions at GTT Academy" priority />
         <div
           className="pointer-events-none absolute inset-0"
           style={{

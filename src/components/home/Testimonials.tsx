@@ -2,8 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import CoverImage from "@/components/ui/CoverImage";
 import TestimonialCard from "@/components/home/TestimonialCard";
 import testimonials from "@/data/testimonials.json";
+
+const featured = testimonials.slice(0, 12);
 
 function canHover() {
   return typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
@@ -15,7 +18,7 @@ export default function Testimonials() {
   const resumeTimer = useRef<number | null>(null);
 
   const renderCards = (copy: string) =>
-    testimonials.map((testimonial, index) => (
+    featured.map((testimonial, index) => (
       <TestimonialCard
         key={`${copy}-${index}-${testimonial.name}`}
         name={testimonial.name}
@@ -51,7 +54,8 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[url('/images/testimonial-bg.jpg')] bg-cover bg-center py-24">
+    <section className="relative overflow-hidden py-24">
+      <CoverImage src="/images/testimonial-bg.jpg" alt="" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0045bc]/92 via-[#0045bc]/88 to-[#30ad22]/75" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -69,7 +73,7 @@ export default function Testimonials() {
         onWheel={pauseForManualScroll}
       >
         <div
-          className={`flex w-max gap-6 px-3 max-sm:[animation:none] sm:animate-[testimonialMarquee_1260s_linear_infinite] sm:hover:[animation-play-state:paused] ${
+          className={`flex w-max gap-6 px-3 max-sm:[animation:none] sm:animate-[testimonialMarquee_80s_linear_infinite] sm:hover:[animation-play-state:paused] ${
             paused ? "sm:[animation-play-state:paused]" : ""
           }`}
         >

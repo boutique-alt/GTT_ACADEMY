@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Keep checking our website",
   "to find out the latest deals",
@@ -31,11 +33,11 @@ export default function SpecialOfferHero() {
     <>
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_20%] bg-no-repeat"
-            style={{ backgroundImage: "url(/images/special-offer-hero.jpg)" }}
-            role="img"
-            aria-label="Special offer at GTT Academy"
+          <CoverImage
+            src="/images/special-offer-hero.jpg"
+            alt="Special offer at GTT Academy"
+            priority
+            className="object-cover object-[center_20%]"
           />
           <div
             className="pointer-events-none absolute inset-0 hidden sm:block"
@@ -59,7 +61,7 @@ export default function SpecialOfferHero() {
       <div className="bg-brand-gradient py-4 sm:py-5 lg:py-7">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-center font-display text-3xl font-semibold tracking-[-0.02em] text-white sm:text-4xl lg:text-[4.5rem] lg:leading-[1.05]">
-            Special Offer
+            Independence Day Offer
           </h1>
         </div>
       </div>

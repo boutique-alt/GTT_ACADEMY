@@ -29,23 +29,29 @@ const slides = [
 
 export default function Hero() {
   const [active, setActive] = useState(0);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    setReady(true);
     const timer = window.setInterval(() => setActive((current) => (current + 1) % slides.length), 6500);
     return () => window.clearInterval(timer);
   }, []);
 
   const move = (direction: number) => setActive((current) => (current + direction + slides.length) % slides.length);
+  const nextIndex = (active + 1) % slides.length;
 
   return (
     <section className="relative isolate h-[min(70svh,620px)] min-h-[520px] w-full overflow-hidden bg-[#05245b] max-sm:h-auto max-sm:min-h-0 lg:h-[40vw] lg:min-h-[560px] lg:max-h-[640px]">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.image}
-          className={`absolute inset-0 bg-cover bg-[72%_center] bg-no-repeat transition-all duration-1000 max-sm:bg-[85%_30%] sm:bg-[center_22%] ${active === index ? "opacity-100" : "opacity-0"}`}
-          style={{ backgroundImage: `url(${slide.image})` }}
-        />
-      ))}
+      {slides.map((slide, index) => {
+        if (index !== active && (!ready || index !== nextIndex)) return null;
+        return (
+          <div
+            key={slide.image}
+            className={`absolute inset-0 bg-cover bg-[72%_center] bg-no-repeat transition-opacity duration-1000 max-sm:bg-[85%_30%] sm:bg-[center_22%] ${active === index ? "opacity-100" : "opacity-0"}`}
+            style={{ backgroundImage: `url("${slide.image}")` }}
+          />
+        );
+      })}
       <div
         className="pointer-events-none absolute inset-0"
         style={{

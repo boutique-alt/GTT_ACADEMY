@@ -89,6 +89,7 @@ export default function ContactForm({
               <option>Educational Administration and Management</option>
               <option>Child Psychology</option>
               <option>Child and Adolescent Counseling</option>
+              <option>Special Education</option>
               <option>TESOL / TEFL</option>
               <option>Other Course</option>
             </select>

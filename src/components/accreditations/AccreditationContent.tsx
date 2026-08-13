@@ -2,8 +2,24 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import AboutCoursesSidebar from "@/components/about/AboutCoursesSidebar";
 import AboutStickyLayout from "@/components/about/AboutStickyLayout";
+import AccreditationSampleDocument from "@/components/accreditations/AccreditationSampleDocument";
 import CourseBulletList from "@/components/courses/CourseBulletList";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
+
+const marksheetSamples = [
+  {
+    src: "/images/accreditations-marksheet-sample-1.png",
+    alt: "Sample marksheet from GTT Academy — page 1",
+  },
+  {
+    src: "/images/accreditations-marksheet-sample-2.png",
+    alt: "Sample marksheet from GTT Academy — page 2",
+  },
+  {
+    src: "/images/accreditations-marksheet-sample-3.png",
+    alt: "Sample marksheet from GTT Academy — page 3",
+  },
+] as const;
 
 const intro = [
   "The world of education is often found to be spoiled by questionable certification of academic courses. In order to draw a line between genuine, bona fide qualifications and those that are fabricated for commercial gain, it is imperative that education companies provide accredited certification.",
@@ -93,6 +109,12 @@ export default function AccreditationContent() {
               {mofaParagraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 64)}>{paragraph}</p>
               ))}
+              <AccreditationSampleDocument
+                src="/images/accreditations-mofa-sample.png"
+                alt="Sample MOFA attestation document"
+                width={744}
+                height={1024}
+              />
             </div>
 
             <div className="space-y-5 pt-4">
@@ -116,6 +138,17 @@ export default function AccreditationContent() {
               {marksheetParagraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 64)}>{paragraph}</p>
               ))}
+              <div className="space-y-2">
+                {marksheetSamples.map((sample) => (
+                  <AccreditationSampleDocument
+                    key={sample.src}
+                    src={sample.src}
+                    alt={sample.alt}
+                    width={1191}
+                    height={1684}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 

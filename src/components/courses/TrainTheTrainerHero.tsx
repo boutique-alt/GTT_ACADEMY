@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Build skilled facilitators",
   "who transform knowledge",
@@ -28,11 +30,11 @@ export default function TrainTheTrainerHero() {
     <>
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_30%] bg-no-repeat"
-            style={{ backgroundImage: "url(/images/train-the-trainer-hero.jpg)" }}
-            role="img"
-            aria-label="Online Training the Trainer Program at GTT Academy"
+          <CoverImage
+            src="/images/train-the-trainer-hero.jpg"
+            alt="Online Training the Trainer Program at GTT Academy"
+            priority
+            className="object-cover object-[center_30%]"
           />
           <div
             className="pointer-events-none absolute inset-0"

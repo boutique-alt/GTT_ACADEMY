@@ -95,6 +95,7 @@ export default function Gallery() {
         >
           {images.map((image, index) => {
             const offset = getOffset(index, active, total);
+            if (Math.abs(offset) > 1) return null;
             return (
               <GalleryItem
                 key={image.src}

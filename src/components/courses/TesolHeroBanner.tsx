@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Teach while you",
   "travel the world!",
@@ -39,12 +41,7 @@ export default function TesolHeroBanner({
     <>
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_35%] bg-no-repeat"
-            style={{ backgroundImage: `url(${image})` }}
-            role="img"
-            aria-label={ariaLabel}
-          />
+          <CoverImage src={image} alt={ariaLabel} priority className="object-cover object-[center_35%]" />
           <div
             className="pointer-events-none absolute inset-0"
             style={{

@@ -1210,6 +1210,12 @@ export const teacherCourseDetails = {
     fees: "15000 INR + GST / 240 USD",
     level: "Diploma",
   },
+  specialEducation: {
+    eligibility: "(10+2) or Graduation / Graduation in any stream",
+    duration: "8 Months / 12 Months",
+    fees: "14000 INR+GST (USD 230) / 20000 INR+GST (USD 325)",
+    level: "Diploma / PG Diploma",
+  },
   classroomManagement: {
     eligibility: "(10+2) or Graduation in any stream.",
     duration: "4 Months",
@@ -1272,7 +1278,7 @@ export const courseApplicationOptions = [
   "Diploma in Teaching and Training",
   "Early Childhood Care and Education",
   "Nursery Teacher Training With Practical Session",
-  "Special Education Needs Teacher Training",
+  "Special Education",
   "Educational Administration and Management",
   "Diploma in Child and Adolescent Counseling",
   "Diploma in Child Psychology",

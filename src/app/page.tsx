@@ -1,19 +1,21 @@
+import dynamic from "next/dynamic";
 import About from "@/components/home/About";
-import AcademyCoursesRange from "@/components/home/AcademyCoursesRange";
-import AcademyDetails from "@/components/home/AcademyDetails";
-import Branches from "@/components/home/Branches";
-import BrochureEnquiry from "@/components/home/BrochureEnquiry";
-import CertificateShowcase from "@/components/home/CertificateShowcase";
 import Courses from "@/components/home/Courses";
-import EnquiryForm from "@/components/home/EnquiryForm";
-import FinalCta from "@/components/home/FinalCta";
-import FloatingContact from "@/components/home/FloatingContact";
-import Gallery from "@/components/home/Gallery";
 import Hero from "@/components/home/Hero";
-import Stats from "@/components/home/Stats";
-import Testimonials from "@/components/home/Testimonials";
 import TrustFeatures from "@/components/home/TrustFeatures";
-import VideoShowcase from "@/components/home/VideoShowcase";
+
+const AcademyCoursesRange = dynamic(() => import("@/components/home/AcademyCoursesRange"));
+const AcademyDetails = dynamic(() => import("@/components/home/AcademyDetails"));
+const Branches = dynamic(() => import("@/components/home/Branches"));
+const BrochureEnquiry = dynamic(() => import("@/components/home/BrochureEnquiry"));
+const CertificateShowcase = dynamic(() => import("@/components/home/CertificateShowcase"));
+const EnquiryForm = dynamic(() => import("@/components/home/EnquiryForm"));
+const FinalCta = dynamic(() => import("@/components/home/FinalCta"));
+const FloatingContact = dynamic(() => import("@/components/home/FloatingContact"));
+const Gallery = dynamic(() => import("@/components/home/Gallery"));
+const Stats = dynamic(() => import("@/components/home/Stats"));
+const Testimonials = dynamic(() => import("@/components/home/Testimonials"));
+const VideoShowcase = dynamic(() => import("@/components/home/VideoShowcase"));
 
 export default function Home() {
   return (

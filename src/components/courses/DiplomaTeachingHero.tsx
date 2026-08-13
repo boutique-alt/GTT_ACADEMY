@@ -1,3 +1,5 @@
+import CoverImage from "@/components/ui/CoverImage";
+
 const quoteLines = [
   "Educate and raise",
   "the masses, and thus",
@@ -29,11 +31,11 @@ export default function DiplomaTeachingHero() {
     <>
       <section className="relative isolate w-full overflow-hidden bg-[#05245b]">
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_25%] bg-no-repeat"
-            style={{ backgroundImage: "url(/images/diploma-teaching-hero.jpg)" }}
-            role="img"
-            aria-label="Diploma in Teaching and Training at GTT Academy"
+          <CoverImage
+            src="/images/diploma-teaching-hero.jpg"
+            alt="Diploma in Teaching and Training at GTT Academy"
+            priority
+            className="object-cover object-[center_25%]"
           />
           <div
             className="pointer-events-none absolute inset-0"

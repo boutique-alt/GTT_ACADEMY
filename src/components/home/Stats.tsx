@@ -1,3 +1,4 @@
+import CoverImage from "@/components/ui/CoverImage";
 import Image from "next/image";
 
 const stats = [
@@ -9,7 +10,8 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="relative overflow-hidden bg-[url('/images/counter-bg.jpg')] bg-cover bg-center py-16 text-white">
+    <section className="relative overflow-hidden py-16 text-white">
+      <CoverImage src="/images/counter-bg.jpg" alt="" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0045bc]/85 via-[#0045bc]/78 to-[#30ad22]/70" />
       <div className="relative mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
         {stats.map(({ value, label, icon }, index) => (

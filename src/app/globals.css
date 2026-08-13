@@ -217,10 +217,42 @@ button {
   }
 }
 
+.ellipsis-anim::after {
+  content: "...";
+  display: inline-block;
+  width: 1.15em;
+  text-align: left;
+  overflow: hidden;
+  animation: ellipsisCycle 1.6s steps(4, end) infinite;
+  vertical-align: baseline;
+}
+
+@keyframes ellipsisCycle {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1.15em;
+  }
+}
+
+.zendesk-launcher-hidden {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+iframe#launcher,
+iframe[title="Button to launch messaging window"],
+iframe[title="Opens a widget"] {
+  display: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *:not(.gallery-slide):not(.about-marquee),
-  *:not(.gallery-slide):not(.about-marquee)::before,
-  *:not(.gallery-slide):not(.about-marquee)::after {
+  *:not(.gallery-slide):not(.about-marquee):not(.ellipsis-anim),
+  *:not(.gallery-slide):not(.about-marquee):not(.ellipsis-anim)::before,
+  *:not(.gallery-slide):not(.about-marquee):not(.ellipsis-anim)::after {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

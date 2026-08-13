@@ -18,6 +18,7 @@ export default function TestimonialCard({ name, text, image, copy }: Props) {
           alt={name}
           fill
           sizes="(max-width: 640px) 260px, 290px"
+          loading="lazy"
           className="object-cover object-top transition duration-700 ease-out group-hover/card:scale-[1.04]"
         />
         <span className="absolute left-4 top-4 rounded-full bg-[#0045bc]/90 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-wider text-white backdrop-blur">

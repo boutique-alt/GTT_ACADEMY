@@ -70,12 +70,31 @@ function buildEmbedSrc(formHash: string, header: "show" | "hide") {
 
 export default function WufooEmbed({ formHash, height = 617, header = "show", className }: Props) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [src, setSrc] = useState("");
+  const [visible, setVisible] = useState(false);
   const [frameHeight, setFrameHeight] = useState(height);
 
   useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "240px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!visible) return;
     setSrc(buildEmbedSrc(formHash, header));
-  }, [formHash, header]);
+  }, [formHash, header, visible]);
 
   useEffect(() => {
     let cancelled = false;
@@ -124,7 +143,7 @@ export default function WufooEmbed({ formHash, height = 617, header = "show", cl
   }, [formHash]);
 
   return (
-    <div className={className}>
+    <div ref={containerRef} className={className}>
       {src ? (
         <iframe
           ref={iframeRef}
@@ -137,13 +156,7 @@ export default function WufooEmbed({ formHash, height = 617, header = "show", cl
           style={{ width: "100%", border: "none" }}
         />
       ) : (
-        <p className="text-sm text-slate-500">
-          Fill out my{" "}
-          <a href={`${WUFOO_ORIGIN}/forms/${formHash}`} className="text-[#0045bc] underline">
-            online form
-          </a>
-          .
-        </p>
+        <div className="w-full animate-pulse rounded-xl bg-slate-100" style={{ minHeight: height }} />
       )}
     </div>
   );
