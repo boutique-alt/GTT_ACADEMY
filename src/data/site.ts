@@ -70,7 +70,7 @@ export const courseGroups = [
     title: "Specialized Courses",
     courses: [
       {
-        title: "Training the Trainer Program",
+        title: "Train the Trainer Program",
         href: coursePath("specialized-courses", "training-the-trainer-program"),
       },
       {
@@ -193,7 +193,7 @@ export const courseDetailSidebarGroups = [
     title: "Specialized Courses",
     courses: [
       {
-        title: "Training the Trainer Program",
+        title: "Train the Trainer Program",
         href: coursePath("specialized-courses", "training-the-trainer-program"),
       },
       {

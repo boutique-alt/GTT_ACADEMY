@@ -32,7 +32,7 @@ export default function TrainTheTrainerHero() {
         <div className="relative aspect-[4/3] w-full sm:aspect-video">
           <CoverImage
             src="/images/train-the-trainer-hero.jpg"
-            alt="Online Training the Trainer Program at GTT Academy"
+            alt="Online Train the Trainer Program at GTT Academy"
             priority
             className="object-cover object-[center_30%]"
           />
@@ -54,7 +54,7 @@ export default function TrainTheTrainerHero() {
       <div className="bg-brand-gradient py-4 sm:py-5 lg:py-7">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-center font-display text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl lg:text-[3.25rem] lg:leading-[1.1] xl:text-[4rem]">
-            Training the Trainer Program
+            Train the Trainer Program
           </h1>
         </div>
       </div>

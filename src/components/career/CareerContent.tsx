@@ -84,7 +84,7 @@ export default function CareerContent() {
                 >
                   Diploma in Child and Adolescent Counseling
                 </a>{" "}
-                programmes attract a diverse group of learners— Not only budding students looking to build their knowledge and explore opportunities in child-focused fields, our learners have included dentists, caregivers, counsellors, educators, and other professionals who already work closely with children. Some participants are already working as child counsellors or caregivers and choose to pursue the programme to further develop their understanding of child and adolescent behaviour, emotional development, developmental needs, and the factors that shape a child&apos;s growth.
+                programmes attract a diverse group of learners— Not only budding students looking to build their knowledge and explore opportunities in child-focused fields, our learners have included child specialists, pediatricians, juvenile counselors, educators, and other professionals who closely work with children. Some participants are already working as child counsellors or caregivers and choose to pursue the programme to further develop their understanding of child and adolescent behaviour, emotional development, developmental needs, and the factors that shape a child&apos;s growth.
               </p>
               <p>
                 Roles such as Child Development Specialist, Behavioral Therapist, School Counselor / Child Counselor, and Special Educator are especially supported by these programmes.

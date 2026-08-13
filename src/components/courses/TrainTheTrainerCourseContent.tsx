@@ -126,7 +126,7 @@ export default function TrainTheTrainerCourseContent() {
         right={
           <CourseRightSidebar
             details={teacherCourseDetails.trainTheTrainer}
-            defaultCourse="Training the Trainer Program"
+            defaultCourse="Train the Trainer Program"
           />
         }
       >

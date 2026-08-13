@@ -1282,7 +1282,7 @@ export const courseApplicationOptions = [
   "Educational Administration and Management",
   "Diploma in Child and Adolescent Counseling",
   "Diploma in Child Psychology",
-  "Training the Trainer Program",
+  "Train the Trainer Program",
   "Classroom Management Skill",
   "Teaching Grammar",
   "Teaching Phonetics",

@@ -44,7 +44,7 @@ const shared = {
 };
 
 export const trainTheTrainerCourse = {
-  title: "Training the Trainer Program",
+  title: "Train the Trainer Program",
   image: "/images/courses/train-the-trainer-detail.jpg",
   pageIntro: [
     "The Train the Trainer course featured by Global Teacher Training Academy (GTT Academy) helps to produce skilled facilitators who can transform knowledge into a lasting and real-world learning. This comprehensive programme equips aspiring trainers with the mindset, methods, and management skills necessary to guide learners toward self-discovery in engaging, memorable ways. The 8 months course, will help participants master the art of group facilitation—learning to navigate group dynamics, manage challenging personalities, and cultivate strong team relationships using cooperative learning tools.",
@@ -142,7 +142,7 @@ export const trainTheTrainerCourse = {
       "Online MCQ and Teaching assignments",
     ],
   },
-  fee: "Training the Trainer Program is an 8-month comprehensive course that builds facilitation, TNA, and evaluation skills for professional trainers. You need eligibility criteria of graduation to apply for this Online course. You may pursue this course by spending a reasonable fee of 14000 INR + GST or 230 USD along with tutor guidance and course material support.",
+  fee: "Train the Trainer Program is an 8-month comprehensive course that builds facilitation, TNA, and evaluation skills for professional trainers. You need eligibility criteria of graduation to apply for this Online course. You may pursue this course by spending a reasonable fee of 14000 INR + GST or 230 USD along with tutor guidance and course material support.",
   levelLabel: "Diploma",
   shared,
 };

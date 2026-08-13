@@ -21,7 +21,7 @@ const feesByTitle: Record<string, string> = {
   "Teaching Grammar": teacherCourseDetails.teachingGrammar.fees,
   "Teaching Phonetics": teacherCourseDetails.teachingPhonetics.fees,
   "NLP for Students": teacherCourseDetails.nlpForStudents.fees,
-  "Training the Trainer Program": teacherCourseDetails.trainTheTrainer.fees,
+  "Train the Trainer Program": teacherCourseDetails.trainTheTrainer.fees,
   "140 Hour TEFL Course Diploma with Practical Teaching Session": teacherCourseDetails.tefl140.fees,
   "200 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session":
     teacherCourseDetails.tesol200.fees,
