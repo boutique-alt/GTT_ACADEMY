@@ -9,6 +9,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { tefl140Course } from "@/data/courses/tefl-140";
 import { tesolFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
@@ -140,6 +141,7 @@ export default function Tefl140CourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.tefl140}
             defaultCourse="140 Hour TEFL Course Diploma with Practical Teaching Session"
+            sampleCertificates={getCourseSampleCertificates("tefl-140")}
           />
         }
       >

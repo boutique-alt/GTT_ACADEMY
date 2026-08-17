@@ -11,6 +11,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { nurseryCourse } from "@/data/courses/nursery";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function NurseryCourseContent() {
@@ -134,6 +135,7 @@ export default function NurseryCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.nursery}
             defaultCourse="Nursery Teacher Training With Practical Session"
+            sampleCertificates={getCourseSampleCertificates("nursery", activeId)}
           />
         }
       >

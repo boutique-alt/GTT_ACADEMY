@@ -4,22 +4,25 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import CourseApplicationForm from "@/components/courses/CourseApplicationForm";
+import CourseSampleCertificate from "@/components/courses/CourseSampleCertificate";
 import CourseTestimonialsSlider from "@/components/courses/CourseTestimonialsSlider";
 import { courseSidebarAssets, type CoursePageDetails } from "@/data/courses/course-sidebar";
+import type { SampleCertificatePage } from "@/data/courses/sample-certificates";
 
 type Props = {
   details: CoursePageDetails;
   defaultCourse?: string;
+  sampleCertificates?: SampleCertificatePage[];
 };
 
 const detailRows: { key: keyof CoursePageDetails; label: string }[] = [
+  { key: "level", label: "Level" },
   { key: "eligibility", label: "Eligibility" },
   { key: "duration", label: "Duration" },
   { key: "fees", label: "Fees" },
-  { key: "level", label: "Level" },
 ];
 
-export default function CourseRightSidebar({ details, defaultCourse }: Props) {
+export default function CourseRightSidebar({ details, defaultCourse, sampleCertificates = [] }: Props) {
   return (
     <aside className="w-full min-w-0 max-w-full space-y-5">
       <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
@@ -44,27 +47,34 @@ export default function CourseRightSidebar({ details, defaultCourse }: Props) {
       <CourseApplicationForm defaultCourse={defaultCourse} />
 
       <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
-        <div className="relative aspect-[4/3] w-full bg-slate-100">
-          <Image
-            src={courseSidebarAssets.certificateTranscript}
-            alt="Certificate and Transcript"
-            fill
-            className="object-contain p-2"
-            sizes="(max-width: 1024px) 100vw, 280px"
-          />
-        </div>
+        {sampleCertificates.length > 0 ? (
+          <div className="bg-slate-50 p-2">
+            <CourseSampleCertificate pages={sampleCertificates} />
+          </div>
+        ) : (
+          <div className="relative aspect-[4/3] w-full bg-slate-100">
+            <Image
+              src={courseSidebarAssets.certificateTranscript}
+              alt="Certificate and Transcript"
+              fill
+              className="object-contain p-2"
+              sizes="(max-width: 1024px) 100vw, 280px"
+            />
+          </div>
+        )}
         <p className="border-t border-slate-100 px-3 py-2 text-center text-xs font-semibold text-[#05245b]">
           Certificate and Transcript
         </p>
       </div>
 
       <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
-        <div className="relative aspect-[4/3] w-full bg-slate-100">
+        <div className="bg-slate-50 p-2">
           <Image
             src={courseSidebarAssets.apostilleStamp}
-            alt="Apostille Stamp"
-            fill
-            className="object-contain p-2"
+            alt="Sample Apostille Stamp"
+            width={427}
+            height={594}
+            className="h-auto w-full object-contain"
             sizes="(max-width: 1024px) 100vw, 280px"
           />
         </div>

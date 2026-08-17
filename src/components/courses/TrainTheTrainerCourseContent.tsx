@@ -9,6 +9,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { trainTheTrainerCourse } from "@/data/courses/train-the-trainer-and-ielts";
 import { specializedFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
@@ -127,6 +128,7 @@ export default function TrainTheTrainerCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.trainTheTrainer}
             defaultCourse="Train the Trainer Program"
+            sampleCertificates={getCourseSampleCertificates("train-the-trainer")}
           />
         }
       >

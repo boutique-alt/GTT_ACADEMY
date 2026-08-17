@@ -10,6 +10,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { nlpForStudentsCourse } from "@/data/courses/nlp-for-students";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { specializedFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
 export default function NlpForStudentsCourseContent() {
@@ -127,6 +128,7 @@ export default function NlpForStudentsCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.nlpForStudents}
             defaultCourse="NLP for Students"
+            sampleCertificates={getCourseSampleCertificates("nlp")}
           />
         }
       >

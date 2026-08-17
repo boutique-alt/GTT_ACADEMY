@@ -11,6 +11,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { prePrimaryCourse } from "@/data/courses/pre-and-primary";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function PrePrimaryCourseContent() {
@@ -128,6 +129,7 @@ export default function PrePrimaryCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.prePrimary}
             defaultCourse="Pre and Primary Teacher Training with Practical Session"
+            sampleCertificates={getCourseSampleCertificates("pre-primary", activeId)}
           />
         }
       >

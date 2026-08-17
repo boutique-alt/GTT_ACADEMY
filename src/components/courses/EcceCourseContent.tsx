@@ -11,6 +11,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { ecceCourse } from "@/data/courses/ecce";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function EcceCourseContent() {
@@ -117,6 +118,7 @@ export default function EcceCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.ecce}
             defaultCourse="Early Childhood Care and Education"
+            sampleCertificates={getCourseSampleCertificates("ecce", activeId)}
           />
         }
       >

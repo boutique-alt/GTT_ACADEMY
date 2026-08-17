@@ -12,9 +12,9 @@ export default function ContactContent() {
         <div className="flex flex-col space-y-0">
           <div className="order-2 mb-10 lg:order-1">
             <div className="rounded-[1.5rem] border border-slate-100 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
-              <h2 className="font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">Our Branch Offices</h2>
+              <h2 className="font-serif text-3xl font-bold text-[#05245b] sm:text-4xl">Our Offices</h2>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Find GTT Academy centers across India and internationally. Full addresses will be updated as confirmed.
+                Find GTT Academy&apos;s India Admin Office and business associates across India and internationally.
               </p>
               <div className="mt-8">
                 <ContactBranchCards />

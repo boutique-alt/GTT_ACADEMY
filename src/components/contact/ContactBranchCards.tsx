@@ -1,6 +1,12 @@
 import { Mail, Phone } from "lucide-react";
 import { contactBranches } from "@/data/contact-branches";
 
+function telHref(value: string) {
+  const plus = value.trim().startsWith("+");
+  const digits = value.replace(/[^\d]/g, "");
+  return plus ? `tel:+${digits}` : `tel:${digits}`;
+}
+
 export default function ContactBranchCards() {
   return (
     <div className="space-y-6">
@@ -30,22 +36,24 @@ export default function ContactBranchCards() {
             </div>
             <div className="space-y-3 p-5 sm:p-6">
               <h3 className="font-serif text-xl font-bold text-[#0045bc]">{branch.name}</h3>
-              <p className="text-sm leading-6 text-slate-600">
+              <p className="whitespace-pre-line text-sm leading-6 text-slate-600">
                 <span className="font-semibold text-[#05245b]">Address: </span>
                 {branch.address}
               </p>
               <p className="text-sm leading-6 text-slate-600">
                 <span className="font-semibold text-[#05245b]">Contact No: </span>
-                <a href={`tel:${branch.contact}`} className="text-[#0045bc] transition hover:text-[#30ad22]">
+                <a href={telHref(branch.contact)} className="text-[#0045bc] transition hover:text-[#30ad22]">
                   {branch.contact}
                 </a>
               </p>
-              <p className="text-sm leading-6 text-slate-600">
-                <span className="font-semibold text-[#05245b]">India Toll Free Number: </span>
-                <a href={`tel:${branch.tollFree}`} className="text-[#0045bc] transition hover:text-[#30ad22]">
-                  {branch.tollFree}
-                </a>
-              </p>
+              {branch.tollFree ? (
+                <p className="text-sm leading-6 text-slate-600">
+                  <span className="font-semibold text-[#05245b]">India Toll Free Number: </span>
+                  <a href={telHref(branch.tollFree)} className="text-[#0045bc] transition hover:text-[#30ad22]">
+                    {branch.tollFree}
+                  </a>
+                </p>
+              ) : null}
             </div>
           </article>
         ))}

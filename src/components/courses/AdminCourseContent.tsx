@@ -11,6 +11,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { adminCourse } from "@/data/courses/admin";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function AdminCourseContent() {
@@ -129,6 +130,7 @@ export default function AdminCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.admin}
             defaultCourse="Educational Administration and Management"
+            sampleCertificates={getCourseSampleCertificates("admin", activeId)}
           />
         }
       >

@@ -309,13 +309,17 @@ export const navLinks = [
 ];
 
 export const usefulLinks = [
-  { label: "Tutor Support & Assessment", href: "/contact" },
-  { label: "Job Opportunities & Placement support", href: "/career" },
-  { label: "Franchise Opportunity", href: "/contact" },
+  { label: "Tutor Support & Assessment", href: "/tutor-support-assessment" },
+  { label: "Job Opportunities & Placement support", href: "/job-opportunities-placement-support" },
+  { label: "Franchise Opportunity", href: "/franchise-opportunity" },
   { label: "About Us", href: "/about" },
   { label: "Career Opportunities", href: "/career" },
   { label: "Accreditations", href: "/accreditations" },
   { label: "Courses", href: "/courses" },
+  { label: "Blog", href: "/blog" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms and Conditions", href: "/terms-and-conditions" },
+  { label: "Refund Policy", href: "/refund-policy" },
 ];
 
 export const quickLinks = [
@@ -333,12 +337,12 @@ export const thankYouHref = "/thank-you";
 export const branches = [
   "Hyderabad",
   "Bangalore",
-  "Kerala",
   "Mysore",
   "Pune",
-  "Delhi",
-  "Kolkata",
   "Guwahati",
+  "Kerala",
+  "Ahmedabad",
+  "Chhattisgarh",
   "UAE",
   "Saudi Arabia",
   "Sint Maarten",

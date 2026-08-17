@@ -9,6 +9,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { tesol200Course } from "@/data/courses/tesol-200";
 import { tesolFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
@@ -140,6 +141,7 @@ export default function Tesol200CourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.tesol200}
             defaultCourse="200 Hour TESOL Course PG Diploma with Dual Specialisation and Practical Teaching Session"
+            sampleCertificates={getCourseSampleCertificates("tesol-200", "pg-diploma")}
           />
         }
       >

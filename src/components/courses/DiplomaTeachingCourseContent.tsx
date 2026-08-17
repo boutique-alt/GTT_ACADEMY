@@ -10,6 +10,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { diplomaTeachingCourse } from "@/data/courses/diploma-teaching";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function DiplomaTeachingCourseContent() {
@@ -116,6 +117,7 @@ export default function DiplomaTeachingCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.diplomaTeaching}
             defaultCourse="Diploma in Teaching and Training"
+            sampleCertificates={getCourseSampleCertificates("diploma-teaching")}
           />
         }
       >

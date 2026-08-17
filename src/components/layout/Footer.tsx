@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import SocialMediaLinks from "@/components/ui/SocialMediaLinks";
 import { quickLinks, usefulLinks } from "@/data/site";
@@ -33,13 +34,25 @@ export default function Footer() {
         <div>
           <h3 className="mb-5 text-lg font-bold">Useful Links</h3>
           <ul className="grid gap-2.5 text-sm text-blue-100">
-            {usefulLinks.map((item) => <li key={item.label}><a href={item.href} className="transition hover:text-[#ffbc09]">{item.label}</a></li>)}
+            {usefulLinks.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} className="transition hover:text-[#ffbc09]">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>
           <h3 className="mb-5 text-lg font-bold">Quick Links</h3>
           <ul className="grid grid-cols-2 gap-2.5 text-sm text-blue-100">
-            {quickLinks.map((item) => <li key={item.label}><a href={item.href} className="transition hover:text-[#ffbc09]">{item.label}</a></li>)}
+            {quickLinks.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} className="transition hover:text-[#ffbc09]">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
           <a
             href="https://goo.gl/maps/xJdUSuAhNABuXGAT7"

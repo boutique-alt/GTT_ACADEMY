@@ -9,6 +9,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { teachingPhoneticsCourse } from "@/data/courses/teaching-phonetics";
 import { specializedFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
@@ -127,6 +128,7 @@ export default function TeachingPhoneticsCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.teachingPhonetics}
             defaultCourse="Teaching Phonetics"
+            sampleCertificates={getCourseSampleCertificates("teaching-phonetics", "certificate")}
           />
         }
       >

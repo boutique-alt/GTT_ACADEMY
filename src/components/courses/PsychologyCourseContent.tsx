@@ -10,6 +10,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { psychologyCourse } from "@/data/courses/psychology";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function PsychologyCourseContent() {
@@ -130,6 +131,7 @@ export default function PsychologyCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.psychology}
             defaultCourse="Diploma in Child Psychology"
+            sampleCertificates={getCourseSampleCertificates("psychology")}
           />
         }
       >

@@ -10,6 +10,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { counselingCourse } from "@/data/courses/counseling";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function CounselingCourseContent() {
@@ -130,6 +131,7 @@ export default function CounselingCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.counseling}
             defaultCourse="Diploma in Child and Adolescent Counseling"
+            sampleCertificates={getCourseSampleCertificates("counseling")}
           />
         }
       >

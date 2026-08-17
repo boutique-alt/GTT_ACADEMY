@@ -11,6 +11,7 @@ import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
 import { montessoriCourse } from "@/data/courses/montessori";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { courseDetailSidebarGroups } from "@/data/site";
 
 export default function MontessoriCourseContent() {
@@ -144,6 +145,7 @@ export default function MontessoriCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.montessori}
             defaultCourse="Montessori Teacher Training with Practical Session"
+            sampleCertificates={getCourseSampleCertificates("montessori", activeId)}
           />
         }
       >
