@@ -320,6 +320,7 @@ export const usefulLinks = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms and Conditions", href: "/terms-and-conditions" },
   { label: "Refund Policy", href: "/refund-policy" },
+  { label: "Payment Options", href: "/payment" },
 ];
 
 export const quickLinks = [

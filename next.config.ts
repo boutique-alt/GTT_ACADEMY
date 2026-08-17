@@ -70,6 +70,11 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/payment.php",
+        destination: "/payment",
+        permanent: false,
+      },
+      {
         source: "/blog.php",
         destination: "/blog",
         permanent: false,

@@ -1,7 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Script from "next/script";
 import { thankYouHref } from "@/data/site";
+
+type WufooFormInstance = {
+  initialize: (options: Record<string, unknown>) => void;
+  display: () => void;
+};
+
+type WufooFormConstructor = new () => WufooFormInstance;
+
+declare global {
+  interface Window {
+    WufooForm?: WufooFormConstructor;
+  }
+}
 
 type Props = {
   formHash: string;
@@ -10,70 +24,16 @@ type Props = {
   className?: string;
 };
 
+const FORM_JS = "https://secure.wufoo.com/scripts/embed/form.js";
 const WUFOO_USER = "gttacademy";
 const WUFOO_HOST = "wufoo.com";
 const WUFOO_ORIGIN = `https://${WUFOO_USER}.${WUFOO_HOST}`;
-/** No allow-top-navigation / popups-escape — blocks old PHP confirmation redirects. */
-const SAFE_SANDBOX = "allow-scripts allow-forms allow-same-origin";
-
-let openPatchCount = 0;
-let originalOpen: typeof window.open | null = null;
-let keepOpenPatch = false;
-
-function isLegacyConfirmationUrl(url: string) {
-  return /thank-you\.php|download-brochure\.php|globalteachersacademy\.com\/(?:thank-you|download-brochure)/i.test(
-    url,
-  );
-}
-
-function goToThankYouPage() {
-  window.location.replace(thankYouHref);
-}
-
-function installConfirmationOpenPatch() {
-  if (openPatchCount === 0) {
-    originalOpen = window.open.bind(window);
-    window.open = ((url?: string | URL, target?: string, features?: string) => {
-      const href = typeof url === "string" ? url : url?.toString?.() ?? "";
-      if (href && isLegacyConfirmationUrl(href)) {
-        goToThankYouPage();
-        return null;
-      }
-      return originalOpen?.(url as string, target, features) ?? null;
-    }) as typeof window.open;
-  }
-  openPatchCount += 1;
-
-  return () => {
-    if (keepOpenPatch) return;
-    openPatchCount = Math.max(0, openPatchCount - 1);
-    if (openPatchCount === 0 && originalOpen) {
-      window.open = originalOpen;
-      originalOpen = null;
-    }
-  };
-}
-
-function buildEmbedSrc(formHash: string, header: "show" | "hide") {
-  const embedKey = `${formHash}${Math.floor(1e6 * Math.random())}`;
-  let referrer = document.referrer || window.location.href;
-  referrer = referrer.replace(/\//g, "wuslash").replace(/\+/g, "wube");
-
-  const params = new URLSearchParams({
-    embedKey,
-    referrer,
-  });
-  if (header === "hide") params.set("header", "hide");
-
-  return `${WUFOO_ORIGIN}/embed/${formHash}/?${params.toString()}`;
-}
+const SUBMIT_REDIRECT_DELAY_MS = 2000;
 
 export default function WufooEmbed({ formHash, height = 617, header = "show", className }: Props) {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [src, setSrc] = useState("");
+  const displayedRef = useRef(false);
   const [visible, setVisible] = useState(false);
-  const [frameHeight, setFrameHeight] = useState(height);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -92,69 +52,55 @@ export default function WufooEmbed({ formHash, height = 617, header = "show", cl
   }, []);
 
   useEffect(() => {
-    if (!visible) return;
-    setSrc(buildEmbedSrc(formHash, header));
-  }, [formHash, header, visible]);
-
-  useEffect(() => {
     let cancelled = false;
     let redirected = false;
-
-    const redirectOnce = () => {
-      if (cancelled || redirected) return;
-      redirected = true;
-      keepOpenPatch = true;
-
-      // Kill iframe first so Wufoo cannot top-navigate after we reach /thank-you.
-      const frame = iframeRef.current;
-      if (frame) {
-        frame.src = "about:blank";
-        frame.remove();
-      }
-
-      goToThankYouPage();
-    };
+    let timer: number | undefined;
 
     const onMessage = (event: MessageEvent) => {
       if (event.origin !== WUFOO_ORIGIN && event.origin !== `http://${WUFOO_USER}.${WUFOO_HOST}`) return;
-
-      if (event.data === "formSubmitted") {
-        redirectOnce();
-        return;
-      }
-
-      if (typeof event.data === "string" && event.data.includes("|")) {
-        const [rawHeight, key = ""] = event.data.split("|");
-        const nextHeight = Number.parseInt(rawHeight, 10);
-        if (!Number.isNaN(nextHeight) && key.startsWith(formHash)) {
-          setFrameHeight(nextHeight);
-        }
-      }
+      if (event.data !== "formSubmitted") return;
+      if (cancelled || redirected) return;
+      redirected = true;
+      timer = window.setTimeout(() => {
+        if (!cancelled) window.location.replace(thankYouHref);
+      }, SUBMIT_REDIRECT_DELAY_MS);
     };
 
     window.addEventListener("message", onMessage);
-    const removeOpenPatch = installConfirmationOpenPatch();
-
     return () => {
       cancelled = true;
       window.removeEventListener("message", onMessage);
-      removeOpenPatch();
+      if (timer) window.clearTimeout(timer);
     };
-  }, [formHash]);
+  }, []);
+
+  function displayForm() {
+    if (!visible || displayedRef.current || !window.WufooForm) return;
+    if (!document.getElementById(`wufoo-${formHash}`)) return;
+    displayedRef.current = true;
+    const form = new window.WufooForm();
+    form.initialize({
+      userName: WUFOO_USER,
+      formHash,
+      autoResize: true,
+      height: String(height),
+      async: true,
+      host: WUFOO_HOST,
+      header,
+      ssl: true,
+    });
+    form.display();
+  }
 
   return (
     <div ref={containerRef} className={className}>
-      {src ? (
-        <iframe
-          ref={iframeRef}
-          id={`wufooForm${formHash}`}
-          title="Online form"
-          src={src}
-          height={frameHeight}
-          sandbox={SAFE_SANDBOX}
-          className="wufoo-form-container w-full border-0"
-          style={{ width: "100%", border: "none" }}
-        />
+      {visible ? (
+        <>
+          <Script id={`wufoo-embed-${formHash}`} src={FORM_JS} strategy="afterInteractive" onReady={displayForm} />
+          <div id={`wufoo-${formHash}`}>
+            <a href={`${WUFOO_ORIGIN}/forms/${formHash}/`}>Fill out my online form</a>
+          </div>
+        </>
       ) : (
         <div className="w-full animate-pulse rounded-xl bg-slate-100" style={{ minHeight: height }} />
       )}

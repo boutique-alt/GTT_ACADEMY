@@ -7,7 +7,8 @@ import Gallery from "@/components/home/Gallery";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | GTT Academy",
-  description: "Privacy policy of Global Teacher Training Academy covering cookies, analytics and how we handle your information.",
+  description:
+    "Privacy policy of Global Teacher Training Academy covering personal information, cookies, analytics and how we handle your data.",
 };
 
 export default function PrivacyPolicyPage() {
