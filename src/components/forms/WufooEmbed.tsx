@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Script from "next/script";
 import { thankYouHref } from "@/data/site";
 
 type WufooFormInstance = {
@@ -30,9 +29,51 @@ const WUFOO_HOST = "wufoo.com";
 const WUFOO_ORIGIN = `https://${WUFOO_USER}.${WUFOO_HOST}`;
 const SUBMIT_REDIRECT_DELAY_MS = 2000;
 
+let wufooScriptPromise: Promise<void> | null = null;
+
+function loadWufooScript() {
+  if (window.WufooForm) return Promise.resolve();
+  if (wufooScriptPromise) return wufooScriptPromise;
+
+  wufooScriptPromise = new Promise((resolve, reject) => {
+    const existing = document.querySelector<HTMLScriptElement>(`script[src="${FORM_JS}"]`);
+    if (existing) {
+      if (window.WufooForm) {
+        resolve();
+        return;
+      }
+      existing.addEventListener("load", () => resolve(), { once: true });
+      existing.addEventListener(
+        "error",
+        () => {
+          wufooScriptPromise = null;
+          reject(new Error("Wufoo script failed"));
+        },
+        { once: true },
+      );
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = FORM_JS;
+    script.async = true;
+    script.addEventListener("load", () => resolve(), { once: true });
+    script.addEventListener(
+      "error",
+      () => {
+        wufooScriptPromise = null;
+        reject(new Error("Wufoo script failed"));
+      },
+      { once: true },
+    );
+    document.body.appendChild(script);
+  });
+
+  return wufooScriptPromise;
+}
+
 export default function WufooEmbed({ formHash, height = 617, header = "show", className }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const displayedRef = useRef(false);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -74,33 +115,55 @@ export default function WufooEmbed({ formHash, height = 617, header = "show", cl
     };
   }, []);
 
-  function displayForm() {
-    if (!visible || displayedRef.current || !window.WufooForm) return;
-    if (!document.getElementById(`wufoo-${formHash}`)) return;
-    displayedRef.current = true;
-    const form = new window.WufooForm();
-    form.initialize({
-      userName: WUFOO_USER,
-      formHash,
-      autoResize: true,
-      height: String(height),
-      async: true,
-      host: WUFOO_HOST,
-      header,
-      ssl: true,
-    });
-    form.display();
-  }
+  useEffect(() => {
+    if (!visible) return;
+
+    let cancelled = false;
+    let displayed = false;
+
+    function tryDisplay() {
+      if (cancelled || displayed || !window.WufooForm) return false;
+      if (!document.getElementById(`wufoo-${formHash}`)) return false;
+      displayed = true;
+      const form = new window.WufooForm();
+      form.initialize({
+        userName: WUFOO_USER,
+        formHash,
+        autoResize: true,
+        height: String(height),
+        async: true,
+        host: WUFOO_HOST,
+        header,
+        ssl: true,
+      });
+      form.display();
+      return true;
+    }
+
+    void loadWufooScript()
+      .then(() => {
+        if (!cancelled) tryDisplay();
+      })
+      .catch(() => undefined);
+
+    const interval = window.setInterval(() => {
+      if (tryDisplay()) window.clearInterval(interval);
+    }, 100);
+    const timeout = window.setTimeout(() => window.clearInterval(interval), 10000);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(interval);
+      window.clearTimeout(timeout);
+    };
+  }, [visible, formHash, height, header]);
 
   return (
     <div ref={containerRef} className={className}>
       {visible ? (
-        <>
-          <Script id={`wufoo-embed-${formHash}`} src={FORM_JS} strategy="afterInteractive" onReady={displayForm} />
-          <div id={`wufoo-${formHash}`}>
-            <a href={`${WUFOO_ORIGIN}/forms/${formHash}/`}>Fill out my online form</a>
-          </div>
-        </>
+        <div id={`wufoo-${formHash}`}>
+          <a href={`${WUFOO_ORIGIN}/forms/${formHash}/`}>Fill out my online form</a>
+        </div>
       ) : (
         <div className="w-full animate-pulse rounded-xl bg-slate-100" style={{ minHeight: height }} />
       )}

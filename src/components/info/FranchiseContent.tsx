@@ -10,7 +10,6 @@ const intro = [
 const benefits = [
   "If you are an investor, you do not have to take the burden of establishing a brand as GTT Academy is already an established name in the field of teacher training. Our 16 years of experience has rewarded us with recognition of qualifications.",
   "All our teachers are provided with certifications which are issued with an Apostille stamp from the MEA (Ministry of External Affairs) after successful completion of courses.",
-  "Our English Proficiency Courses are accredited by ALAP (Awarding Language Acquisition for Professionals), a renowned organisation based in the United Kingdom considered to be a supreme institute in the ELT industry, which will be one of the most prominent USPs to attract students from every corner.",
   "GTT Academy launches centralised marketing campaigns which cover and provide benefits to all franchisees; therefore, the cost of promotion will be less for the franchises.",
 ];
 
