@@ -22,7 +22,7 @@ export default function FloatingContact() {
           </span>
         </a>
         <a
-          href="https://wa.me/919674923512?text=Hello%20GTT%20Academy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20courses."
+          href="https://wa.me/919674923512"
           target="_blank"
           rel="noreferrer"
           aria-label="Message GTT Academy on WhatsApp"
