@@ -69,7 +69,7 @@ export default function AboutEditMarquee() {
         <div className="order-1 flex flex-col items-center px-2 py-4 text-center lg:order-2 lg:items-start lg:py-6 lg:text-left">
           <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.22em] text-[#30ad22]">GTT Academy</p>
           <h2 className="font-serif text-3xl font-bold leading-tight text-[#05245b] sm:text-4xl">
-            Teacher Training Edit
+            Our Training Gallery
           </h2>
           <p className="mt-4 max-w-md text-sm leading-7 text-slate-600 sm:text-base">
             Timeless craft for classrooms that matter — practical skills, global credentials, and confident educators.

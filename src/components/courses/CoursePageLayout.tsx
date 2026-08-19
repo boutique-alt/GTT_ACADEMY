@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode, useEffect, useRef } from "react";
+import MobileApplyNowCta from "@/components/ui/MobileApplyNowCta";
 
 type Props = {
   left: ReactNode;
@@ -94,7 +95,10 @@ export default function CoursePageLayout({ left, right, children }: Props) {
         </div>
       </div>
 
-      <div className="order-1 min-w-0 max-w-full flex-1 lg:order-2">{children}</div>
+      <div className="order-1 min-w-0 max-w-full flex-1 lg:order-2">
+        <MobileApplyNowCta />
+        {children}
+      </div>
 
       <div ref={rightRailRef} className="order-2 w-full min-w-0 max-w-full shrink-0 lg:order-3 lg:w-[280px]">
         <div ref={rightSideRef} className="w-full min-w-0 max-w-full will-change-[position,top]">

@@ -55,7 +55,7 @@ export default function SpecialEducationHero() {
       <div className="bg-brand-gradient py-4 sm:py-5 lg:py-7">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-center font-display text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl lg:text-[3.25rem] lg:leading-[1.1] xl:text-[4rem]">
-            Special Education
+            Special Education Teacher Training with Practical Session
           </h1>
         </div>
       </div>

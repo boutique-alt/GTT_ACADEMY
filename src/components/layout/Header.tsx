@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
@@ -9,8 +10,10 @@ import SocialMediaLinks from "@/components/ui/SocialMediaLinks";
 import { courseDetailSidebarGroups, navLinks } from "@/data/site";
 
 export default function Header() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const showMobileApply = pathname !== "/" && pathname !== "/apply-now";
 
   return (
     <header className="sticky top-0 z-50">
@@ -85,9 +88,16 @@ export default function Header() {
             <ApplyNowLink className="btn-brand-gradient ml-3 rounded-full px-5 py-3 text-sm font-bold">Apply Now</ApplyNowLink>
           </div>
 
-          <button className="rounded-lg p-2 text-[#0045bc] lg:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
-            {menuOpen ? <X /> : <Menu />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            {showMobileApply ? (
+              <ApplyNowLink className="btn-brand-gradient btn-apply-float rounded-full px-3.5 py-2 text-[11px] font-bold sm:px-5 sm:py-2.5 sm:text-sm">
+                Apply Now
+              </ApplyNowLink>
+            ) : null}
+            <button className="rounded-lg p-2 text-[#0045bc]" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
+              {menuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
 
         {menuOpen && (

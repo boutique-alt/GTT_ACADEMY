@@ -46,6 +46,15 @@ export default function RootLayout({
       className={`${manrope.variable} ${lora.variable} ${display.variable} scroll-smooth antialiased`}
     >
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-10836042837" strategy="afterInteractive" />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-10836042837');
+          `}
+        </Script>
         <ScrollProgress />
         <Header />
         {children}

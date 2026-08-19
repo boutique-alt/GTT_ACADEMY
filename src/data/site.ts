@@ -29,7 +29,7 @@ export const courseGroups = [
         href: coursePath("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
       },
       {
-        title: "Special Education",
+        title: "Special Education Teacher Training with Practical Session",
         href: coursePath("teacher-training-courses", "pg-diploma-in-special-education"),
       },
       {
@@ -148,7 +148,7 @@ export const courseDetailSidebarGroups = [
         href: coursePath("teacher-training-courses", "nursery-teacher-training-with-practical-session"),
       },
       {
-        title: "Special Education",
+        title: "Special Education Teacher Training with Practical Session",
         href: coursePath("teacher-training-courses", "pg-diploma-in-special-education"),
       },
       {
@@ -289,7 +289,7 @@ export const courses = [
       "Nursery Teacher Training at GTT Academy prepares caregivers and educators with child development, teaching methodology, and nursery-level classroom skills.",
   },
   {
-    title: "Special Education",
+    title: "Special Education Teacher Training",
     image: "/images/courses/special-education.jpg",
     badge: "/images/premium-course.gif",
     href: coursePath("teacher-training-courses", "pg-diploma-in-special-education"),

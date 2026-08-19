@@ -34,8 +34,8 @@ export default function FranchiseContent() {
           enquiry@globalteachersacademy.com
         </a>{" "}
         or Call / WhatsApp us at{" "}
-        <a href="tel:9674923512" className="font-semibold text-[#0045bc] hover:underline">
-          9674923512
+        <a href="tel:9830029206" className="font-semibold text-[#0045bc] hover:underline">
+          9830029206
         </a>
         .
       </p>

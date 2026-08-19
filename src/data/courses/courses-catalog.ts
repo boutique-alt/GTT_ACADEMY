@@ -27,7 +27,7 @@ const feesByTitle: Record<string, string> = {
     teacherCourseDetails.tesol200.fees,
   "400 Hour TESOL Course Masters with Practical Teaching Session": teacherCourseDetails.tesol400.fees,
   "IELTS for Teachers": teacherCourseDetails.ieltsForTeachers.fees,
-  "Special Education": teacherCourseDetails.specialEducation.fees,
+  "Special Education Teacher Training with Practical Session": teacherCourseDetails.specialEducation.fees,
 };
 
 function toFeeLines(fees: string): string[] {

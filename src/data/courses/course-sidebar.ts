@@ -1278,7 +1278,7 @@ export const courseApplicationOptions = [
   "Diploma in Teaching and Training",
   "Early Childhood Care and Education",
   "Nursery Teacher Training With Practical Session",
-  "Special Education",
+  "Special Education Teacher Training with Practical Session",
   "Educational Administration and Management",
   "Diploma in Child and Adolescent Counseling",
   "Diploma in Child Psychology",

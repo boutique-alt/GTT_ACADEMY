@@ -65,31 +65,26 @@ export default function CareerContent() {
               ))}
             </ul>
 
-            <div className="space-y-5 pt-2">
-              <h3 className="font-serif text-xl font-bold text-[#05245b] sm:text-2xl">
-                Diploma in Child Psychology and Diploma in Child and Adolescent Counseling
-              </h3>
-              <p>
-                Our{" "}
-                <a
-                  href="/courses/teacher-training-courses/diploma-in-child-psychology"
-                  className="font-semibold text-[#0045bc] underline-offset-2 hover:underline"
-                >
-                  Diploma in Child Psychology
-                </a>{" "}
-                and{" "}
-                <a
-                  href="/courses/teacher-training-courses/diploma-in-child-and-adolescent-counseling"
-                  className="font-semibold text-[#0045bc] underline-offset-2 hover:underline"
-                >
-                  Diploma in Child and Adolescent Counseling
-                </a>{" "}
-                programmes attract a diverse group of learners— Not only budding students looking to build their knowledge and explore opportunities in child-focused fields, our learners have included child specialists, pediatricians, juvenile counselors, educators, and other professionals who closely work with children. Some participants are already working as child counsellors or caregivers and choose to pursue the programme to further develop their understanding of child and adolescent behaviour, emotional development, developmental needs, and the factors that shape a child&apos;s growth.
-              </p>
-              <p>
-                Roles such as Child Development Specialist, Behavioral Therapist, School Counselor / Child Counselor, and Special Educator are especially supported by these programmes.
-              </p>
-            </div>
+            <p>
+              Our{" "}
+              <a
+                href="/courses/teacher-training-courses/diploma-in-child-psychology"
+                className="font-semibold text-[#0045bc] underline-offset-2 hover:underline"
+              >
+                Diploma in Child Psychology
+              </a>{" "}
+              and{" "}
+              <a
+                href="/courses/teacher-training-courses/diploma-in-child-and-adolescent-counseling"
+                className="font-semibold text-[#0045bc] underline-offset-2 hover:underline"
+              >
+                Diploma in Child and Adolescent Counseling
+              </a>{" "}
+              programmes attract a diverse group of learners— Not only budding students looking to build their knowledge and explore opportunities in child-focused fields, our learners have included child specialists, pediatricians, juvenile counselors, educators, and other professionals who closely work with children. Some participants are already working as child counsellors or caregivers and choose to pursue the programme to further develop their understanding of child and adolescent behaviour, emotional development, developmental needs, and the factors that shape a child&apos;s growth.
+            </p>
+            <p>
+              Roles such as Child Development Specialist, Behavioral Therapist, School Counselor / Child Counselor, and Special Educator are especially supported by these programmes.
+            </p>
 
             {closing.map((paragraph) => (
               <p key={paragraph.slice(0, 64)}>{paragraph}</p>

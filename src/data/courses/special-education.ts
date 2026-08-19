@@ -134,7 +134,7 @@ const pgModules: CoursePhase[] = [
 ];
 
 export const specialEducationCourse = {
-  title: "Special Education",
+  title: "Special Education Teacher Training with Practical Session",
   image: "/images/courses/special-education-detail.jpg",
   pageIntro: [
     "Children with special needs require specialized supervision, dedicated support, and specialized skills from educators trained to nurture their potential. As the demand for qualified special education professionals grows, job opportunities continue to expand across educational settings. Helping a special child gain confidence and integrate into mainstream society is a deeply rewarding career path. This premium course is developed by licensed practitioners with years of hands-on teaching and counseling experience, requiring utmost dedication from candidate parents, school teachers, and shadow teachers alike. Students gain hands-on techniques to guide daily learning, while formal diagnostic testing remains the dedicated work of certified specialists.",

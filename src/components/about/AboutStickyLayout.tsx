@@ -1,17 +1,19 @@
 "use client";
 
 import { ReactNode, useEffect, useRef } from "react";
+import MobileApplyNowCta from "@/components/ui/MobileApplyNowCta";
 
 type Props = {
   sidebar: ReactNode;
   children: ReactNode;
   /** On mobile/tablet, render main content above the courses sidebar. */
   mobileContentFirst?: boolean;
+  showMobileApply?: boolean;
 };
 
 const HEADER_OFFSET = 120;
 
-export default function AboutStickyLayout({ sidebar, children, mobileContentFirst = false }: Props) {
+export default function AboutStickyLayout({ sidebar, children, mobileContentFirst = false, showMobileApply = true }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
   const sideRef = useRef<HTMLDivElement>(null);
@@ -78,16 +80,19 @@ export default function AboutStickyLayout({ sidebar, children, mobileContentFirs
   }, []);
 
   return (
-    <div ref={wrapRef} className="relative mx-auto flex w-full max-w-7xl min-w-0 flex-col gap-10 overflow-x-clip px-4 sm:px-6 lg:flex-row lg:items-start lg:gap-12 lg:px-8">
-      <div
-        ref={railRef}
-        className={`w-full min-w-0 max-w-full shrink-0 lg:w-[280px] ${mobileContentFirst ? "order-2 lg:order-1" : ""}`}
-      >
-        <div ref={sideRef} className="w-full min-w-0 max-w-full will-change-[position,top]">
-          {sidebar}
+    <div className="mx-auto w-full max-w-7xl min-w-0 px-4 sm:px-6 lg:px-8">
+      {showMobileApply ? <MobileApplyNowCta /> : null}
+      <div ref={wrapRef} className="relative flex w-full min-w-0 flex-col gap-10 overflow-x-clip lg:flex-row lg:items-start lg:gap-12">
+        <div
+          ref={railRef}
+          className={`w-full min-w-0 max-w-full shrink-0 lg:w-[280px] ${mobileContentFirst ? "order-2 lg:order-1" : ""}`}
+        >
+          <div ref={sideRef} className="w-full min-w-0 max-w-full will-change-[position,top]">
+            {sidebar}
+          </div>
         </div>
+        <div className={`min-w-0 max-w-full flex-1 ${mobileContentFirst ? "order-1 lg:order-2" : ""}`}>{children}</div>
       </div>
-      <div className={`min-w-0 max-w-full flex-1 ${mobileContentFirst ? "order-1 lg:order-2" : ""}`}>{children}</div>
     </div>
   );
 }

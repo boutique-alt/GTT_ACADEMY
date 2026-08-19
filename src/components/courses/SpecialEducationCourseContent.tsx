@@ -132,7 +132,7 @@ export default function SpecialEducationCourseContent() {
         right={
           <CourseRightSidebar
             details={teacherCourseDetails.specialEducation}
-            defaultCourse="Special Education"
+            defaultCourse="Special Education Teacher Training with Practical Session"
           />
         }
       >

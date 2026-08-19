@@ -6,7 +6,7 @@ import FloatingContact from "@/components/home/FloatingContact";
 import Gallery from "@/components/home/Gallery";
 
 export const metadata: Metadata = {
-  title: "Special Education Diploma & PG Diploma | GTT Academy",
+  title: "Special Education Teacher Training with Practical Session | GTT Academy",
   description:
     "Diploma and PG Diploma in Special Education at Global Teacher Training Academy (GTT Academy) — train parents, school teachers and shadow teachers in developmental disorders, PECS, AAC, behaviour management and inclusive classroom strategies with Apostille certification.",
 };
