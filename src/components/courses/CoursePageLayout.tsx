@@ -89,19 +89,19 @@ export default function CoursePageLayout({ left, right, children }: Props) {
       ref={wrapRef}
       className="relative mx-auto flex w-full max-w-7xl min-w-0 flex-col gap-8 overflow-x-clip px-4 sm:px-6 lg:flex-row lg:items-start lg:gap-8 lg:px-8"
     >
-      <div ref={leftRailRef} className="order-3 w-full min-w-0 max-w-full shrink-0 lg:order-1 lg:w-[240px]">
+      <div ref={leftRailRef} className="order-4 w-full min-w-0 max-w-full shrink-0 lg:order-1 lg:w-[240px]">
         <div ref={leftSideRef} className="w-full min-w-0 max-w-full will-change-[position,top]">
           {left}
         </div>
       </div>
 
-      <div className="order-1 min-w-0 max-w-full flex-1 lg:order-2">
+      <div className="order-2 min-w-0 max-w-full flex-1 lg:order-2">
         <MobileApplyNowCta />
         {children}
       </div>
 
-      <div ref={rightRailRef} className="order-2 w-full min-w-0 max-w-full shrink-0 lg:order-3 lg:w-[280px]">
-        <div ref={rightSideRef} className="w-full min-w-0 max-w-full will-change-[position,top]">
+      <div ref={rightRailRef} className="contents w-full min-w-0 max-w-full shrink-0 lg:block lg:order-3 lg:w-[280px]">
+        <div ref={rightSideRef} className="contents w-full min-w-0 max-w-full will-change-[position,top] lg:block">
           {right}
         </div>
       </div>
