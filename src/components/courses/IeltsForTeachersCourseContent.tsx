@@ -9,6 +9,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { ieltsForTeachersCourse } from "@/data/courses/train-the-trainer-and-ielts";
 import { tesolFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
@@ -127,6 +128,7 @@ export default function IeltsForTeachersCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.ieltsForTeachers}
             defaultCourse="IELTS for Teachers"
+            sampleCertificates={getCourseSampleCertificates("ielts")}
           />
         }
       >

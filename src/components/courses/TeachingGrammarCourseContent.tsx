@@ -9,6 +9,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { teachingGrammarCourse } from "@/data/courses/teaching-grammar";
 import { specializedFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
@@ -127,6 +128,7 @@ export default function TeachingGrammarCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.teachingGrammar}
             defaultCourse="Teaching Grammar"
+            sampleCertificates={getCourseSampleCertificates("teaching-grammar")}
           />
         }
       >

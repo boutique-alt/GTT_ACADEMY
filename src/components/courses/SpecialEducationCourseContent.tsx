@@ -10,6 +10,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { specialEducationCourse } from "@/data/courses/special-education";
 import { courseDetailSidebarGroups } from "@/data/site";
 
@@ -133,6 +134,7 @@ export default function SpecialEducationCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.specialEducation}
             defaultCourse="Special Education Teacher Training with Practical Session"
+            sampleCertificates={getCourseSampleCertificates("special-education", activeId)}
           />
         }
       >

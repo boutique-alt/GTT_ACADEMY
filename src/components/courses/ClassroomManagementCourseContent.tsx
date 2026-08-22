@@ -9,6 +9,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { classroomManagementCourse } from "@/data/courses/classroom-management";
 import { specializedFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
@@ -127,6 +128,7 @@ export default function ClassroomManagementCourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.classroomManagement}
             defaultCourse="Classroom Management Skill"
+            sampleCertificates={getCourseSampleCertificates("classroom-management")}
           />
         }
       >

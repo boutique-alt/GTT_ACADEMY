@@ -9,6 +9,7 @@ import CoursePageLayout from "@/components/courses/CoursePageLayout";
 import CourseRightSidebar from "@/components/courses/CourseRightSidebar";
 import ApplyNowLink from "@/components/ui/ApplyNowLink";
 import { teacherCourseDetails } from "@/data/courses/course-sidebar";
+import { getCourseSampleCertificates } from "@/data/courses/sample-certificates";
 import { tesol400Course } from "@/data/courses/tesol-400";
 import { tesolFirstSidebarGroups } from "@/data/courses/tesol-sidebar";
 
@@ -140,6 +141,7 @@ export default function Tesol400CourseContent() {
           <CourseRightSidebar
             details={teacherCourseDetails.tesol400}
             defaultCourse="400 Hour TESOL Course Masters with Practical Teaching Session"
+            sampleCertificates={getCourseSampleCertificates("tesol-400")}
           />
         }
       >
